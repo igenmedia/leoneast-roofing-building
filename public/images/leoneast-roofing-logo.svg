@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 150" role="img" aria-label="LeonEast Roofing &amp; Building Limited">
+  <title>LeonEast Roofing &amp; Building Limited</title>
+  <!--
+    Rebuilt from the logo artwork supplied by the client: a silver-to-white
+    "LEON", an electric blue "EAST", a twin-pitch roof mark with a chimney
+    above, and a ruled strapline beneath. Vector so it stays crisp at any size
+    and costs about 2KB.
+
+    TODO(client): if a master vector (AI/EPS/SVG) of the original exists, drop
+    it in over this file and keep the filename. Everything references
+    /images/leoneast-roofing-logo.svg.
+  -->
+  <defs>
+    <linearGradient id="le-silver" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="52%" stop-color="#d3dae1"/>
+      <stop offset="100%" stop-color="#8e99a5"/>
+    </linearGradient>
+    <linearGradient id="le-blue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4ea2f6"/>
+      <stop offset="55%" stop-color="#1479ea"/>
+      <stop offset="100%" stop-color="#0b5fbf"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Roof mark: blue underpitch, silver overpitch, chimney to the right -->
+  <path d="M283 14 L455 74 L432 74 L283 27 L134 74 L111 74 Z" fill="url(#le-blue)"/>
+  <path d="M395 30 h26 v20 l-26 -9 Z" fill="url(#le-blue)"/>
+  <path d="M283 6 L470 74 L440 74 L283 21 L126 74 L96 74 Z" fill="url(#le-silver)"/>
+  <!-- Loft light -->
+  <rect x="266" y="40" width="14" height="14" rx="1.5" fill="url(#le-silver)"/>
+  <rect x="284" y="40" width="14" height="14" rx="1.5" fill="url(#le-silver)"/>
+  <rect x="266" y="57" width="14" height="14" rx="1.5" fill="url(#le-silver)"/>
+  <rect x="284" y="57" width="14" height="14" rx="1.5" fill="url(#le-silver)"/>
+
+  <!-- Wordmark -->
+  <text x="280" y="115"
+        text-anchor="middle"
+        font-family="Sora, 'Trebuchet MS', Verdana, sans-serif"
+        font-size="46" font-weight="800" letter-spacing="-0.5">
+    <tspan fill="url(#le-silver)">LEON</tspan><tspan fill="url(#le-blue)">EAST</tspan>
+  </text>
+
+  <!-- Strapline with the two short rules either side -->
+  <rect x="26" y="132" width="34" height="4" fill="#1479ea"/>
+  <rect x="500" y="132" width="34" height="4" fill="#1479ea"/>
+  <text x="280" y="139"
+        text-anchor="middle"
+        font-family="Sora, 'Trebuchet MS', Verdana, sans-serif"
+        font-size="16" font-weight="600" letter-spacing="2.2" fill="#ffffff">ROOFING &amp; BUILDING LIMITED</text>
+</svg>

@@ -1,0 +1,15 @@
+---
+import { getNextPage } from "../data/pageChain";
+
+interface Props { current: string }
+const { current } = Astro.props;
+const next = getNextPage(current);
+---
+
+<section class="bg-slate border-t border-steel">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 text-center">
+    <a href={next.slug} class="text-brand-light font-semibold hover:underline">
+      Next: {next.label} &rarr;
+    </a>
+  </div>
+</section>

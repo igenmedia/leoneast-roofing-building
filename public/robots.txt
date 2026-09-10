@@ -1,0 +1,5 @@
+Sitemap: https://www.leoneastroofing.co.uk/sitemap-index.xml
+
+User-agent: *
+Allow: /
+Disallow: /thank-you

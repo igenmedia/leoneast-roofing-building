@@ -1,0 +1,93 @@
+---
+import Layout from "./Layout.astro";
+import { business } from "../data/business";
+
+interface Props {
+  title: string;
+  description: string;
+  heroImage: string;
+  heroImageAlt: string;
+  pubDate: Date;
+  faqs?: { question: string; answer: string }[];
+}
+
+const { title, description, heroImage, heroImageAlt, pubDate, faqs = [] } = Astro.props;
+
+const formattedDate = pubDate.toLocaleDateString("en-GB", {
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+});
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: title,
+  description,
+  image: heroImage,
+  datePublished: pubDate.toISOString(),
+  author: { "@type": "Organization", name: business.name },
+  publisher: {
+    "@type": "Organization",
+    name: business.name,
+    logo: { "@type": "ImageObject", url: `${business.url}/images/leoneast-roofing-logo.svg` },
+  },
+};
+
+const schema: Record<string, unknown>[] = [articleSchema];
+if (faqs.length) {
+  schema.push({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
+    })),
+  });
+}
+---
+
+<Layout title={title} description={description} ogImage={heroImage} heroImage={heroImage} schema={schema}>
+  <article class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+    <header class="mb-8">
+      <nav aria-label="Breadcrumb" class="text-xs text-slate/50">
+        <a href="/" class="hover:text-brand-dark">Home</a>
+        <span class="mx-2 text-slate/25">/</span>
+        <a href="/blog" class="hover:text-brand-dark">Blog</a>
+      </nav>
+      <p class="mt-4 text-sm text-slate/50">{formattedDate}</p>
+      <h1 class="mt-2 text-4xl sm:text-5xl font-bold tracking-tight text-ink leading-tight">
+        <a href="/" class="hover:text-brand-dark transition-colors">{title}</a>
+      </h1>
+      <p class="mt-4 text-lg text-slate/70">{description}</p>
+    </header>
+
+    <div class="prose prose-stone max-w-none prose-headings:font-heading prose-a:text-brand-dark prose-img:rounded-lg">
+      <slot />
+    </div>
+
+    {faqs.length > 0 && (
+      <section class="mt-12">
+        <h2 class="text-2xl sm:text-3xl font-bold text-ink">Frequently asked questions</h2>
+        <div class="mt-6 divide-y divide-slate/15">
+          {faqs.map((f) => (
+            <div class="py-5">
+              <h3 class="text-lg font-semibold text-ink">{f.question}</h3>
+              <p class="mt-2 text-slate/80">{f.answer}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <div class="mt-12 rounded-xl bg-ink text-white p-8 text-center">
+      <h2 class="text-2xl font-bold">Want us to look at your own roof?</h2>
+      <p class="mt-2 text-steel-light">Free surveys across Orpington and the BR postcodes, with photographs of whatever we find and a fixed written price to follow.</p>
+      <div class="mt-4 flex flex-wrap justify-center gap-3">
+        <a href={business.phoneHref} class="inline-flex items-center rounded-md bg-brand px-6 py-3 font-bold text-white hover:bg-brand-light hover:text-ink">Call {business.phone}</a>
+        <a href="/contact" class="inline-flex items-center rounded-md border border-steel-light/40 px-6 py-3 font-semibold text-white hover:bg-white/10">Book A Free Survey</a>
+      </div>
+    </div>
+  </article>
+</Layout>

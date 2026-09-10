@@ -1,0 +1,135 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { business } from "../data/business";
+
+// Legal boilerplate. noindex and out of the sitemap, per project standard.
+//
+// This site belongs to the trading company itself, so - unlike some others in
+// this portfolio - there is no separate site operator and no third-party
+// contractor arrangement to explain. Contracts are made directly with
+// LeonEast Roofing & Building Limited.
+const hasEmail = Boolean(business.email);
+const hasCompanyDetails = Boolean(business.companyNumber);
+const updated = "10 September 2026";
+---
+
+<Layout
+  title="Terms & Conditions | LeonEast Roofing & Building"
+  description="The terms on which LeonEast Roofing & Building provides surveys, quotations and roofing work, and how the workmanship guarantee applies."
+  noindex={true}
+>
+  <section class="bg-ink text-white">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 text-center">
+      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight">
+        <a href="/" class="text-white hover:text-brand-light transition-colors">Terms &amp; Conditions</a>
+      </h1>
+      <p class="mt-4 text-steel-light">Last updated: {updated}</p>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 prose prose-stone max-w-none">
+    <h2>About us and this website</h2>
+    <p>
+      This website is owned and operated by {business.name}
+      {hasCompanyDetails
+        ? `, a company registered in England and Wales under number ${business.companyNumber}`
+        : ", a limited company registered in England and Wales"}.
+      Any contract for surveys, quotations or roofing work arising from this website is made
+      directly with us.
+    </p>
+
+    <h2>Information on this site</h2>
+    <p>
+      The guidance, price bands and local information published here are provided in good
+      faith and in general terms. They are not a substitute for a survey of your particular
+      roof, and nothing on this website constitutes a quotation or an offer to carry out work
+      at a stated price. Price ranges are indicative and intended to help you budget and
+      compare quotations sensibly.
+    </p>
+    <p>
+      Where we refer to planning rules, conservation areas, Article 4 directions or building
+      regulations, we do so to help you know what to check. Those rules change and their
+      application depends on your specific property, so please confirm the position with the
+      relevant local authority before relying on it.
+    </p>
+
+    <h2>Surveys and quotations</h2>
+    <p>
+      Surveys are carried out free of charge and place you under no obligation. A quotation
+      issued following a survey is fixed for the work described in it and remains open for
+      thirty days unless it states otherwise. It covers only what is itemised. Where a defect
+      is genuinely concealed and cannot be identified until the covering is opened up - for
+      example rot in rafter feet or a wall plate, or an unsound chimney - the quotation will
+      say so, and any additional work will be described, priced and agreed with you in writing
+      before it is carried out.
+    </p>
+
+    <h2>Carrying out the work</h2>
+    <p>
+      We will agree a start date with you and keep you informed if weather prevents work from
+      proceeding, which on roofing it sometimes will. We will not leave a roof open overnight.
+      Access equipment remains our responsibility and must not be used or altered by anyone
+      else. Please keep the working area clear and, where relevant, keep children and pets
+      away from it while we are on site.
+    </p>
+
+    <h2>Payment</h2>
+    <p>
+      Repairs are invoiced on completion and payable within the period stated on the invoice.
+      On larger works such as a full re-roof, where materials and access are purchased in
+      advance, staged payments may apply; the stages and amounts will be set out on the
+      quotation before you accept it. Title in materials passes to you on payment. We do not
+      ask for large cash deposits.
+    </p>
+
+    <h2>The workmanship guarantee</h2>
+    <p>
+      Work we complete carries a {business.workmanshipGuaranteeYears} year guarantee on our
+      workmanship, issued to you in writing at completion. If a defect arises in that
+      workmanship within the guarantee period we will return and put it right at no cost to
+      you.
+    </p>
+    <p>
+      The guarantee covers our work. It does not cover a new and unrelated defect elsewhere on
+      the roof, damage caused by a subsequent storm or other event, damage caused by third
+      parties working on the roof after us, or failure arising from lack of ordinary
+      maintenance such as blocked gutters. Materials carry their manufacturers' own warranties
+      on their own terms, and the applicable warranty will be identified in your completion
+      paperwork.
+    </p>
+
+    <h2>Your cancellation rights</h2>
+    <p>
+      Where a contract is agreed away from our business premises - which for a domestic
+      roofing job it usually is - you have a statutory right to cancel within fourteen days
+      under the Consumer Contracts (Information, Cancellation and Additional Charges)
+      Regulations 2013. If you have asked us in writing to begin work within that period and
+      then cancel, we may charge for the work already carried out. Your cancellation rights
+      will be set out with your quotation.
+    </p>
+
+    <h2>Liability</h2>
+    <p>
+      We maintain public liability insurance. Nothing in these terms excludes or limits our
+      liability for death or personal injury caused by our negligence, for fraud, or for
+      anything else which cannot lawfully be excluded. Your statutory rights as a consumer,
+      including the right to work carried out with reasonable care and skill under the
+      Consumer Rights Act 2015, are not affected by anything on this page.
+    </p>
+
+    <h2>Complaints</h2>
+    <p>
+      If something is not right, please tell us as soon as possible on
+      {" "}<a href={business.phoneHref}>{business.phone}</a>
+      {hasEmail && <> or by email at <a href={`mailto:${business.email}`}>{business.email}</a></>}.
+      We would far rather come back and sort it out than have you unhappy with a roof we
+      worked on.
+    </p>
+
+    <h2>Governing law</h2>
+    <p>
+      These terms and any contract arising from them are governed by the law of England and
+      Wales, and are subject to the jurisdiction of the courts of England and Wales.
+    </p>
+  </section>
+</Layout>

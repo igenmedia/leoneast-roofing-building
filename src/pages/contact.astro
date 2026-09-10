@@ -1,0 +1,207 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { business, img } from "../data/business";
+import { locations } from "../data/locations";
+import ContactForm from "../components/ContactForm.astro";
+import StatsBar from "../components/StatsBar.astro";
+import NextPage from "../components/NextPage.astro";
+
+const heroImg = img("contact-leoneast-roofing-orpington");
+const hasEmail = Boolean(business.email);
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: business.url },
+    { "@type": "ListItem", position: 2, name: "Contact", item: `${business.url}/contact` },
+  ],
+};
+
+const faqs = [
+  {
+    question: "What happens after I get in touch?",
+    answer:
+      "We ring you back, ask a few questions about what you have noticed, and book a time to come and look. The survey takes about half an hour and covers the roof from above and the loft from inside. You get the photographs and a written verdict the same day, and a fixed itemised quote if there is anything to quote for.",
+  },
+  {
+    question: "How soon can you come out?",
+    answer:
+      "A free survey is normally within two to four working days. If water is coming in, say so when you ring and we will treat it as an emergency instead - that means a temporary make-safe within hours where the weather allows, and the permanent repair booked afterwards.",
+  },
+  {
+    question: "Do I have to be at home?",
+    answer:
+      "For a straightforward external check, no. For anything involving a leak, yes please - we need to get into the loft and see the affected ceiling from inside, and that is where most of the useful evidence is.",
+  },
+  {
+    question: "Will you pester me afterwards?",
+    answer:
+      "No. You will get the report and the quote, and then it is over to you. If we have not heard from you we will not chase, and there is no charge either way.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
+};
+---
+
+<Layout
+  title="Contact LeonEast Roofing & Building | Orpington Roofers"
+  description="Get in touch with LeonEast Roofing & Building in Orpington. Free roof surveys across the BR postcodes, fixed written prices and a 10 year workmanship guarantee."
+  heroImage={heroImg}
+  ogImage={heroImg}
+  schema={[breadcrumbSchema, faqSchema]}
+>
+  <section class="relative bg-ink text-white overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-slate via-ink to-ink" aria-hidden="true"></div>
+    <div class="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16 text-center">
+      <nav aria-label="Breadcrumb" class="text-xs text-steel-light/60">
+        <a href="/" class="hover:text-brand-light">Home</a>
+        <span class="mx-2 text-steel">/</span>
+        <span class="text-steel-light">Contact</span>
+      </nav>
+      <h1 class="mt-4 text-4xl sm:text-5xl font-bold tracking-tight leading-tight">
+        <a href="/" class="text-white hover:text-brand-light transition-colors">Contact LeonEast Roofing In Orpington</a>
+      </h1>
+      <h2 class="mt-4 text-xl font-semibold text-brand-light">Ready to find out what is going on up there?</h2>
+      <h3 class="mt-3 text-lg font-semibold text-steel-light">
+        Free surveys across Orpington and the BR postcodes, with photographs and a written
+        verdict whether or not there is a job in it
+      </h3>
+      <p class="mt-6 text-lg text-steel-light text-left">
+        The quickest way to reach us is the phone. Tell us the road and what you have spotted -
+        a tile in the border, a mark on a ceiling, a gutter that pours over one corner every
+        time it rains - and we will arrange a time to come and look. It costs nothing, it
+        commits you to nothing, and if the honest answer turns out to be that your roof needs
+        no work this year, that is the answer you will get in writing.
+      </p>
+      <div class="mt-8 text-left">
+        <ContactForm page="Contact page" title="Request a free roof survey" />
+      </div>
+    </div>
+  </section>
+
+  <StatsBar />
+
+  <!-- Details -->
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 grid lg:grid-cols-2 gap-12 items-start">
+    <div>
+      <h2 class="text-3xl sm:text-4xl font-bold text-ink rule">How to reach us</h2>
+      <dl class="mt-8 space-y-6">
+        <div class="border-l-2 border-brand pl-5">
+          <dt class="text-sm font-semibold uppercase tracking-wide text-slate/60">Phone</dt>
+          <dd class="mt-1">
+            <a href={business.phoneHref} class="text-2xl font-bold text-ink hover:text-brand-dark">{business.phone}</a>
+          </dd>
+        </div>
+        {hasEmail && (
+          <div class="border-l-2 border-brand pl-5">
+            <dt class="text-sm font-semibold uppercase tracking-wide text-slate/60">Email</dt>
+            <dd class="mt-1">
+              <a href={`mailto:${business.email}`} class="text-lg font-semibold text-ink hover:text-brand-dark break-all">{business.email}</a>
+            </dd>
+          </div>
+        )}
+        <div class="border-l-2 border-brand pl-5">
+          <dt class="text-sm font-semibold uppercase tracking-wide text-slate/60">Hours</dt>
+          <dd class="mt-1 text-slate/80">
+            {business.openingHours.opens} to {business.openingHours.closes}, Monday to Saturday.
+            Emergency calls are answered outside those hours - though whether we can safely
+            work at height depends entirely on the weather, and we will be straight with you
+            about that on the phone.
+          </dd>
+        </div>
+        <div class="border-l-2 border-brand pl-5">
+          <dt class="text-sm font-semibold uppercase tracking-wide text-slate/60">Where we work</dt>
+          <dd class="mt-1 text-slate/80">{business.serviceAreaLabel}.</dd>
+        </div>
+      </dl>
+      <div class="mt-8 rounded-xl border border-slate/15 bg-white p-6">
+        <h3 class="text-lg font-bold text-ink">Three things worth mentioning when you call</h3>
+        <ol class="mt-3 space-y-2 text-sm text-slate/80 list-decimal list-inside">
+          <li>Your road, so we know the housing before we set off.</li>
+          <li>What you have actually seen, in whatever words come naturally.</li>
+          <li>Whether water is coming in right now, because that changes how we schedule it.</li>
+        </ol>
+      </div>
+    </div>
+    <div>
+      <img src={heroImg}
+        alt="A roofer's van and ladder outside a suburban house in Orpington"
+        class="w-full rounded-xl shadow-lg object-cover aspect-[4/3]" width="800" height="600" loading="lazy" />
+      <div class="mt-6 rounded-xl overflow-hidden border border-slate/15 shadow-sm">
+        <iframe
+          src="https://maps.google.com/maps?q=Orpington%2C%20London&output=embed"
+          width="100%"
+          height="320"
+          style="border:0;"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Map of Orpington, our base"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Emergency -->
+  <section class="bg-brand/5 border-y border-brand/20">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12">
+      <h2 class="text-2xl sm:text-3xl font-bold text-ink rule">If water is coming in right now</h2>
+      <p class="mt-6 text-slate/80">
+        Ring rather than filling in a form, and do these three things while you wait. Turn off
+        the electricity to any circuit near the water. Move furniture and anything valuable out
+        of the way and get buckets down. And if a ceiling is sagging and holding water,
+        piercing it deliberately at the lowest point with something long will let it drain in
+        one controlled place instead of bringing the whole board down.
+      </p>
+      <p class="mt-4 text-slate/80">
+        Then photograph everything before anybody touches it. If this turns into an insurance
+        claim, those photographs are what decide it - and there is more on how we handle that
+        on the
+        {" "}<a href="/storm-damage-repairs" class="text-brand-dark font-semibold hover:underline">storm damage repairs page</a>.
+      </p>
+      <a href={business.phoneHref} class="mt-6 inline-flex items-center rounded-md bg-brand px-6 py-3 text-base font-bold text-white shadow-sm hover:bg-brand-light hover:text-ink">
+        Call {business.phone}
+      </a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+    <h2 class="text-3xl sm:text-4xl font-bold text-ink text-center rule rule-center">Before you get in touch</h2>
+    <div class="mt-10 max-w-3xl mx-auto divide-y divide-slate/15">
+      {faqs.map((faq) => (
+        <div class="py-6">
+          <h3 class="text-lg font-semibold text-ink">{faq.question}</h3>
+          <p class="mt-2 text-slate/80">{faq.answer}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Areas -->
+  <section class="bg-white border-y border-slate/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 text-center">
+      <h2 class="text-2xl sm:text-3xl font-bold text-ink">Towns we cover</h2>
+      <p class="mt-6 text-slate/70 max-w-3xl mx-auto">
+        No travel charge on any of these. If you are just outside and not sure, ring and ask -
+        we will tell you honestly if you would be better served by somebody closer.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-2">
+        <a href="/" class="rounded-full bg-ink px-4 py-1.5 text-sm font-semibold text-white hover:bg-slate">Orpington</a>
+        {locations.map((l) => (
+          <a href={`/${l.slug}`} class="rounded-full border border-slate/20 bg-paper px-4 py-1.5 text-sm text-slate/80 hover:border-brand hover:text-brand-dark">{l.name}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <NextPage current="/contact" />
+</Layout>

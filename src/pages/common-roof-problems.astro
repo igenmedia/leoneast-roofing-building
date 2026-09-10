@@ -1,0 +1,279 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { business, img } from "../data/business";
+import { locations } from "../data/locations";
+import ContactForm from "../components/ContactForm.astro";
+import StatsBar from "../components/StatsBar.astro";
+import Reviews from "../components/Reviews.astro";
+import NextPage from "../components/NextPage.astro";
+
+const heroImg = img("common-roof-problems-orpington-hero");
+
+// Eight faults, ordered roughly by how often we are called to them on this
+// patch. Each one is tied to the local housing that produces it rather than
+// written as generic advice, and each says plainly how urgent it is - because
+// the most useful thing this page can do is stop somebody panicking about
+// moss and ignoring a cracked flaunching.
+const problems = [
+  {
+    n: "01",
+    h: "Cracked mortar on hips and ridges",
+    where: "Everywhere interwar - Crofton, Farnborough, Goddington, Sidcup, Petts Wood",
+    urgency: "Deal with it this year",
+    publicId: "problem-cracked-hip-mortar-ridge-tiles",
+    alt: "Cracked and missing mortar between hip tiles on a pitched roof",
+    p1: "Hip and ridge tiles on any pre-1980s roof were bedded in sand and cement, and mortar has a working life of perhaps forty to sixty years. Around here it has now had ninety. It cracks because it is rigid and a roof is not - timber moves with temperature and humidity, and decades of that movement works on a brittle material until it lets go.",
+    p2: "Caught while all the tiles are still in place it is a straightforward rebed. Left until two or three have come off, you add sourcing and the risk of a tile finding a car. This is comfortably the most common single repair we carry out, and the single most common cause of a wind-damage claim on this patch.",
+  },
+  {
+    n: "02",
+    h: "A ceiling stain that keeps coming back",
+    where: "Any house, but especially anything with a loft conversion",
+    urgency: "Get it surveyed properly, once",
+    publicId: "problem-ceiling-water-stain-damp-patch",
+    alt: "A brown water stain spreading across a painted ceiling",
+    p1: "Water almost never comes through directly beneath where it got in. It enters at a fault, runs along the top of a rafter or across the loft insulation, and drops at the first place it can - which can easily be three or four metres away. That is why a repair made above the stain so often fails, and why the same ceiling gets patched by three different firms.",
+    p2: "Finding the real entry point means surveying the roof from above and the loft from inside, and occasionally running a controlled water test. It is methodical rather than clever. If nobody has opened your loft hatch, nobody has yet done the half of the job where leaks are actually solved.",
+  },
+  {
+    n: "03",
+    h: "Damp on the chimney breast",
+    where: "Most common on the London Clay side - Beckenham, Bromley, Penge edge",
+    urgency: "Before winter",
+    publicId: "problem-damp-chimney-breast-wall-stain",
+    alt: "Damp staining on the plaster of an internal chimney breast",
+    p1: "A chimney stands proud on all four sides with no roof of its own, and is held together by mortar that is often a century old. Water gets in through cracked flaunching at the top, open joints in the brickwork, or a flashing that was replaced with a fillet of sand and cement at some point in the 1980s - and it then runs down inside the flue and shows up a floor below.",
+    p2: "On the clay ground towards Beckenham the problem is worse, because clay shrinks in a dry summer and swells again in winter, and that seasonal movement steadily opens the joints. Worth knowing: not all chimney damp is a leak. It can also be condensation in a cold unventilated flue, or salts drawn out of an old lining. Three problems, three different remedies.",
+  },
+  {
+    n: "04",
+    h: "Gutters overflowing at one corner",
+    where: "The tree-lined streets - Petts Wood, Chislehurst, Beckenham, old Orpington",
+    urgency: "Cheap now, expensive later",
+    publicId: "problem-overflowing-gutter-blocked-leaves",
+    alt: "Water overflowing from a gutter blocked with leaves and debris",
+    p1: "Either a blockage or a gutter that has dropped between brackets and is holding water instead of moving it. Bromley is the largest London borough and among the most heavily wooded, so gutters here fill faster than most - and on a north-facing slope the leaf litter mixes with washed-down moss into a mat that water simply cannot get through.",
+    p2: "This is the cheapest problem on the page and the one that turns into the most expensive. The overflow lands on the fascia, the fascia stays wet through the winter, and after a few years the rafter feet behind it start to go. A gutter clear is under two hundred pounds. Rafter end repairs are not.",
+  },
+  {
+    n: "05",
+    h: "Tiles flaking, crumbling or losing their surface",
+    where: "Postwar estates - St Mary Cray, St Paul's Cray, Ramsden, Swanley",
+    urgency: "Start budgeting",
+    publicId: "problem-delaminating-concrete-roof-tiles",
+    alt: "Weathered concrete roof tiles with eroded surfaces and crumbling edges",
+    p1: "Concrete interlocking tiles have a surface coating that eventually wears away. Once it does the tile becomes porous, absorbs water, gains real weight and starts breaking up at the nose. The estates through the Cray valley and out towards Swanley were roofed in the fifties and sixties, which puts them squarely at the end of a forty to sixty year life now.",
+    p2: "Nothing can be done for a tile in that condition, and replacing individual ones on a covering that is generally delaminating is money spent to produce three more next winter. It is not an emergency though. A tired concrete roof will usually give you several years' notice, which is time to plan and save rather than time to panic.",
+  },
+  {
+    n: "06",
+    h: "A flat roof that ponds, blisters or splits",
+    where: "Extensions, garages and dormer tops across the whole patch",
+    urgency: "Before the autumn rain",
+    publicId: "problem-flat-roof-ponding-blistered-felt",
+    alt: "Standing water and blistering on an ageing felt flat roof",
+    p1: "Ponding means the fall is inadequate or the deck has sagged. Blisters mean moisture trapped under the covering has turned to vapour in the sun and lifted it. Splits are what happens next. This corner of the country is one of the sunniest and driest in Britain, and a dark felt roof in full sun gets far hotter than the air temperature, over and over, all summer.",
+    p2: "Almost every flat roof failure we attend starts at an edge, an upstand or an outlet rather than in the middle. That is where the movement is and where the workmanship shows. It is also why flat-roof emergencies cluster in September and October - the summer does the damage and the first serious downpour finds it.",
+  },
+  {
+    n: "07",
+    h: "Slates slipping one or two at a time",
+    where: "Victorian and Edwardian housing - Chislehurst, Beckenham, old Bromley",
+    urgency: "Watch the pattern",
+    publicId: "problem-slipped-slates-victorian-roof",
+    alt: "Missing and slipped slates on a Victorian slate roof",
+    p1: "This is nail fatigue and it happens to every slate roof eventually. The slate itself is fine - Welsh slate comfortably outlives the people who laid it - but the iron or steel nails holding it corrode and snap. One or two slates over a few years is normal ageing and worth refixing individually.",
+    p2: "The pattern is what matters. Several a year, in different places across the same slope, means the fixings have reached the end as a batch, and at that point individual repairs stop making economic sense. The usual answer is to strip that slope, keep the sound slates - normally eighty per cent or more - and re-lay them on new battens with new fixings.",
+  },
+  {
+    n: "08",
+    h: "Thick moss across the north slope",
+    where: "Every shaded roof in the borough, which is a lot of them",
+    urgency: "Tidy it, do not panic",
+    publicId: "problem-moss-covered-roof-tiles-north-slope",
+    alt: "Thick green moss growing across the tiles of a shaded roof slope",
+    p1: "Mostly cosmetic, and in a borough this green almost every north-facing slope has some. It becomes a genuine problem in two ways: it holds moisture against the tile through winter frosts, and it washes down into the gutters and blocks them, which brings you back to problem four.",
+    p2: "Clear it by hand with soft brushes, and clear the gutters at the same time. Never with a pressure washer. Pressure washing strips the surface off clay and concrete tiles, forces water up under the laps and takes years off a roof, and it is responsible for a great deal of the premature tile failure we get called to look at.",
+  },
+];
+
+const faqs = [
+  {
+    question: "Which of these should I worry about first?",
+    answer:
+      "Anything letting water into the house, then anything loose at height above a path or a driveway, then cracked flaunching or hip mortar before winter. Moss and a slightly tired concrete roof can both wait. If you are unsure, that is precisely what a free survey is for - and being told to do nothing is a perfectly common outcome.",
+  },
+  {
+    question: "How often should a roof be checked?",
+    answer:
+      "Every two or three years for a roof in normal condition, and once a year for the gutters, in late autumn once the leaves are down. Also worth a look after any serious gale, even if nothing appears to be wrong - a great many storm claims are made months late because nobody thought to look up while they were putting the fence back.",
+  },
+  {
+    question: "Is a damp patch always a leak?",
+    answer:
+      "No, and this is worth knowing before you spend anything. A good share of the damp we investigate is condensation from a loft that has been heavily insulated and starved of ventilation, so moist air from the house cannot escape and condenses on cold felt. The clue is timing: condensation appears in cold weather and is spread evenly, while a leak appears after rain and is concentrated. The remedy is airflow, not roofing.",
+  },
+  {
+    question: "Can I go up and look myself?",
+    answer:
+      "Please do not. Falls from height are the largest single cause of workplace deaths in construction in Britain, and a domestic roof is no safer for being your own. Almost everything on this page can be assessed from the ground with binoculars or from inside the loft with a torch, and we will come and do the rest for nothing.",
+  },
+  {
+    question: "Do you charge to come and tell me what it is?",
+    answer:
+      "No. The survey is free, there is no obligation, and you get photographs and a written verdict whether or not there is any work in it for us. If the honest answer is that your roof is fine, that is what the report will say.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: business.url },
+    { "@type": "ListItem", position: 2, name: "Common Roof Problems", item: `${business.url}/common-roof-problems` },
+  ],
+};
+---
+
+<Layout
+  title="Common Roof Problems In Orpington | LeonEast Roofing"
+  description="The eight roof faults we get called to most around Orpington - what causes each one, how urgent it really is, and what it costs to put right."
+  ogImage={heroImg}
+  schema={[faqSchema, breadcrumbSchema]}
+>
+  <section class="relative bg-ink text-white overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-slate via-ink to-ink" aria-hidden="true"></div>
+    <div class="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16 text-center">
+      <nav aria-label="Breadcrumb" class="text-xs text-steel-light/60">
+        <a href="/" class="hover:text-brand-light">Home</a>
+        <span class="mx-2 text-steel">/</span>
+        <span class="text-steel-light">Common Roof Problems</span>
+      </nav>
+      <h1 class="mt-4 text-4xl sm:text-5xl font-bold tracking-tight leading-tight">
+        <a href="/" class="text-white hover:text-brand-light transition-colors">Common Roof Problems In Orpington</a>
+      </h1>
+      <h2 class="mt-4 text-xl font-semibold text-brand-light">What is that, and does it need doing now?</h2>
+      <h3 class="mt-3 text-lg font-semibold text-steel-light">
+        The eight faults we are called to most on this patch, what causes each one, and how
+        urgent it honestly is
+      </h3>
+      <p class="mt-6 text-lg text-steel-light text-left">
+        The single most useful thing this page can do is stop somebody worrying about moss
+        while ignoring a cracked flaunching. Below are the eight things we get called out to
+        most around Orpington, each tied to the housing that produces it - the interwar hips
+        at Crofton, the postwar concrete tiles through the Crays, the chimneys on the clay at
+        Beckenham. Each one says plainly whether it needs dealing with this week, this year, or
+        not for a while yet.
+      </p>
+      <div class="mt-8 text-left">
+        <ContactForm page="Common roof problems" title="Not sure which one you have?" />
+      </div>
+    </div>
+  </section>
+
+  <StatsBar />
+
+  {problems.map((p, i) => (
+    <section class:list={["border-b border-slate/10", i % 2 === 0 ? "bg-paper" : "bg-white"]}>
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 grid lg:grid-cols-2 gap-10 items-center">
+        <div class:list={[i % 2 === 0 ? "lg:order-1" : "lg:order-2"]}>
+          <img src={img(p.publicId)} alt={p.alt}
+            class="w-full rounded-xl shadow-lg object-cover aspect-[4/3]" width="800" height="600" loading="lazy" />
+        </div>
+        <div class:list={[i % 2 === 0 ? "lg:order-2" : "lg:order-1"]}>
+          <p class="text-4xl font-bold text-brand/30 font-heading" aria-hidden="true">{p.n}</p>
+          <h2 class="mt-1 text-2xl sm:text-3xl font-bold text-ink">{p.h}</h2>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="rounded-full bg-ink px-3 py-1 text-xs font-semibold text-white">{p.urgency}</span>
+            <span class="rounded-full border border-slate/20 px-3 py-1 text-xs text-slate/70">{p.where}</span>
+          </div>
+          <p class="mt-5 text-slate/80">{p.p1}</p>
+          <p class="mt-3 text-slate/80">{p.p2}</p>
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <!-- Safety -->
+  <section class="bg-brand/5 border-y border-brand/20">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12">
+      <h2 class="text-2xl sm:text-3xl font-bold text-ink rule">Please do not go up and look</h2>
+      <p class="mt-6 text-slate/80">
+        Every item on this page can be assessed from the ground with a pair of binoculars, or
+        from inside the loft with a torch. None of it is worth getting on a ladder for. Falls
+        from height remain the largest single cause of fatal injury in construction in Britain,
+        and the
+        {" "}<a href="https://www.hse.gov.uk/construction/safetytopics/roofwork.htm" target="_blank" rel="noopener noreferrer" class="text-brand-dark font-semibold hover:underline">Health and Safety Executive's guidance on roof work</a>
+        {" "}exists because experienced tradespeople get it wrong too.
+      </p>
+      <p class="mt-4 text-slate/80">
+        We will come and look for nothing, and tell you what we find whether or not there is a
+        job in it. That is a considerably better arrangement than a Saturday morning on a
+        borrowed ladder.
+      </p>
+    </div>
+  </section>
+
+  <Reviews />
+
+  <!-- FAQ -->
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+    <h2 class="text-3xl sm:text-4xl font-bold text-ink text-center rule rule-center">What people ask us about these</h2>
+    <div class="mt-10 max-w-3xl mx-auto divide-y divide-slate/15">
+      {faqs.map((faq) => (
+        <div class="py-6">
+          <h3 class="text-lg font-semibold text-ink">{faq.question}</h3>
+          <p class="mt-2 text-slate/80">{faq.answer}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Areas -->
+  <section class="bg-white border-y border-slate/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 text-center">
+      <h2 class="text-2xl sm:text-3xl font-bold text-ink">Where we see these faults</h2>
+      <p class="mt-6 text-slate/70 max-w-3xl mx-auto">
+        Each town page sets out what dominates that particular set of streets, because the
+        eight faults above are not evenly distributed across the patch.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-2">
+        <a href="/" class="rounded-full bg-ink px-4 py-1.5 text-sm font-semibold text-white hover:bg-slate">Orpington</a>
+        {locations.map((l) => (
+          <a href={`/${l.slug}`} class="rounded-full border border-slate/20 bg-paper px-4 py-1.5 text-sm text-slate/80 hover:border-brand hover:text-brand-dark">{l.name}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-ink text-white">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold">Let us tell you which one it is</h2>
+      <p class="mt-6 text-steel-light max-w-2xl mx-auto">
+        Half an hour, no charge, photographs of whatever we find, and a written verdict on how
+        urgent it actually is. Including, quite often, not urgent at all.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href={business.phoneHref} class="inline-flex items-center rounded-md bg-brand px-6 py-3 text-base font-bold text-white shadow-sm hover:bg-brand-light hover:text-ink">
+          Call {business.phone}
+        </a>
+        <a href="/contact" class="inline-flex items-center rounded-md border border-steel-light/40 px-6 py-3 text-base font-semibold text-white hover:bg-white/10">
+          Book A Free Survey
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <NextPage current="/common-roof-problems" />
+</Layout>

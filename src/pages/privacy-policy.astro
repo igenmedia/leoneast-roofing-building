@@ -1,0 +1,142 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { business } from "../data/business";
+
+// Legal boilerplate. Kept noindex and out of the sitemap, which is the project
+// standard - see RULE ZERO in the shared CLAUDE.md, where legal pages are the
+// one legitimate exception to the no-shared-prose rule.
+//
+// TODO(client): once the Companies House number and registered office for
+// LeonEast Roofing & Building Limited are confirmed, hardcode the registered
+// office in the "Who we are" section below. Per project convention the
+// registered address is written into this page directly rather than pulled
+// from business.ts, so that editing business.ts can never silently change it.
+const hasEmail = Boolean(business.email);
+const updated = "10 September 2026";
+---
+
+<Layout
+  title="Privacy Policy | LeonEast Roofing & Building"
+  description="How LeonEast Roofing & Building collects, uses and stores the personal information you provide when requesting a roof survey or quote."
+  noindex={true}
+>
+  <section class="bg-ink text-white">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 text-center">
+      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight">
+        <a href="/" class="text-white hover:text-brand-light transition-colors">Privacy Policy</a>
+      </h1>
+      <p class="mt-4 text-steel-light">Last updated: {updated}</p>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 prose prose-stone max-w-none">
+    <h2>Who we are</h2>
+    <p>
+      This website is operated by {business.name}, a limited company registered in England and
+      Wales, trading from {business.address.locality}, {business.address.region}. For the
+      purposes of UK data protection law we are the data controller for the personal
+      information described in this policy.
+    </p>
+    <p>
+      You can contact us about anything in this policy by telephone on
+      {" "}<a href={business.phoneHref}>{business.phone}</a>
+      {hasEmail && <>, or by email at <a href={`mailto:${business.email}`}>{business.email}</a></>}.
+    </p>
+
+    <h2>What we collect</h2>
+    <p>
+      When you submit an enquiry through this website, or contact us by phone, we collect the
+      information you choose to give us. Typically that is your name, telephone number, email
+      address, the property address the work relates to, and a description of the roofing
+      problem. We do not ask for and do not want any special category data, and we do not
+      collect payment details through this website.
+    </p>
+    <p>
+      Our web forms are handled by Web3Forms, which passes the contents of the form to us by
+      email. Our hosting provider records standard server information such as IP addresses and
+      request logs for security and reliability purposes. We do not run advertising trackers,
+      analytics cookies or third-party pixels on this site.
+    </p>
+
+    <h2>Why we use it, and our legal basis</h2>
+    <ul>
+      <li>
+        <strong>To respond to your enquiry and arrange a survey.</strong> Legal basis: taking
+        steps at your request prior to entering into a contract, and our legitimate interest in
+        answering people who contact us.
+      </li>
+      <li>
+        <strong>To prepare and issue a quotation, and to carry out work you accept.</strong>
+        Legal basis: performance of a contract with you.
+      </li>
+      <li>
+        <strong>To keep records of work carried out, including survey and completion
+        photographs, so that we can honour the workmanship guarantee.</strong> Legal basis:
+        performance of a contract and our legitimate interest in being able to evidence what we
+        did and when.
+      </li>
+      <li>
+        <strong>To meet our legal and insurance obligations.</strong> Legal basis: compliance
+        with a legal obligation, and our legitimate interests in defending claims.
+      </li>
+    </ul>
+    <p>
+      We will not add you to a marketing list because you asked for a quote, and we do not sell
+      or rent personal information to anyone.
+    </p>
+
+    <h2>Who we share it with</h2>
+    <p>
+      We share personal information only where it is necessary to do the job or to run the
+      business. That may include our form provider and email provider, our website host, our
+      accountant, our insurers, and - where you are making a claim - your own insurer or their
+      loss adjuster. Where a job requires materials to be delivered to your address, the
+      supplier will be given the delivery address. Each of these acts either as our processor
+      under contract or as a controller in its own right.
+    </p>
+
+    <h2>How long we keep it</h2>
+    <p>
+      Enquiries that do not lead to work are deleted within twelve months. Records relating to
+      work we have carried out, including photographs and guarantee documentation, are kept for
+      the length of the workmanship guarantee plus a further six years, which reflects the
+      period in which a claim could be brought. Financial records are kept for six years as
+      required for tax purposes.
+    </p>
+
+    <h2>Your rights</h2>
+    <p>
+      Under the UK GDPR you have the right to ask us for a copy of the personal information we
+      hold about you, to have inaccurate information corrected, to ask us to delete information
+      where we no longer need it, to restrict or object to certain processing, and to ask for
+      your information in a portable format. Where we rely on legitimate interests you can
+      object, and we will stop unless we have compelling grounds to continue.
+    </p>
+    <p>
+      To exercise any of these, contact us using the details above. We will respond within one
+      month. There is no charge.
+    </p>
+
+    <h2>Complaints</h2>
+    <p>
+      If you are unhappy with how we have handled your information, please tell us first so
+      that we can try to put it right. You also have the right to complain to the Information
+      Commissioner's Office, the UK supervisory authority, at
+      {" "}<a href="https://ico.org.uk/make-a-complaint/" target="_blank" rel="noopener noreferrer">ico.org.uk</a>
+      {" "}or on 0303 123 1113.
+    </p>
+
+    <h2>Cookies</h2>
+    <p>
+      This website does not set analytics, advertising or profiling cookies. Pages that embed a
+      Google map load content from Google, which may set cookies of its own under Google's
+      privacy policy; where a map is embedded it is clearly visible on the page.
+    </p>
+
+    <h2>Changes to this policy</h2>
+    <p>
+      We may update this policy from time to time. The date at the top of the page shows when
+      it was last changed.
+    </p>
+  </section>
+</Layout>

@@ -1,0 +1,57 @@
+---
+import { business } from "../data/business";
+
+// The 10 year workmanship guarantee is the figure to confirm with the client.
+// The materials slot deliberately carries no number: manufacturer cover varies
+// by product, so a single headline figure would be wrong on most jobs. Do not
+// add one without a specific manufacturer to attach it to.
+const years = business.workmanshipGuaranteeYears;
+---
+<section class="bg-slate text-white">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 grid lg:grid-cols-2 gap-12 items-center">
+    <div>
+      <h2 class="text-3xl sm:text-4xl font-bold rule">What our guarantee actually is</h2>
+      <p class="mt-6 text-steel-light">
+        Every roofing van in south London says "all work guaranteed" on the side, and it costs
+        nothing to paint. The question worth asking is whether anything gets written down. Work
+        carried out by {business.name} comes with a {years} year workmanship guarantee as a real
+        document - dated, signed, specific to the job we did on your house - handed to you at
+        completion along with the photographs. The materials carry their manufacturers' own
+        cover on top of that, and because it varies from product to product your paperwork names
+        the one that applies to yours rather than quoting an averaged figure at you.
+      </p>
+      <p class="mt-4 text-steel-light">
+        It is worth understanding why that changes how we work. A guarantee lasting a decade is
+        only affordable to us if the repairs do not come back, so failed material comes off
+        rather than being sealed over, junctions get lead rather than a fillet of cement, and on
+        the exposed ground towards Biggin Hill and Coney Hall we fix mechanically instead of
+        trusting mortar. Anything we find that we cannot deal with the same day gets
+        photographed and said out loud, because a problem kept quiet now becomes our problem
+        within {years} years.
+      </p>
+      <p class="mt-4 text-steel-light">
+        In plain terms: if water finds its way back through something we repaired, we come back
+        and put it right at no cost to you. It is worth asking anyone else quoting for the job
+        to put the same thing in writing.
+      </p>
+    </div>
+    <div class="grid grid-cols-2 gap-4">
+      <div class="rounded-xl border border-brand/40 bg-ink p-6 text-center">
+        <p class="text-3xl font-bold text-brand-light leading-tight">{years} yrs</p>
+        <p class="mt-2 text-sm font-semibold text-white uppercase tracking-wide">Workmanship, in writing</p>
+      </div>
+      <div class="rounded-xl border border-brand/40 bg-ink p-6 text-center">
+        <p class="text-3xl font-bold text-brand-light leading-tight">£0</p>
+        <p class="mt-2 text-sm font-semibold text-white uppercase tracking-wide">To call us back under it</p>
+      </div>
+      <div class="rounded-xl border border-steel bg-ink p-6 text-center">
+        <p class="text-2xl font-bold text-white leading-tight">Insured</p>
+        <p class="mt-2 text-sm font-semibold text-steel-light uppercase tracking-wide">Public liability cover in place</p>
+      </div>
+      <div class="rounded-xl border border-steel bg-ink p-6 text-center">
+        <p class="text-2xl font-bold text-white leading-tight">Named</p>
+        <p class="mt-2 text-sm font-semibold text-steel-light uppercase tracking-wide">Manufacturer cover, per job</p>
+      </div>
+    </div>
+  </div>
+</section>

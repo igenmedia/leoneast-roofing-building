@@ -1,0 +1,449 @@
+---
+import Layout, { serviceLinks } from "../layouts/Layout.astro";
+import { business, img } from "../data/business";
+import { locations } from "../data/locations";
+import { getCollection } from "astro:content";
+import ContactForm from "../components/ContactForm.astro";
+import StatsBar from "../components/StatsBar.astro";
+import Reviews from "../components/Reviews.astro";
+import Guarantee from "../components/Guarantee.astro";
+import NextPage from "../components/NextPage.astro";
+
+const heroImg = img("orpington-roofers-tiled-roof-hero");
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+).slice(0, 3);
+
+// Three headline services get a card with an image; the remaining six sit in
+// a compact link grid below. 3 and 6 both divide cleanly into the three-column
+// layout, so neither row is left with an orphan.
+const headline = [
+  {
+    name: "Roof Repairs",
+    href: "/roof-repairs",
+    publicId: "roof-repairs-orpington-card",
+    alt: "A roofer refixing displaced clay tiles on a pitched roof",
+    text: "Slipped tiles, cracked hip mortar, tired flashings and failed valleys. Photographed before it is priced, and repaired rather than sealed over.",
+  },
+  {
+    name: "New Roofs & Re-Roofing",
+    href: "/new-roofs",
+    publicId: "new-roof-reroofing-orpington-card",
+    alt: "A roof stripped to the rafters with new battens and membrane going on",
+    text: "Full strip back to the rafters, new treated battens, breathable membrane and a covering matched to the street. No overlaying, ever.",
+  },
+  {
+    name: "Flat Roofing",
+    href: "/flat-roofing",
+    publicId: "flat-roofing-orpington-card",
+    alt: "A newly laid flat roof membrane on a single storey extension",
+    text: "EPDM, fibreglass and high performance felt on extensions, dormers and garages, with the falls corrected rather than covered over.",
+  },
+];
+
+const others = serviceLinks.filter((s) => !headline.some((h) => h.href === s.slug));
+
+const benefits = [
+  {
+    h: "We survey before we quote, every time",
+    p: "Nobody can diagnose a roof from a driveway. We get up there, and we go into the loft as well, because the evidence of where water has actually been running lives on the underside of the roof rather than on your ceiling.",
+  },
+  {
+    h: "You see the fault before you hear the price",
+    p: "Photographs of the defect come first, the figure comes second. If you want to compare our quote against somebody else's, those photographs will tell you whether the two of you are even describing the same problem.",
+  },
+  {
+    h: "Access is a separate line, not a surprise",
+    p: "Scaffolding is often the biggest single item on a roofing invoice and the one people are least prepared for. Ours is itemised, with how long it stays up and who pays if the weather extends the job.",
+  },
+  {
+    h: "We say no to work that is not needed",
+    p: "A good share of the calls we take turn out to be condensation rather than a leak, or a roof with fifteen years left in it. You get that verdict in writing, and you get it free.",
+  },
+  {
+    h: "Materials chosen to match, not to be convenient",
+    p: "A wrong tile is visible from the pavement for the next fifty years. We source reclaimed clay, discontinued concrete profiles and handmade Kentish pegs when that is what the house needs, even when it means waiting a few days.",
+  },
+  {
+    h: "Ten years of cover, written down",
+    p: "A dated, signed document specific to your job, handed over at completion with the photographs. If water comes back through our work, so do we, at no cost.",
+  },
+];
+
+const whyUs = [
+  "Based in Orpington, so most of the BR postcodes are ten to twenty minutes away rather than a scheduling problem",
+  "Nine roofing services under one firm - repairs, emergencies, storm work, leaks, re-roofing, flat roofs, tiling and slating, chimneys and roofline",
+  "Comfortable across all four coverings this area uses: machine-made clay, concrete interlocking, natural slate and handmade Kentish peg tiles",
+  "Straight about the London Borough of Bromley's conservation areas, Areas of Special Residential Character and Article 4 directions - and about when none of them apply to you",
+  "Storm damage photographed and written up the way loss adjusters expect, before anything is touched",
+];
+
+const faqs = [
+  {
+    question: "How much does a roofer cost in Orpington?",
+    answer:
+      "For a single defect - a slipped tile, a cracked flashing, a short run of ridge - most repairs land between £180 and £900 including access. Rebedding all four hips and the ridge on a 1930s semi is generally £900 to £1,600. A chimney flashing renewed in lead is £450 to £950. A full re-roof on a standard three-bedroom semi runs £7,000 to £14,000 including scaffolding, new treated battens and breathable membrane. Every quote we issue is fixed and itemised, so you can see exactly which part of it is materials, which is labour and which is access.",
+  },
+  {
+    question: "Do you charge for a survey or a quote?",
+    answer:
+      "No, and there is no obligation attached to either. We will come out, get on the roof, look in the loft, photograph anything worth showing you and give you a written verdict. If that verdict is that your roof does not need work this year, you will have paid nothing to find that out - which happens more often than you might expect.",
+  },
+  {
+    question: "Which areas do you cover?",
+    answer:
+      "Orpington and the BR postcodes around it. That means Petts Wood, St Mary Cray and St Paul's Cray, Chelsfield, Farnborough, Crofton, Locksbottom, Green Street Green, Chislehurst, Bromley, West Wickham, Beckenham, Keston, Downe, Cudham and Biggin Hill - plus Sidcup over the boundary in Bexley and Swanley over the county line in Kent.",
+  },
+  {
+    question: "Do I need planning permission for roof work?",
+    answer:
+      "Not for a like-for-like repair. Replacing damaged tiles with matching tiles, rebedding a ridge or renewing a flashing is maintenance and needs no consent anywhere. It changes if the work alters the roof's shape or appearance. The London Borough of Bromley has 47 conservation areas, 13 Areas of Special Residential Character, and Article 4 directions that have removed permitted development rights for upward extensions in 16 areas across eleven wards. If your job touches any of that, we will say so on the survey and point you at the right page on the council's site.",
+  },
+  {
+    question: "Can you come out in an emergency?",
+    answer:
+      "Yes. Ring us and tell us what is happening - we will talk you through what to do inside straight away, which on a bulging ceiling can save you the ceiling. Whether we can safely work at height depends on the conditions. In a serious gale the honest answer is that nobody should be up a ladder, and we will be there at first light instead. A temporary make-safe is priced separately and comes off the permanent repair if we carry that out too.",
+  },
+  {
+    question: "What does the ten year guarantee cover?",
+    answer:
+      "Our workmanship, for ten years from completion, as a written document rather than a verbal promise. If water finds its way back through something we repaired, we return and put it right at no cost. It does not extend to a new and separate fault elsewhere on the roof, and it is not the same thing as the manufacturer's warranty on the materials, which runs on its own terms. You get both pieces of paper at the end of the job.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
+};
+---
+
+<Layout
+  title="Roofers Orpington – LeonEast Roofing & Building"
+  description="Roofers in Orpington covering repairs, re-roofing, flat roofs, chimneys and guttering across the BR postcodes. Free survey, photos of the fault, fixed price, 10 year guarantee."
+  heroImage={heroImg}
+  ogImage={heroImg}
+  schema={[faqSchema]}
+>
+  <!-- Hero -->
+  <section class="relative bg-ink text-white overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-slate via-ink to-ink" aria-hidden="true"></div>
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <p class="inline-flex items-center rounded-full border border-brand/50 bg-brand/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-brand-light">
+          Orpington · Petts Wood · Bromley · the Crays · Chislehurst
+        </p>
+        <h1 class="mt-4 text-4xl sm:text-6xl font-bold tracking-tight leading-[1.05]">
+          <span class="silver">Roofers</span> <span class="text-brand-light">Orpington</span>
+        </h1>
+        <h2 class="mt-4 text-xl font-semibold text-white">{business.name}</h2>
+        <h3 class="mt-3 text-lg font-semibold text-steel-light">
+          Roof repairs, re-roofing, flat roofing, chimneys and guttering across Orpington and
+          the BR postcodes around it
+        </h3>
+        <p class="mt-6 text-lg text-steel-light">
+          Most roofs do not fail all at once. They give way in one small place and then carry
+          on looking perfectly respectable from the pavement while water gets in behind - which
+          is why so many people around here find out through a ceiling. We survey before we
+          quote, we photograph what we find so you can see it yourself, and we tell you plainly
+          whether you are looking at an afternoon's work or the start of something bigger.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href={business.phoneHref} class="inline-flex items-center rounded-md bg-brand px-6 py-3 text-base font-bold text-white shadow-sm hover:bg-brand-light hover:text-ink">
+            Call {business.phone}
+          </a>
+          <a href="/contact" class="inline-flex items-center rounded-md border border-steel-light/40 px-6 py-3 text-base font-semibold text-white hover:bg-white/10">
+            Book A Free Survey
+          </a>
+        </div>
+      </div>
+      <div>
+        <img
+          src={heroImg}
+          alt="Clay tiled roofs and brick chimney stacks across a residential street in Orpington"
+          class="w-full rounded-xl shadow-2xl object-cover aspect-[4/3] ring-1 ring-white/10"
+          width="1200" height="900" fetchpriority="high" loading="eager"
+        />
+      </div>
+    </div>
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-12 lg:pb-20">
+      <ContactForm page="Homepage" title="Book a free roof survey in Orpington" />
+    </div>
+  </section>
+
+  <!-- Trust bar -->
+  <section class="bg-white border-b border-slate/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 grid grid-cols-2 lg:grid-cols-4 gap-4 text-center text-sm font-semibold text-slate">
+      <p>Public liability insured</p>
+      <p>Free surveys and second opinions</p>
+      <p>Fixed written prices</p>
+      <p>Local to Orpington, not a call centre</p>
+    </div>
+  </section>
+
+  <StatsBar />
+
+  <!-- Services -->
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+    <h2 class="text-3xl sm:text-4xl font-bold text-ink text-center rule rule-center">What we do</h2>
+    <p class="mt-8 text-center text-slate/70 max-w-3xl mx-auto">
+      Nine roofing services under one firm, which matters more than it sounds. A leak that
+      turns out to be a chimney, a chimney that turns out to be a gutter, a gutter that has
+      quietly rotted the rafter feet behind it - all of that gets handled by the same people
+      rather than passed between three trades.
+    </p>
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {headline.map((s) => (
+        <a href={s.href} class="group rounded-xl border border-slate/15 bg-white overflow-hidden shadow-sm hover:border-brand transition-colors flex flex-col">
+          <img src={img(s.publicId)} alt={s.alt} class="w-full object-cover aspect-[3/2]"
+            width="600" height="400" loading="lazy" />
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="text-lg font-bold text-ink group-hover:text-brand-dark">{s.name}</h3>
+            <p class="mt-2 text-sm text-slate/80 flex-1">{s.text}</p>
+            <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-dark">
+              Learn more<span aria-hidden="true">&rarr;</span>
+              <span class="sr-only">about {s.name.toLowerCase()} in Orpington</span>
+            </span>
+          </div>
+        </a>
+      ))}
+    </div>
+    <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {others.map((s) => (
+        <a href={s.slug} class="rounded-lg border border-slate/15 bg-white px-5 py-4 text-sm font-semibold text-ink hover:border-brand hover:text-brand-dark">
+          {s.name} <span aria-hidden="true" class="text-brand-dark">&rarr;</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="bg-white border-y border-slate/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 grid lg:grid-cols-2 gap-12 items-start">
+      <div>
+        <h2 class="text-3xl sm:text-4xl font-bold text-ink rule">Six things we do differently</h2>
+        <dl class="mt-8 space-y-6">
+          {benefits.map((b) => (
+            <div class="border-l-2 border-brand pl-5">
+              <dt class="font-bold text-ink">{b.h}</dt>
+              <dd class="mt-1 text-sm text-slate/80">{b.p}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+      <div class="lg:sticky lg:top-28">
+        <img src={img("roofer-working-tiled-roof-orpington")}
+          alt="A roofer working on the tiled roof of a suburban house in Orpington"
+          class="w-full rounded-xl shadow-lg object-cover aspect-[4/3]" width="800" height="600" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Local knowledge -->
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 grid lg:grid-cols-2 gap-12 items-center">
+    <div>
+      <img src={img("north-downs-chalk-landscape-kent")}
+        alt="Rolling chalk downland and woodland on the North Downs in Kent"
+        class="w-full rounded-xl shadow-lg object-cover aspect-[4/3]" width="800" height="600" loading="lazy" />
+    </div>
+    <div>
+      <h2 class="text-3xl sm:text-4xl font-bold text-ink rule">Why roofs fail differently around here</h2>
+      <p class="mt-6 text-slate/80">
+        Orpington sits in the rain shadow of the North Downs, and Bromley records something
+        like 729mm of rain in an average year against a UK figure nearer 1,150mm. That makes
+        this one of the driest corners of Britain, and it changes how roofs fail rather than
+        whether they do. A fault that would flood a kitchen in Cumbria inside a fortnight can
+        sit quietly above an Orpington bedroom for two or three years, wetting the end of a
+        rafter a little each month, doing its damage entirely out of sight.
+      </p>
+      <p class="mt-4 text-slate/80">
+        Then a proper storm arrives, because this corner of the country gets those too. The
+        Great Storm of 16 October 1987 gusted to around 130mph and hit west Kent and Sevenoaks
+        about as hard as anywhere in England; Storm Eunice did a smaller version of the same
+        thing in February 2022. Afterwards the pattern is always the same. It is rarely the
+        sound roofs that fail. It is the ones that were already carrying a cracked hip or a
+        lifting flashing, quietly, for years - and the storm simply found all of them on the
+        same night.
+      </p>
+      <p class="mt-4 text-slate/80">
+        The ground matters too. Orpington and everything rising south of it stands on the chalk
+        dip slope of the Downs, which is comparatively steady. North and west towards Beckenham
+        it becomes London Clay, which shrinks through a dry summer and swells again over
+        winter - and that seasonal movement is why we do so much more chimney and flashing work
+        on that side of the patch than on this one.
+      </p>
+    </div>
+  </section>
+
+  <!-- Insight -->
+  <section class="bg-brand/5 border-y border-brand/20">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 text-center">
+      <p class="text-xl sm:text-2xl font-semibold text-ink leading-snug">
+        "Roughly half the roofs we are called out to around Orpington need one afternoon of
+        work and nothing more. The problem is that nobody can tell which half from the ground."
+      </p>
+      <p class="mt-4 text-sm text-slate/60">From the survey notes at {business.name}</p>
+    </div>
+  </section>
+
+  <!-- Why choose us -->
+  <section class="bg-white border-y border-slate/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-3xl sm:text-4xl font-bold text-ink rule">Why homeowners here call us back</h2>
+        <ul class="mt-8 space-y-4">
+          {whyUs.map((w) => (
+            <li class="flex gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-6 w-6 flex-none text-brand" aria-hidden="true">
+                <path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-7.5 7.5a1 1 0 0 1-1.4 0l-3.5-3.5a1 1 0 1 1 1.4-1.4l2.8 2.79 6.8-6.79a1 1 0 0 1 1.4 0Z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-slate/80">{w}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <img src={img("roofer-photographing-roof-fault-survey")}
+          alt="A roofer photographing a defect during a roof survey"
+          class="w-full rounded-xl shadow-lg object-cover aspect-[4/3]" width="800" height="600" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <Guarantee />
+
+  <!-- Roof problems teaser -->
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 grid lg:grid-cols-2 gap-12 items-center">
+    <div>
+      <h2 class="text-3xl sm:text-4xl font-bold text-ink rule">Not sure what you are looking at?</h2>
+      <p class="mt-6 text-slate/80">
+        We have written up the faults that come round again and again on this patch, with
+        photographs of each one and a plain description of what happens if it is left. The
+        mortar-bedded hips of the Crofton semis. The hung tiling on the Petts Wood gables.
+        Sixty-year-old concrete tiles through the Cray valley. Chimney flashings pulling away
+        on the clay ground over towards Beckenham. It is worth ten minutes before you ring
+        anybody, ourselves included.
+      </p>
+      <a href="/common-roof-problems" class="mt-6 inline-flex items-center gap-1 text-brand-dark font-semibold hover:underline">
+        Read the common roof problems guide<span aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+    <div>
+      <img src={img("cracked-hip-mortar-roof-tiles-close-up")}
+        alt="Cracked mortar along the hip of a tiled roof with a loose hip tile"
+        class="w-full rounded-xl shadow-lg object-cover aspect-[4/3]" width="800" height="600" loading="lazy" />
+    </div>
+  </section>
+
+  <Reviews />
+
+  <!-- Blog -->
+  {posts.length > 0 && (
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+      <h2 class="text-3xl sm:text-4xl font-bold text-ink text-center rule rule-center">Roofing advice for this area</h2>
+      <p class="mt-8 text-center text-slate/70 max-w-3xl mx-auto">
+        Written for houses around Orpington rather than for the internet in general.
+      </p>
+      <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {posts.map((post) => (
+          <a href={`/blog/${post.id}`} class="group rounded-xl border border-slate/15 bg-white overflow-hidden shadow-sm hover:border-brand transition-colors flex flex-col">
+            <img src={post.data.heroImage} alt={post.data.title}
+              class="w-full object-cover aspect-[3/2]" width="600" height="400" loading="lazy" />
+            <div class="p-6 flex flex-col flex-1">
+              <p class="text-xs font-semibold uppercase tracking-wide text-brand-dark">
+                {post.data.pubDate.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}
+              </p>
+              <h3 class="mt-2 text-lg font-bold text-ink group-hover:text-brand-dark">{post.data.title}</h3>
+              <p class="mt-2 text-sm text-slate/80 flex-1">{post.data.description}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+      <p class="mt-10 text-center">
+        <a href="/blog" class="inline-flex items-center gap-1 text-brand-dark font-semibold hover:underline">
+          All roofing guides<span aria-hidden="true">&rarr;</span>
+        </a>
+      </p>
+    </section>
+  )}
+
+  <!-- Pricing -->
+  <section class="bg-slate text-white">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold">What roof work costs in Orpington</h2>
+      <p class="mt-6 text-steel-light max-w-3xl mx-auto">
+        Single-fault repairs generally fall between £180 and £900 including access. Rebedding
+        the hips and ridge on a 1930s semi is £900 to £1,600. A lead chimney flashing is £450
+        to £950. Re-covering a flat extension roof in EPDM is £1,600 to £2,900. A full re-roof
+        on a standard three-bedroom semi runs £7,000 to £14,000 with scaffolding, new treated
+        battens and breathable membrane included. The cost guide breaks all of it down, and
+        explains the three things that legitimately change a price once a roof is opened up.
+      </p>
+      <a href="/roof-repair-cost" class="mt-8 inline-flex items-center rounded-md bg-brand px-6 py-3 text-base font-bold text-white shadow-sm hover:bg-brand-light hover:text-ink">
+        See the full cost guide
+      </a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+    <h2 class="text-3xl sm:text-4xl font-bold text-ink text-center rule rule-center">Questions people ask us first</h2>
+    <div class="mt-10 max-w-3xl mx-auto divide-y divide-slate/15">
+      {faqs.map((faq) => (
+        <div class="py-6">
+          <h3 class="text-lg font-semibold text-ink">{faq.question}</h3>
+          <p class="mt-2 text-slate/80">{faq.answer}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Areas -->
+  <section class="bg-white border-y border-slate/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+      <h2 class="text-3xl sm:text-4xl font-bold text-ink text-center rule rule-center">Where we work</h2>
+      <p class="mt-8 text-center text-slate/70 max-w-3xl mx-auto">
+        Orpington is the middle of our patch rather than the edge of it. Petts Wood, the Crays
+        and Farnborough are a few minutes away; Chislehurst and Bromley are a straight run
+        north; Chelsfield and Biggin Hill climb up onto the Downs; and we cross two boundaries
+        regularly - into Bexley at Sidcup, and into Kent at Swanley. Each of those towns has
+        its own page, because the housing and the planning rules genuinely differ.
+      </p>
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {locations.map((l) => (
+          <a href={`/${l.slug}`} class="group rounded-lg border border-slate/15 bg-paper px-5 py-4 hover:border-brand transition-colors">
+            <p class="font-bold text-ink group-hover:text-brand-dark">Roofers in {l.name}</p>
+            <p class="mt-1 text-xs text-slate/60">{l.postcode} · {l.council} · {l.driveTime} away</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="bg-ink text-white">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold">Find out what is actually up there</h2>
+      <p class="mt-6 text-steel-light max-w-2xl mx-auto">
+        Half an hour, no charge, no obligation. We look at the roof and the loft, photograph
+        anything worth showing you, and give you a written verdict with a fixed price if
+        something needs doing. If nothing does, you get that in writing as well.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href={business.phoneHref} class="inline-flex items-center rounded-md bg-brand px-6 py-3 text-base font-bold text-white shadow-sm hover:bg-brand-light hover:text-ink">
+          Call {business.phone}
+        </a>
+        <a href="/contact" class="inline-flex items-center rounded-md border border-steel-light/40 px-6 py-3 text-base font-semibold text-white hover:bg-white/10">
+          Book A Free Survey
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <NextPage current="/" />
+</Layout>

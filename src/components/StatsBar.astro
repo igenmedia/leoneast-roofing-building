@@ -1,0 +1,25 @@
+---
+import { business } from "../data/business";
+
+// No invented job counts, years-trading figures or review scores. The client
+// has not supplied any, and a made-up number on a trade site is both a lie
+// and the easiest thing in the world for a competitor to disprove. Every slot
+// below is either a real term (the guarantee) or a plain statement of how the
+// firm works. Replace the first slot with a genuine total once one is given.
+const items = [
+  { label: `${business.workmanshipGuaranteeYears} years`, sub: "Workmanship guarantee, written down" },
+  { label: "No charge", sub: "For surveys, quotes and second opinions" },
+  { label: "Photographed", sub: "Every fault, before you hear a price" },
+  { label: "Orpington", sub: "Based here, so most of BR is minutes away" },
+];
+---
+<section class="bg-ink text-white">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-2 lg:grid-cols-4 gap-6">
+    {items.map((i) => (
+      <div class="border-l-2 border-brand pl-4">
+        <p class="text-lg font-bold text-white">{i.label}</p>
+        <p class="mt-1 text-sm text-steel-light/70">{i.sub}</p>
+      </div>
+    ))}
+  </div>
+</section>
