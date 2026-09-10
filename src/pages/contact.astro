@@ -110,6 +110,18 @@ const faqSchema = {
           </div>
         )}
         <div class="border-l-2 border-brand pl-5">
+          <dt class="text-sm font-semibold uppercase tracking-wide text-slate/60">Office</dt>
+          <dd class="mt-1">
+            <address class="not-italic text-slate/80 leading-relaxed">
+              {business.addresses[0].map((line) => <span class="block">{line}</span>)}
+            </address>
+            <p class="mt-3 text-sm text-slate/60">
+              Post and paperwork only - the work is done at your house, and the survey comes
+              to you.
+            </p>
+          </dd>
+        </div>
+        <div class="border-l-2 border-brand pl-5">
           <dt class="text-sm font-semibold uppercase tracking-wide text-slate/60">Hours</dt>
           <dd class="mt-1 text-slate/80">
             {business.openingHours.opens} to {business.openingHours.closes}, Monday to Saturday.
@@ -144,7 +156,7 @@ const faqSchema = {
           style="border:0;"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-          title="Map of Orpington, our base"
+          title="Map of Orpington and the surrounding service area"
         ></iframe>
       </div>
     </div>

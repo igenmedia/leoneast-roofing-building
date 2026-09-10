@@ -368,9 +368,8 @@ const year = new Date().getFullYear();
             {hasEmail && (
               <li><a href={`mailto:${business.email}`} class="hover:text-brand-light break-all">{business.email}</a></li>
             )}
-            {hasAddress && (
-              <li>{business.address.street}, {business.address.locality}, {business.address.postcode}</li>
-            )}
+            {/* The address is not repeated here - both offices are set out
+                in full in the block at the foot of the page. */}
             <li>{business.serviceAreaLabel}</li>
           </ul>
           <h3 class="text-sm font-semibold text-white uppercase tracking-wide mt-6 mb-3">Areas We Cover</h3>

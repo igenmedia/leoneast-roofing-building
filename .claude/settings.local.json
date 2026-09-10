@@ -4,7 +4,18 @@
       "Bash(npx astro *)",
       "Bash(python3 -c ' *)",
       "Bash(git add *)",
-      "Bash(git commit -q -m 'Add both client addresses to the footer *)"
+      "Bash(git commit -q -m 'Add both client addresses to the footer *)",
+      "Bash(git remote *)",
+      "Bash(git push *)",
+      "Read(//Users/charlieclark/**)",
+      "Bash(ssh -o BatchMode=yes -o StrictHostKeyChecking=accept-new -o ConnectTimeout=10 -T git@github.com)",
+      "Bash(ssh-keygen -t ed25519 -C \"charlie.clark2403@outlook.com\" -f ~/.ssh/id_ed25519 -N \"\" -q)",
+      "Bash(chmod 600 ~/.ssh/id_ed25519)",
+      "Bash(ssh-add --apple-use-keychain ~/.ssh/id_ed25519)",
+      "Bash(printf 'Host github.com\\\\n  HostName github.com\\\\n  User git\\\\n  IdentityFile ~/.ssh/id_ed25519\\\\n  AddKeysToAgent yes\\\\n  UseKeychain yes\\\\n')",
+      "Bash(ssh -o StrictHostKeyChecking=accept-new -T git@github.com)",
+      "Bash(git count-objects *)",
+      "Bash(git commit -q -m 'Set the Dulwich office as the trading address *)"
     ]
   }
 }

@@ -39,28 +39,33 @@ export const business = {
   serviceAreaLabel:
     "Covering Orpington and the BR postcodes around it - Petts Wood, Chislehurst, Bromley, the Crays, Chelsfield, Farnborough, West Wickham, Beckenham, Biggin Hill, and over the borough line into Sidcup and Swanley",
 
-  // Kept empty on purpose. This drives the LocalBusiness schema, which needs
-  // a single trading address - and we have two office addresses rather than a
-  // yard, with no steer on which is the trading one. An areaServed-only
-  // listing is the safer record for a business working out of vans. The two
-  // addresses below are displayed in the footer instead.
+  // Trading address - drives the footer, the contact page and the
+  // LocalBusiness schema. Client confirmed the Dulwich office is the trading
+  // one of the two.
   address: {
-    street: "",
-    locality: "Orpington",
+    street: "70 Dulwich Business Park, Malham Road",
+    locality: "London",
     region: "Greater London",
-    postcode: "",
+    postcode: "SE23 1AG",
   },
 
-  // Both supplied by the client, shown in the footer.
+  // Both client addresses, shown together at the foot of every page. The
+  // first is the trading address above; the second is listed as a further
+  // office. Only the trading one goes into schema, so the NAP stays single
+  // and consistent.
   addresses: [
     ["70 Dulwich Business Park", "Malham Road", "London", "SE23 1AG", "England"],
     ["23 Kingfisher House", "Elmfield Road", "Bromley", "BR1 1LT", "England"],
   ],
 
-  // Centroid of BR6 0JA, Orpington ward, verified against postcodes.io.
+  // Centroid of SE23 1AG, verified against postcodes.io. This matches the
+  // trading address above rather than the service centre - schema `geo` and
+  // schema `address` have to describe the same place or the record is
+  // self-contradictory. Where the firm actually works is expressed through
+  // `areaServed`, which lists Orpington and all eleven towns.
   geo: {
-    latitude: 51.3748,
-    longitude: 0.0973,
+    latitude: 51.4428,
+    longitude: -0.0481,
   },
   serviceRadiusKm: 14,
 
