@@ -39,16 +39,23 @@ export const business = {
   serviceAreaLabel:
     "Covering Orpington and the BR postcodes around it - Petts Wood, Chislehurst, Bromley, the Crays, Chelsfield, Farnborough, West Wickham, Beckenham, Biggin Hill, and over the borough line into Sidcup and Swanley",
 
-  // TODO(client): no trading address supplied. Everything address-shaped is
-  // behind this flag, and the LocalBusiness schema falls back to an
-  // areaServed-only listing, which is what Google expects from a business
-  // that works out of vans rather than a shopfront.
+  // Kept empty on purpose. This drives the LocalBusiness schema, which needs
+  // a single trading address - and we have two office addresses rather than a
+  // yard, with no steer on which is the trading one. An areaServed-only
+  // listing is the safer record for a business working out of vans. The two
+  // addresses below are displayed in the footer instead.
   address: {
     street: "",
     locality: "Orpington",
     region: "Greater London",
     postcode: "",
   },
+
+  // Both supplied by the client, shown in the footer.
+  addresses: [
+    ["70 Dulwich Business Park", "Malham Road", "London", "SE23 1AG", "England"],
+    ["23 Kingfisher House", "Elmfield Road", "Bromley", "BR1 1LT", "England"],
+  ],
 
   // Centroid of BR6 0JA, Orpington ward, verified against postcodes.io.
   geo: {

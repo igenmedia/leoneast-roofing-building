@@ -392,6 +392,15 @@ const year = new Date().getFullYear();
           </ul>
         </div>
       </div>
+      <div class="border-t border-steel">
+        <div class="mx-auto max-w-4xl px-4 py-8 grid gap-6 sm:grid-cols-2 text-center sm:text-left">
+          {business.addresses.map((lines) => (
+            <address class="text-sm not-italic text-steel-light/70 leading-relaxed">
+              {lines.map((line) => <span class="block">{line}</span>)}
+            </address>
+          ))}
+        </div>
+      </div>
       <div class="border-t border-steel py-6 text-center text-xs text-steel-light/60 px-4 space-y-2 max-w-4xl mx-auto">
         <p>
           {hasCompanyDetails ? (
