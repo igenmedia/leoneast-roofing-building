@@ -1,0 +1,116 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { company, photo } from "../data/company";
+import QuoteForm from "../components/QuoteForm.astro";
+import CallStrip from "../components/CallStrip.astro";
+const lead = photo("chimney-repairs-bromley-brick-stack");
+---
+
+<Layout
+  title="Chimney & Guttering Work in Bromley | LeonEast Roofing"
+  description="Chimney repairs and guttering across Bromley. Lead flashings, repointing, flaunching, rebuilds and removals, plus gutters, fascias and soffits cleared or replaced."
+  lead={lead}
+>
+  <section class="bg-carbon text-white">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 py-12 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-wide text-volt-bright">Chimneys &amp; guttering</p>
+        <h1 class="mt-2 text-4xl sm:text-5xl font-bold leading-tight">Chimneys and guttering</h1>
+        <p class="mt-5 text-lg text-mist">
+          The two least interesting parts of a roof and between them the cause of a
+          remarkable amount of internal damp. Both are cheap to sort early and expensive to
+          sort late.
+        </p>
+        <a href={company.phoneLink} class="mt-7 inline-flex rounded bg-volt px-6 py-3 text-lg font-bold text-white hover:bg-volt-deep">
+          {company.phone}
+        </a>
+      </div>
+      <img src={lead} alt="A brick chimney stack rising above a tiled roof"
+        class="w-full rounded-lg object-cover aspect-[4/3]" width="1200" height="900"
+        fetchpriority="high" loading="eager" />
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-4 sm:px-6 py-14 grid lg:grid-cols-3 gap-10">
+    <div class="lg:col-span-2">
+      <h2 class="text-2xl sm:text-3xl font-bold text-carbon">Chimneys</h2>
+      <p class="mt-4 text-graphite/80">
+        If we had to name the most misdiagnosed damp in a house it would be the chimney, and
+        it is not close. A stack is exposed on all four sides, has no roof of its own, and is
+        held together by mortar that is often a century old. Water gets in at the top through
+        cracked flaunching or open joints, runs down inside the flue, and shows up on a wall
+        a floor or two below - which is why people spend money on entirely the wrong wall.
+      </p>
+      <p class="mt-4 text-graphite/80">
+        The other thing we find constantly is a cement fillet where the lead flashing should
+        be. A lot of stacks had theirs replaced with a triangle of sand and cement at some
+        point in the eighties, because it is quicker. Cement is rigid, the stack and the roof
+        move independently, and it always cracks in the end. Lead flexes and lasts forty to
+        sixty years.
+      </p>
+      <p class="mt-4 text-graphite/80">
+        Worth knowing: not all chimney damp is a leak. It can be condensation in a cold
+        unventilated flue, or salts drawn out of an old lining. Three different problems,
+        three different fixes, so we look inside as well as up before recommending anything.
+      </p>
+      <p class="mt-4 text-graphite/80">
+        Flashings in lead are £450 to £950. Repointing above the roof line is £600 to £1,500 -
+        and on older soft brickwork it wants a lime mix, because hard modern cement traps
+        moisture and pushes the decay into the bricks. New flaunching with the pots rebedded
+        is £350 to £700, much less if it is done while the access is already up. Taking a
+        redundant stack down to below the roof line and making good is £900 to £2,000.
+      </p>
+
+      <h2 class="mt-10 text-2xl sm:text-3xl font-bold text-carbon">Guttering, fascias and soffits</h2>
+      <img src={photo("blocked-gutter-leaves-autumn-roof")}
+        alt="A roof gutter filled with fallen autumn leaves"
+        class="mt-5 w-full rounded-lg object-cover aspect-[3/2]" width="800" height="533" loading="lazy" />
+      <p class="mt-6 text-graphite/80">
+        Clearing a gutter is the cheapest job on this website and it prevents the most
+        expensive one. A gutter that overflows at one corner soaks the fascia behind it, the
+        fascia rots, the rafter ends follow, and a fifty pound bracket job becomes several
+        thousand pounds of timber work. Bromley is one of the greenest boroughs in London,
+        which is lovely to live in and hard on gutters every October.
+      </p>
+      <p class="mt-4 text-graphite/80">
+        When a fascia does need replacing we take the old board off rather than capping over
+        it. Capping means fixing new plastic over the existing timber - quicker, cheaper, and
+        it seals a rotten board and whatever is happening to the rafter ends behind a nice
+        new cover. You cannot tell the difference once it is finished, which is exactly why
+        it is worth asking about.
+      </p>
+      <p class="mt-4 text-graphite/80">
+        Clearing gutters and downpipes on a standard semi is £90 to £180. New guttering is
+        £25 to £45 a metre. A full roofline - gutters, fascias and soffits together - runs
+        £1,400 to £3,200 depending on the length and the access.
+      </p>
+
+      <h2 class="mt-10 text-2xl sm:text-3xl font-bold text-carbon">A few questions we get</h2>
+      <dl class="mt-5 space-y-5">
+        <div>
+          <dt class="font-bold text-carbon">My chimney breast is damp but the roof looks fine.</dt>
+          <dd class="mt-1 text-graphite/80">That is the classic. It usually means water is getting in at the top of the stack rather than through the roof at all. Worth having looked at before winter.</dd>
+        </div>
+        <div>
+          <dt class="font-bold text-carbon">Can you take a chimney down?</dt>
+          <dd class="mt-1 text-graphite/80">Yes, normally to below the roof line with the covering made good over the top. Removing the breast inside the house too is a bigger and structural job. We will be honest about whether you will regret losing the fireplace.</dd>
+        </div>
+        <div>
+          <dt class="font-bold text-carbon">How often should gutters be cleared?</dt>
+          <dd class="mt-1 text-graphite/80">Once a year, late autumn, after the leaves are down. Twice if you have mature trees directly overhead, which on a lot of streets round here you do.</dd>
+        </div>
+        <div>
+          <dt class="font-bold text-carbon">There are birds nesting in my soffit.</dt>
+          <dd class="mt-1 text-graphite/80">Then it has to wait. Nesting birds are legally protected while the nest is in use. We will make a temporary repair to keep the weather out and come back properly from late summer.</dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="lg:sticky lg:top-6 self-start">
+      <QuoteForm title="Get a price" source="Chimneys and guttering" />
+    </div>
+  </section>
+
+  <CallStrip heading="Gutters worth doing before winter?"
+    text="It is the cheapest thing we do and it heads off the most expensive. Ring and we will book you in." />
+</Layout>

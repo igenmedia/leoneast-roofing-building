@@ -1,0 +1,81 @@
+---
+import { company, services } from "../data/company";
+import { areas } from "../data/areas";
+
+const year = new Date().getFullYear();
+const hasEmail = Boolean(company.email);
+const hasNumber = Boolean(company.companyNumber);
+---
+
+<footer class="bg-carbon text-mist">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 py-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+    <div>
+      <img src="/images/leoneast-roofing-logo.svg" alt={`${company.name} logo`}
+        class="h-14 w-auto mb-4" width="560" height="150" />
+      <p class="text-sm text-mist/70">
+        Roofing and building work across {company.town} and the surrounding areas. Every job
+        looked at properly before it is priced, and every price fixed in writing.
+      </p>
+      <a href={company.phoneLink} class="mt-5 inline-flex items-center rounded bg-volt px-5 py-2.5 font-bold text-white hover:bg-volt-deep">
+        {company.phone}
+      </a>
+    </div>
+
+    <div>
+      <h2 class="text-sm font-semibold uppercase tracking-wide text-white">What we do</h2>
+      <ul class="mt-3 space-y-2 text-sm text-mist/70">
+        {services.map((s) => <li><a href={s.href} class="hover:text-volt-bright">{s.name}</a></li>)}
+        <li><a href="/areas-we-cover" class="hover:text-volt-bright">Areas we cover</a></li>
+        <li><a href="/about" class="hover:text-volt-bright">About us</a></li>
+        <li><a href="/contact" class="hover:text-volt-bright">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="text-sm font-semibold uppercase tracking-wide text-white">Where to find us</h2>
+      <div class="mt-3 space-y-4 text-sm text-mist/70">
+        <address class="not-italic">
+          <span class="block text-mist">Office</span>
+          {company.office.line1}, {company.office.line2}<br />
+          {company.office.town}, {company.office.postcode}
+        </address>
+        <address class="not-italic">
+          <span class="block text-mist">Trading address</span>
+          {company.tradingAddress.line1}, {company.tradingAddress.line2}<br />
+          {company.tradingAddress.town}, {company.tradingAddress.postcode}
+        </address>
+        {hasEmail && <p><a href={`mailto:${company.email}`} class="hover:text-volt-bright break-all">{company.email}</a></p>}
+        <p>{company.hours}</p>
+      </div>
+      {company.social.length > 0 && (
+        <ul class="mt-4 flex gap-3">
+          {company.social.map((s) => (
+            <li><a href={s.url} target="_blank" rel="noopener noreferrer me" class="text-sm hover:text-volt-bright">{s.name}</a></li>
+          ))}
+        </ul>
+      )}
+    </div>
+  </div>
+
+  <div class="border-t border-gunmetal">
+    <p class="mx-auto max-w-6xl px-4 sm:px-6 py-4 text-xs text-mist/50">
+      Covering {areas.slice(0, -1).join(", ")} and {areas[areas.length - 1]}.
+    </p>
+  </div>
+
+  <div class="border-t border-gunmetal">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 py-5 text-xs text-mist/50 sm:flex sm:items-center sm:justify-between">
+      <p>
+        &copy; {year} {company.name}.
+        {hasNumber
+          ? ` Registered in England and Wales, company number ${company.companyNumber}.`
+          : " A limited company registered in England and Wales."}
+      </p>
+      <p class="mt-2 sm:mt-0">
+        <a href="/privacy-policy" class="hover:text-mist">Privacy</a>
+        <span class="mx-2">·</span>
+        <a href="/terms-and-conditions" class="hover:text-mist">Terms</a>
+      </p>
+    </div>
+  </div>
+</footer>

@@ -1,15 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { business } from "../data/business";
+import { company } from "../data/company";
 
-// Legal boilerplate. noindex and out of the sitemap, per project standard.
-//
-// This site belongs to the trading company itself, so - unlike some others in
-// this portfolio - there is no separate site operator and no third-party
-// contractor arrangement to explain. Contracts are made directly with
-// LeonEast Roofing & Building Limited.
-const hasEmail = Boolean(business.email);
-const hasCompanyDetails = Boolean(business.companyNumber);
+// Noindex, and excluded from the sitemap. Contracts are made directly with
+// LeonEast Roofing & Building Limited - there is no separate site operator.
+const hasEmail = Boolean(company.email);
+const hasCompanyDetails = Boolean(company.companyNumber);
 const updated = "10 September 2026";
 ---
 
@@ -18,21 +14,21 @@ const updated = "10 September 2026";
   description="The terms on which LeonEast Roofing & Building provides surveys, quotations and roofing work, and how the workmanship guarantee applies."
   noindex={true}
 >
-  <section class="bg-ink text-white">
+  <section class="bg-carbon text-white">
     <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 text-center">
       <h1 class="text-4xl sm:text-5xl font-bold tracking-tight">
-        <a href="/" class="text-white hover:text-brand-light transition-colors">Terms &amp; Conditions</a>
+        Terms &amp; Conditions
       </h1>
-      <p class="mt-4 text-steel-light">Last updated: {updated}</p>
+      <p class="mt-4 text-mist">Last updated: {updated}</p>
     </div>
   </section>
 
-  <section class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 prose prose-stone max-w-none">
+  <section class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 prose prose-neutral max-w-none">
     <h2>About us and this website</h2>
     <p>
-      This website is owned and operated by {business.name}
+      This website is owned and operated by {company.name}
       {hasCompanyDetails
-        ? `, a company registered in England and Wales under number ${business.companyNumber}`
+        ? `, a company registered in England and Wales under number ${company.companyNumber}`
         : ", a limited company registered in England and Wales"}.
       Any contract for surveys, quotations or roofing work arising from this website is made
       directly with us.
@@ -84,7 +80,7 @@ const updated = "10 September 2026";
 
     <h2>The workmanship guarantee</h2>
     <p>
-      Work we complete carries a {business.workmanshipGuaranteeYears} year guarantee on our
+      Work we complete carries a {company.guaranteeYears} year guarantee on our
       workmanship, issued to you in writing at completion. If a defect arises in that
       workmanship within the guarantee period we will return and put it right at no cost to
       you.
@@ -120,8 +116,8 @@ const updated = "10 September 2026";
     <h2>Complaints</h2>
     <p>
       If something is not right, please tell us as soon as possible on
-      {" "}<a href={business.phoneHref}>{business.phone}</a>
-      {hasEmail && <> or by email at <a href={`mailto:${business.email}`}>{business.email}</a></>}.
+      {" "}<a href={company.phoneLink}>{company.phone}</a>
+      {hasEmail && <> or by email at <a href={`mailto:${company.email}`}>{company.email}</a></>}.
       We would far rather come back and sort it out than have you unhappy with a roof we
       worked on.
     </p>

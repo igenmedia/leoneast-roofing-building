@@ -1,0 +1,84 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { company, photo } from "../data/company";
+import Testimonials from "../components/Testimonials.astro";
+import CallStrip from "../components/CallStrip.astro";
+const lead = photo("roofer-working-tiled-roof-bromley");
+---
+
+<Layout
+  title="About Us | LeonEast Roofing & Building"
+  description="LeonEast Roofing & Building is a roofing firm working out of Bromley. What we do, how we price, and what the 10 year workmanship guarantee actually covers."
+  lead={lead}
+>
+  <section class="bg-carbon text-white">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 py-12 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-4xl sm:text-5xl font-bold leading-tight">About us</h1>
+        <p class="mt-5 text-lg text-mist">
+          {company.name} is a roofing and building firm working out of Bromley, covering the
+          towns around it. Roofs are what we do all day - repairs, re-roofs, flat roofs,
+          chimneys and guttering - on the houses this part of south east London is actually
+          made of.
+        </p>
+      </div>
+      <img src={lead} alt="A roofer working on the tiled roof of a house"
+        class="w-full rounded-lg object-cover aspect-[4/3]" width="800" height="600"
+        fetchpriority="high" loading="eager" />
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-4 sm:px-6 py-14 max-w-3xl">
+    <h2 class="text-2xl sm:text-3xl font-bold text-carbon">How we price</h2>
+    <p class="mt-4 text-graphite/80">
+      We come and look first, every time. Nobody can diagnose a roof from a driveway, and a
+      quote produced without going up is a guess with a number attached. There is no charge
+      for the visit and nothing to sign afterwards.
+    </p>
+    <p class="mt-4 text-graphite/80">
+      You get photographs of whatever we find before you get a figure. The quote is itemised,
+      with the materials, the labour and the access on separate lines, and the total on it is
+      the total on the invoice. If something genuinely hidden turns up once a roof is opened
+      up - rot in the rafter feet, a chimney worse than it looked - it gets described, priced
+      and agreed with you before anybody carries on.
+    </p>
+
+    <h2 class="mt-10 text-2xl sm:text-3xl font-bold text-carbon">The guarantee</h2>
+    <p class="mt-4 text-graphite/80">
+      Every van in south London says "all work guaranteed" and it costs nothing to paint on.
+      Ours is a dated, signed document specific to your job, handed over when we finish along
+      with the photographs. {company.guaranteeYears} years on our workmanship: if water finds
+      its way back through something we repaired, we come back and put it right at no cost.
+    </p>
+    <p class="mt-4 text-graphite/80">
+      Materials carry their manufacturers' own cover on top, which varies from product to
+      product, so your paperwork names the one that applies to your roof rather than quoting
+      an average at you.
+    </p>
+    <p class="mt-4 text-graphite/80">
+      A guarantee lasting a decade only works if the repairs do not come back, which is why
+      failed material comes off rather than being sealed over, junctions get lead rather than
+      a fillet of cement, and anything we cannot deal with on the day gets photographed and
+      said out loud.
+    </p>
+
+    <h2 class="mt-10 text-2xl sm:text-3xl font-bold text-carbon">Insurance and paperwork</h2>
+    <p class="mt-4 text-graphite/80">
+      We carry public liability insurance and are happy to show you the certificate - it
+      takes ten seconds and almost nobody asks. {company.name} is a limited company
+      registered in England and Wales. Where a job is going through a buildings insurance
+      claim we will photograph the damage before anything is touched and describe it in
+      writing for the loss adjuster, which is usually what decides whether a claim is paid.
+    </p>
+
+    <h2 class="mt-10 text-2xl sm:text-3xl font-bold text-carbon">Where to find us</h2>
+    <p class="mt-4 text-graphite/80">
+      The office is at {company.office.line1}, {company.office.line2}, {company.office.town}
+      {" "}{company.office.postcode}. It is for post and paperwork - surveys happen at your
+      house, not ours. Open {company.hours}.
+    </p>
+  </section>
+
+  <Testimonials />
+  <CallStrip />
+</Layout>

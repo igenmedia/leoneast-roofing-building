@@ -1,17 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { business } from "../data/business";
+import { company } from "../data/company";
 
-// Legal boilerplate. Kept noindex and out of the sitemap, which is the project
-// standard - see RULE ZERO in the shared CLAUDE.md, where legal pages are the
-// one legitimate exception to the no-shared-prose rule.
+// Noindex, and excluded from the sitemap.
 //
-// TODO(client): once the Companies House number and registered office for
-// LeonEast Roofing & Building Limited are confirmed, hardcode the registered
-// office in the "Who we are" section below. Per project convention the
-// registered address is written into this page directly rather than pulled
-// from business.ts, so that editing business.ts can never silently change it.
-const hasEmail = Boolean(business.email);
+// TODO(client): when the Companies House number and registered office are
+// confirmed, write the registered office into "Who we are" below directly
+// rather than pulling it from company.ts, so that editing company.ts can
+// never silently change a legal document.
+const hasEmail = Boolean(company.email);
 const updated = "10 September 2026";
 ---
 
@@ -20,27 +17,27 @@ const updated = "10 September 2026";
   description="How LeonEast Roofing & Building collects, uses and stores the personal information you provide when requesting a roof survey or quote."
   noindex={true}
 >
-  <section class="bg-ink text-white">
+  <section class="bg-carbon text-white">
     <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 text-center">
       <h1 class="text-4xl sm:text-5xl font-bold tracking-tight">
-        <a href="/" class="text-white hover:text-brand-light transition-colors">Privacy Policy</a>
+        Privacy Policy
       </h1>
-      <p class="mt-4 text-steel-light">Last updated: {updated}</p>
+      <p class="mt-4 text-mist">Last updated: {updated}</p>
     </div>
   </section>
 
-  <section class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 prose prose-stone max-w-none">
+  <section class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 prose prose-neutral max-w-none">
     <h2>Who we are</h2>
     <p>
-      This website is operated by {business.name}, a limited company registered in England and
-      Wales, trading from {business.address.locality}, {business.address.region}. For the
+      This website is operated by {company.name}, a limited company registered in England and
+      Wales, trading from {company.office.town}, {company.county}. For the
       purposes of UK data protection law we are the data controller for the personal
       information described in this policy.
     </p>
     <p>
       You can contact us about anything in this policy by telephone on
-      {" "}<a href={business.phoneHref}>{business.phone}</a>
-      {hasEmail && <>, or by email at <a href={`mailto:${business.email}`}>{business.email}</a></>}.
+      {" "}<a href={company.phoneLink}>{company.phone}</a>
+      {hasEmail && <>, or by email at <a href={`mailto:${company.email}`}>{company.email}</a></>}.
     </p>
 
     <h2>What we collect</h2>
@@ -88,7 +85,7 @@ const updated = "10 September 2026";
     <h2>Who we share it with</h2>
     <p>
       We share personal information only where it is necessary to do the job or to run the
-      business. That may include our form provider and email provider, our website host, our
+      company. That may include our form provider and email provider, our website host, our
       accountant, our insurers, and - where you are making a claim - your own insurer or their
       loss adjuster. Where a job requires materials to be delivered to your address, the
       supplier will be given the delivery address. Each of these acts either as our processor

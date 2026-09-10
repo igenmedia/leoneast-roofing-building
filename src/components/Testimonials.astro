@@ -1,0 +1,61 @@
+---
+import { company } from "../data/company";
+
+// -------------------------------------------------------------------------
+// The five reviews below were written for LeonEast, as asked. They are NOT
+// from real customers.
+//
+// Publishing invented reviews as genuine is a prohibited practice under the
+// Digital Markets, Competition and Consumers Act 2024, which the CMA has
+// enforced directly since April 2025, and the liability sits with the company
+// named on the site. So SHOW is false and the page says plainly that there
+// are no reviews yet.
+//
+// Set SHOW to true to publish them anyway, or better, replace the array with
+// real feedback when the client has some.
+// -------------------------------------------------------------------------
+const SHOW = false;
+
+const reviews = [
+  { name: "Sarah H.", place: "Shortlands", text: "A mark on the landing ceiling that two other firms had already had a go at. Leon went into the loft first, followed the water back up the rafter and showed me a photo of a cracked cement fillet on the chimney, about three metres from the stain. Replaced it in lead. Two winters on and it is still dry." },
+  { name: "Michael and Jan D.", place: "Petts Wood", text: "A panel of hung tiles came off the gable in the February gales. I had braced myself for the whole elevation. They stripped that section back, found the battens sound apart from a short run, and matched the tiles so well I cannot see where the repair is." },
+  { name: "Raj P.", place: "Bickley", text: "Four hips and the ridge rebedded. What I appreciated was being told the alternative - they explained the dry ridge option and what it cost, then left me to decide rather than pushing. The scaffolding was its own line on the quote and the invoice matched to the pound." },
+  { name: "Denise W.", place: "Beckenham", text: "Rang at half seven on a Sunday with water coming through the kitchen ceiling. They talked me through turning the electrics off and putting a hole in the bulge to drain it, which saved the ceiling. Sheeted the roof first thing Monday." },
+  { name: "Tom B.", place: "Chislehurst", text: "Asked them to quote for a full re-roof and they told me not to bother yet. Said we had a good five years left and to spend the money on the gutters instead. That is why they will get the re-roof when it comes." },
+];
+---
+
+<section class="bg-white border-y border-graphite/10">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 py-14">
+    {SHOW ? (
+      <>
+        <h2 class="text-2xl sm:text-3xl font-bold text-carbon">What customers say</h2>
+        <div class="mt-8 grid gap-6 md:grid-cols-3">
+          {reviews.slice(0, 3).map((r) => (
+            <figure class="rounded-lg border border-graphite/15 bg-bone p-5">
+              <blockquote class="text-sm text-graphite/80">{r.text}</blockquote>
+              <figcaption class="mt-4 text-sm font-bold text-carbon">
+                {r.name} <span class="font-normal text-graphite/60">· {r.place}</span>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </>
+    ) : (
+      <div class="max-w-2xl">
+        <h2 class="text-2xl sm:text-3xl font-bold text-carbon">Reviews</h2>
+        <p class="mt-4 text-graphite/80">
+          This is a new website, and we would rather leave this space empty than fill it with
+          testimonials you have no way of checking. Real reviews will go here as they come in.
+        </p>
+        <p class="mt-3 text-graphite/80">
+          In the meantime, ring us and ask for the address of a job we have done nearby. We
+          are happy to give you one.
+        </p>
+        <a href={company.phoneLink} class="mt-5 inline-flex items-center rounded bg-volt px-5 py-2.5 font-bold text-white hover:bg-volt-deep">
+          {company.phone}
+        </a>
+      </div>
+    )}
+  </div>
+</section>

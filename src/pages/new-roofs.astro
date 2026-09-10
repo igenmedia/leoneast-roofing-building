@@ -1,5 +1,113 @@
 ---
-import ServicePage from "../layouts/ServicePage.astro";
-import { getService } from "../data/services";
+import Layout from "../layouts/Layout.astro";
+import { company, photo } from "../data/company";
+import QuoteForm from "../components/QuoteForm.astro";
+import CallStrip from "../components/CallStrip.astro";
+const lead = photo("new-roof-reroofing-bromley-tiles");
 ---
-<ServicePage service={getService("/new-roofs")} />
+
+<Layout
+  title="New Roofs & Re-Roofing in Bromley | LeonEast Roofing & Building"
+  description="Full re-roofing across Bromley. Stripped to the rafters, new treated battens and breathable membrane, tiles or slate matched to the house. Fixed price, 10 year guarantee."
+  lead={lead}
+>
+  <section class="bg-carbon text-white">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 py-12 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-wide text-volt-bright">New roofs</p>
+        <h1 class="mt-2 text-4xl sm:text-5xl font-bold leading-tight">New roofs and re-roofing</h1>
+        <p class="mt-5 text-lg text-mist">
+          A re-roof is the biggest piece of maintenance most houses ever have. The tiles are
+          the part you can see and usually the least of it - what decides whether a roof
+          lasts twenty years or sixty is the timber and the membrane underneath, and none of
+          that is visible once the job is done.
+        </p>
+        <a href={company.phoneLink} class="mt-7 inline-flex rounded bg-volt px-6 py-3 text-lg font-bold text-white hover:bg-volt-deep">
+          {company.phone}
+        </a>
+      </div>
+      <img src={lead} alt="Newly laid clay roof tiles on a pitched roof"
+        class="w-full rounded-lg object-cover aspect-[4/3]" width="1200" height="900"
+        fetchpriority="high" loading="eager" />
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-4 sm:px-6 py-14 grid lg:grid-cols-3 gap-10">
+    <div class="lg:col-span-2">
+      <h2 class="text-2xl sm:text-3xl font-bold text-carbon">When it is time</h2>
+      <p class="mt-4 text-graphite/80">
+        Three or four repairs in a few years, each in a different place, is a roof telling you
+        it has reached the end as a system rather than in one spot. So is a covering that has
+        started flaking and crumbling - concrete tiles lose their surface after fifty or sixty
+        years, go porous, gain weight and break up at the nose, and nothing can be done for a
+        tile in that state. So is felt you can see daylight through from the loft.
+      </p>
+      <p class="mt-4 text-graphite/80">
+        Sagging along the ridge or between the rafters is the one to act on promptly. It can
+        be as simple as failed battens, but it can also mean rot in the rafter feet or an old
+        alteration that was never done properly.
+      </p>
+
+      <h2 class="mt-10 text-2xl sm:text-3xl font-bold text-carbon">What you actually get</h2>
+      <p class="mt-4 text-graphite/80">
+        We strip the roof back to the rafters. We do not overlay a new covering on top of an
+        old one - it is quicker and cheaper and it hides every problem underneath while
+        adding weight the structure was never designed to carry.
+      </p>
+      <p class="mt-4 text-graphite/80">
+        Then graded, treated battens to the current standard. Battens are the cheapest part of
+        a roof and the first thing downgraded to win a quote, which is exactly why so many
+        postwar roofs need doing again after forty years. Breathable membrane over that, with
+        the eaves and ridge ventilation detailed to suit the roof rather than whatever comes
+        as standard. Then the covering, matched to the house and to the street.
+      </p>
+      <p class="mt-4 text-graphite/80">
+        You are welcome to come and look at the roof once it is stripped and before it is
+        covered. It is the only moment anyone can see what they are paying for, and we would
+        rather you did.
+      </p>
+
+      <img src={photo("stripped-roof-battens-membrane-reroof")}
+        alt="A roof stripped back to new battens and breathable membrane"
+        class="mt-10 w-full rounded-lg object-cover aspect-[3/2]" width="800" height="533" loading="lazy" />
+
+      <h2 class="mt-10 text-2xl sm:text-3xl font-bold text-carbon">Cost and timing</h2>
+      <p class="mt-4 text-graphite/80">
+        A standard three-bedroom semi is generally £7,000 to £14,000 including scaffolding,
+        battens, membrane, disposal and the tiles - clay costs more than concrete, and a
+        hipped roof costs more than a gabled one of the same size because there is more
+        cutting and more hip work. Natural slate pushes the top of that range higher. Larger
+        detached houses with dormers and valleys are priced individually.
+      </p>
+      <p class="mt-4 text-graphite/80">
+        Four to seven working days for a semi, weather permitting. We never leave a roof open
+        overnight, so a wet fortnight genuinely does stretch things. You can stay in the house
+        throughout - just clear the loft first, because dust gets everywhere once the old felt
+        comes off.
+      </p>
+
+      <h2 class="mt-10 text-2xl sm:text-3xl font-bold text-carbon">A few questions we get</h2>
+      <dl class="mt-5 space-y-5">
+        <div>
+          <dt class="font-bold text-carbon">What might change the price once you have started?</dt>
+          <dd class="mt-1 text-graphite/80">Only what is genuinely hidden: rotten rafter feet or wall plate, a chimney in worse shape than it looked, or an old conversion that was not done properly. All three are flagged on the quote as possibilities with indicative costs, so if one turns up it is a conversation and not a shock.</dd>
+        </div>
+        <div>
+          <dt class="font-bold text-carbon">Can you reuse my existing tiles?</dt>
+          <dd class="mt-1 text-graphite/80">Where they are sound, often yes, and on an older clay roof it is well worth it - they match perfectly and it cuts the material cost. Expect to lose ten to twenty per cent to breakage during the strip and buy in the difference.</dd>
+        </div>
+        <div>
+          <dt class="font-bold text-carbon">Do building regulations apply?</dt>
+          <dd class="mt-1 text-graphite/80">Generally yes on a full re-roof, mostly around insulation and structure. That is separate from planning permission, and a quote that has quietly ignored it will look cheaper than one that has not.</dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="lg:sticky lg:top-6 self-start">
+      <QuoteForm title="Get a price for a new roof" source="New roofs" />
+    </div>
+  </section>
+
+  <CallStrip heading="Want a second opinion on a quote?"
+    text="Bring us someone else's quote and we will go up, look for ourselves and tell you what we would do. Sometimes the answer is that their price is fair and you should take it." />
+</Layout>

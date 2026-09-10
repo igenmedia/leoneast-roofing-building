@@ -1,5 +1,100 @@
 ---
-import ServicePage from "../layouts/ServicePage.astro";
-import { getService } from "../data/services";
+import Layout from "../layouts/Layout.astro";
+import { company, photo } from "../data/company";
+import QuoteForm from "../components/QuoteForm.astro";
+import CallStrip from "../components/CallStrip.astro";
+const lead = photo("roof-repairs-bromley-tiled-roof");
 ---
-<ServicePage service={getService("/roof-repairs")} />
+
+<Layout
+  title="Roof Repairs in Bromley | LeonEast Roofing & Building"
+  description="Roof repairs across Bromley and south east London. Slipped tiles, cracked mortar, leaks traced to the source. We look before we price and fix the cause, not the symptom."
+  lead={lead}
+>
+  <section class="bg-carbon text-white">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 py-12 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-wide text-volt-bright">Roof repairs</p>
+        <h1 class="mt-2 text-4xl sm:text-5xl font-bold leading-tight">Roof repairs in Bromley</h1>
+        <p class="mt-5 text-lg text-mist">
+          Most roofs do not fail all at once. They give way in one small place, then carry on
+          looking perfectly fine from the pavement while water gets in behind - which is why
+          so many people find out through a ceiling rather than through the roof.
+        </p>
+        <a href={company.phoneLink} class="mt-7 inline-flex rounded bg-volt px-6 py-3 text-lg font-bold text-white hover:bg-volt-deep">
+          {company.phone}
+        </a>
+      </div>
+      <img src={lead} alt="Clay tiles and a brick gable on a house in Bromley"
+        class="w-full rounded-lg object-cover aspect-[4/3]" width="1200" height="900"
+        fetchpriority="high" loading="eager" />
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-4 sm:px-6 py-14 grid lg:grid-cols-3 gap-10">
+    <div class="lg:col-span-2">
+      <h2 class="text-2xl sm:text-3xl font-bold text-carbon">What we get called out to</h2>
+      <p class="mt-4 text-graphite/80">
+        A tile in the flower bed. Crumbling grey mortar along the hips of a 1930s semi -
+        easily the most common job on our books around here, because mortar lasts forty to
+        sixty years and most of it has now had ninety. A damp patch on a ceiling that keeps
+        coming back because somebody fixed the stain rather than the leak. Gutters pouring
+        over at one corner every time it rains.
+      </p>
+      <p class="mt-4 text-graphite/80">
+        Water almost never comes in directly above where it shows. It gets in at a fault, runs
+        along a rafter or across the loft insulation, and drops through at the first place it
+        can - sometimes three or four metres away. Finding the real entry point is the actual
+        skill in roof repair, and it is the step that gets skipped when a repair fails twice.
+      </p>
+
+      <h2 class="mt-10 text-2xl sm:text-3xl font-bold text-carbon">How a repair goes</h2>
+      <ol class="mt-5 space-y-4 text-graphite/80">
+        <li><span class="font-bold text-carbon">1.</span> You ring and describe what you have seen. Plain words are fine.</li>
+        <li><span class="font-bold text-carbon">2.</span> We come and look - the roof from above, and the loft from inside if there is a leak involved. No charge for that.</li>
+        <li><span class="font-bold text-carbon">3.</span> You get photographs of the fault and a fixed price, itemised, with the access on its own line.</li>
+        <li><span class="font-bold text-carbon">4.</span> We do the work, clear up, and hand over the {company.guaranteeYears} year guarantee.</li>
+      </ol>
+
+      <img src={photo("damaged-roof-tiles-close-up-bromley")}
+        alt="Cracked and displaced roof tiles on an older pitched roof"
+        class="mt-10 w-full rounded-lg object-cover aspect-[3/2]" width="800" height="533" loading="lazy" />
+
+      <h2 class="mt-10 text-2xl sm:text-3xl font-bold text-carbon">Rough costs</h2>
+      <p class="mt-4 text-graphite/80">
+        A single slipped or cracked tile is usually £180 to £320. Rebedding one hip runs £350
+        to £650, and doing all four hips and the ridge on a typical semi is £900 to £1,600. A
+        chimney flashing renewed in lead is £450 to £950. Where a full scaffold is needed,
+        allow £800 to £1,600 on top - and expect to see that as a separate line rather than
+        buried in the total.
+      </p>
+      <p class="mt-4 text-graphite/80">
+        Those are honest brackets, not a quote. What you get after we have been out is one
+        fixed figure that does not move.
+      </p>
+
+      <h2 class="mt-10 text-2xl sm:text-3xl font-bold text-carbon">A few questions we get</h2>
+      <dl class="mt-5 space-y-5">
+        <div>
+          <dt class="font-bold text-carbon">Do I need planning permission?</dt>
+          <dd class="mt-1 text-graphite/80">Not for a repair. Putting back the same tile, rebedding a ridge or renewing a flashing is maintenance and needs no consent. It only comes into it if the work changes the shape or the appearance of the roof - a dormer, or a different covering - and Bromley has conservation areas and Article 4 rules in places. We will say so if we think it applies to you.</dd>
+        </div>
+        <div>
+          <dt class="font-bold text-carbon">Why did my last repair not work?</dt>
+          <dd class="mt-1 text-graphite/80">Nearly always because it was done where the stain was rather than where the water was getting in. The other common reason is mastic smeared over a fault instead of the fault being repaired - that buys a year or two and then cracks.</dd>
+        </div>
+        <div>
+          <dt class="font-bold text-carbon">Can you match old tiles?</dt>
+          <dd class="mt-1 text-graphite/80">Usually. The interwar streets round here used a fairly small range of clay tiles and reclaimed stock is easy to come by. Some 1960s and 70s concrete profiles are no longer made, and in that case we will show you the closest match before ordering anything.</dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="lg:sticky lg:top-6 self-start">
+      <QuoteForm title="Get a price for your repair" source="Roof repairs" />
+    </div>
+  </section>
+
+  <CallStrip heading="Not sure how urgent it is?"
+    text="Ring and describe it. Half the time we can tell you on the phone whether it needs doing this week or can wait until spring." />
+</Layout>

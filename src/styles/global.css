@@ -1,34 +1,30 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-/* ---------- Brand theme tokens ----------
-   Taken straight off the LeonEast logo: a black ground, a bright electric
-   blue, and the brushed-silver of the wordmark's left half. The site leans
-   dark on purpose - it is the only dark-dominant build in this portfolio,
-   and nothing about it should read like the navy/orange, graphite/clay,
-   pine/mint or oxblood/gold roofing sites. */
+/* ---------- Theme ----------
+   Token names are deliberately specific to this build. Tailwind compiles them
+   into class names that appear in the served HTML, so generic names would put
+   an identical set of classes in the page source of every site built from the
+   same starting point. These are LeonEast's own.
+
+   Palette comes off the client's logo: a black ground, an electric blue, and
+   the brushed silver of the wordmark. */
 @theme {
-  --font-heading: "Sora", ui-sans-serif, system-ui, sans-serif;
-  --font-body: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-text: "Manrope", ui-sans-serif, system-ui, sans-serif;
 
-  /* Electric blue from the logo */
-  --color-brand: #1479ea;       /* button fill - white text clears AA at 4.6:1 */
-  --color-brand-dark: #0b5fbf;  /* link and accent text on light grounds - 6.2:1 */
-  --color-brand-light: #5aa9f7; /* accent on the dark surfaces - 7.1:1 on ink */
+  --color-carbon: #0a0c0f;      /* near-black, headers and footers */
+  --color-graphite: #14181e;    /* raised dark surfaces */
+  --color-gunmetal: #2a323d;    /* borders on dark */
+  --color-mist: #dfe5ec;        /* body text on dark */
+  --color-bone: #f6f8fa;        /* cool off-white page ground */
 
-  /* Black and graphite surfaces */
-  --color-ink: #0a0c0f;
-  --color-slate: #14181e;
-  --color-steel: #2a323d;
-  --color-steel-light: #dfe5ec;
-
-  /* Cool off-white page ground */
-  --color-paper: #f6f8fa;
+  --color-volt: #1479ea;        /* button fill, white text clears AA at 4.6:1 */
+  --color-volt-deep: #0b5fbf;   /* link and accent text on light, 6.2:1 */
+  --color-volt-bright: #5aa9f7; /* accent on the dark surfaces, 7.1:1 */
 }
 
-/* ---------- Self-hosted fonts ----------
-   Two variable files, latin subset only, ~25KB each. No Google Fonts CDN
-   request at runtime. */
+/* ---------- Self-hosted fonts ---------- */
 @font-face {
   font-family: "Sora";
   font-style: normal;
@@ -44,41 +40,24 @@
   src: url("/fonts/manrope-var.woff2") format("woff2");
 }
 
-/* ---------- Base ---------- */
 body {
-  font-family: var(--font-body);
+  font-family: var(--font-text);
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
+  font-family: var(--font-display);
   letter-spacing: -0.02em;
 }
 
-/* Blue underscore that sits beneath a section heading, echoing the two short
-   rules either side of "ROOFING & BUILDING LIMITED" on the logo. */
-.rule::after {
-  content: "";
-  display: block;
-  width: 3.5rem;
-  height: 3px;
-  margin-top: 0.85rem;
-  background: linear-gradient(90deg, var(--color-brand), var(--color-brand-light));
-}
-.rule-center::after {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Brushed-silver gradient text, used once per page at most - the logo does
-   the same thing across "LEON". */
-.silver {
+/* Brushed-silver gradient text, used once on the homepage - the logo does the
+   same thing across "LEON". */
+.brushed {
   background: linear-gradient(180deg, #ffffff 0%, #cdd5de 55%, #9aa5b1 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-/* Screen-reader only */
-.sr-only {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;

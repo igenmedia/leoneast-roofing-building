@@ -1,0 +1,75 @@
+---
+import { company, services } from "../data/company";
+
+const nav = [
+  { name: "Home", href: "/" },
+  ...services,
+  { name: "Areas We Cover", href: "/areas-we-cover" },
+  { name: "About", href: "/about" },
+  { name: "Contact", href: "/contact" },
+];
+const here = Astro.url.pathname.replace(/\/+$/, "") || "/";
+---
+
+<header class="bg-carbon border-b border-gunmetal">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="flex items-center justify-between gap-4 py-3">
+      <a href="/" aria-label={`${company.name} home`}>
+        <img src="/images/leoneast-roofing-logo.svg" alt={`${company.name} logo`}
+          class="h-11 sm:h-14 w-auto" width="560" height="150" />
+      </a>
+
+      <div class="flex items-center gap-3">
+        <a href={company.phoneLink}
+          class="hidden sm:inline-flex items-center gap-2 rounded bg-volt px-4 py-2 text-sm font-bold text-white hover:bg-volt-deep">
+          {company.phone}
+        </a>
+        <a href={company.phoneLink} aria-label={`Call ${company.phone}`}
+          class="sm:hidden inline-flex items-center justify-center rounded bg-volt p-2 text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5" aria-hidden="true">
+            <path d="M2.25 6.75c0-1.01.67-1.9 1.65-2.18l3.46-.99a1.88 1.88 0 0 1 2.22 1.08l1.39 3.11a1.88 1.88 0 0 1-.46 2.16l-1.4 1.23c-.19.16-.25.42-.13.64a11.5 11.5 0 0 0 5.16 5.16c.22.12.48.06.64-.13l1.23-1.4a1.88 1.88 0 0 1 2.16-.46l3.11 1.39c.83.37 1.28 1.3 1.07 2.22l-.98 3.46A2.25 2.25 0 0 1 17.25 21.75H16.5C8.84 21.75 2.25 15.17 2.25 7.5v-.75Z" />
+          </svg>
+        </a>
+        <button id="nav-toggle" type="button" aria-label="Toggle navigation"
+          aria-expanded="false" aria-controls="nav-panel"
+          class="md:hidden inline-flex items-center justify-center rounded p-2 text-mist hover:bg-gunmetal">
+          <svg id="nav-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-6 w-6" aria-hidden="true">
+            <path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+          <svg id="nav-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="hidden h-6 w-6" aria-hidden="true">
+            <path stroke-linecap="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <nav class="hidden md:flex flex-wrap items-center gap-x-6 gap-y-1 pb-3 text-sm font-semibold" aria-label="Main">
+      {nav.map((l) => (
+        <a href={l.href}
+          aria-current={here === l.href.replace(/\/+$/, "") ? "page" : undefined}
+          class:list={["py-1 hover:text-volt-bright",
+            here === (l.href.replace(/\/+$/, "") || "/") ? "text-volt-bright" : "text-mist"]}>
+          {l.name}
+        </a>
+      ))}
+    </nav>
+
+    <nav id="nav-panel" class="hidden md:hidden flex-col pb-3 text-sm font-semibold" aria-label="Mobile">
+      {nav.map((l) => (
+        <a href={l.href} class="rounded px-2 py-2 text-mist hover:bg-gunmetal hover:text-volt-bright">{l.name}</a>
+      ))}
+    </nav>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById("nav-toggle");
+  const panel = document.getElementById("nav-panel");
+  btn?.addEventListener("click", () => {
+    const hidden = panel?.classList.toggle("hidden");
+    panel?.classList.toggle("flex", !hidden);
+    document.getElementById("nav-open")?.classList.toggle("hidden");
+    document.getElementById("nav-close")?.classList.toggle("hidden");
+    btn.setAttribute("aria-expanded", hidden ? "false" : "true");
+  });
+</script>

@@ -1,5 +1,109 @@
 ---
-import ServicePage from "../layouts/ServicePage.astro";
-import { getService } from "../data/services";
+import Layout from "../layouts/Layout.astro";
+import { company, photo } from "../data/company";
+import QuoteForm from "../components/QuoteForm.astro";
+import CallStrip from "../components/CallStrip.astro";
+const lead = photo("flat-roofing-bromley-extension");
 ---
-<ServicePage service={getService("/flat-roofing")} />
+
+<Layout
+  title="Flat Roofing in Bromley | EPDM, Fibreglass & Felt | LeonEast"
+  description="Flat roofing across Bromley - EPDM rubber, GRP fibreglass and felt on extensions, dormers and garages. Falls corrected, edges detailed properly, 10 year guarantee."
+  lead={lead}
+>
+  <section class="bg-carbon text-white">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 py-12 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-wide text-volt-bright">Flat roofing</p>
+        <h1 class="mt-2 text-4xl sm:text-5xl font-bold leading-tight">Flat roofing</h1>
+        <p class="mt-5 text-lg text-mist">
+          Flat roofing is a different trade from tiling, with different materials and
+          different ways of going wrong, and it causes a fair share of the leaks we attend.
+          A flat roof has no pitch to shed water quickly, so it has no tolerance at all for a
+          badly made joint.
+        </p>
+        <a href={company.phoneLink} class="mt-7 inline-flex rounded bg-volt px-6 py-3 text-lg font-bold text-white hover:bg-volt-deep">
+          {company.phone}
+        </a>
+      </div>
+      <img src={lead} alt="A flat roof on a single storey rear extension"
+        class="w-full rounded-lg object-cover aspect-[4/3]" width="1200" height="900"
+        fetchpriority="high" loading="eager" />
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-4 sm:px-6 py-14 grid lg:grid-cols-3 gap-10">
+    <div class="lg:col-span-2">
+      <h2 class="text-2xl sm:text-3xl font-bold text-carbon">The three we fit</h2>
+      <p class="mt-4 text-graphite/80">
+        <strong class="text-carbon">EPDM rubber</strong> is a single sheet with very few
+        joints, and it stays flexible through the temperature swings. On a plain rectangular
+        extension or garage roof it is usually what we would suggest. Thirty to fifty years,
+        and roughly £90 to £130 a square metre fitted.
+      </p>
+      <p class="mt-4 text-graphite/80">
+        <strong class="text-carbon">GRP fibreglass</strong> is laid wet and cures into one
+        continuous skin, so it forms itself around pipes, upstands and awkward shapes better
+        than a sheet does. It is also the harder-wearing choice for a balcony or anything
+        that gets walked on. Twenty five to thirty years, £110 to £160 a square metre. It
+        needs dry weather to cure, which can mean waiting.
+      </p>
+      <p class="mt-4 text-graphite/80">
+        <strong class="text-carbon">High performance felt</strong> still has its place,
+        particularly on a budget or where a roof is due to be replaced along with the
+        extension in a few years. Twenty to twenty five years, and cheaper up front.
+      </p>
+
+      <h2 class="mt-10 text-2xl sm:text-3xl font-bold text-carbon">Where flat roofs actually fail</h2>
+      <p class="mt-4 text-graphite/80">
+        Almost never in the middle, which is the part everybody looks at. It is the edges,
+        the upstands where the roof turns up against a wall, and the outlets. That is where
+        the movement is and where the workmanship shows.
+      </p>
+      <p class="mt-4 text-graphite/80">
+        If yours is holding water days after rain, the fall is wrong or the deck has sagged.
+        Laying a new covering over the same flat deck just reproduces the problem in a newer
+        material, so where the fall has gone we build it back with tapered insulation or new
+        firrings and show you the levels. And we lift the old covering to look at the boards
+        before anything goes over them - wet chipboard from the seventies has no business
+        under a new roof.
+      </p>
+
+      <img src={photo("flat-roof-membrane-detail-upstand")}
+        alt="A flat roof membrane turned up against a brick wall at an upstand"
+        class="mt-10 w-full rounded-lg object-cover aspect-[3/2]" width="800" height="533" loading="lazy" />
+
+      <h2 class="mt-10 text-2xl sm:text-3xl font-bold text-carbon">Rough costs</h2>
+      <p class="mt-4 text-graphite/80">
+        A typical single-storey extension roof of around fifteen square metres runs £1,600 to
+        £2,400 in EPDM or £1,900 to £2,900 in fibreglass, both including tearing off the old
+        covering and taking it away. A single garage is £1,800 to £2,800. Replacing a failed
+        deck adds £25 to £45 a square metre, and bringing the insulation up to current
+        standards while the roof is open typically adds £400 to £900 - usually money well
+        spent, since a flat roof only gets opened up once every few decades.
+      </p>
+
+      <h2 class="mt-10 text-2xl sm:text-3xl font-bold text-carbon">A few questions we get</h2>
+      <dl class="mt-5 space-y-5">
+        <div>
+          <dt class="font-bold text-carbon">Can it be repaired instead of replaced?</dt>
+          <dd class="mt-1 text-graphite/80">A split, a lifted edge trim or a failed outlet, yes - and if the rest is sound that is what we will recommend. What does not work is patching a covering that has reached the end, because each patch just moves the failure a metre to the left.</dd>
+        </div>
+        <div>
+          <dt class="font-bold text-carbon">Why does mine hold water?</dt>
+          <dd class="mt-1 text-graphite/80">A flat roof is not actually flat - it should be laid to a fall of at least 1 in 80. Older extensions round here were often built with a nominal fall that has since been lost as the timbers settled.</dd>
+        </div>
+        <div>
+          <dt class="font-bold text-carbon">Can I put a terrace or solar panels on it?</dt>
+          <dd class="mt-1 text-graphite/80">Sometimes, but that is a structural question before it is a roofing one. Tell us at the survey and we will specify accordingly and say whether an engineer needs to look at it.</dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="lg:sticky lg:top-6 self-start">
+      <QuoteForm title="Get a price for a flat roof" source="Flat roofing" />
+    </div>
+  </section>
+
+  <CallStrip />
+</Layout>

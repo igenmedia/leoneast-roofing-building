@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { business } from "../data/business";
+import { company } from "../data/company";
 ---
 
 <Layout
@@ -8,29 +8,29 @@ import { business } from "../data/business";
   description="Thanks for getting in touch with LeonEast Roofing & Building. We will call you back shortly to arrange your free roof survey."
   noindex={true}
 >
-  <section class="bg-ink text-white">
+  <section class="bg-carbon text-white">
     <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-20 text-center">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="mx-auto h-16 w-16 text-brand-light" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="mx-auto h-16 w-16 text-volt-bright" aria-hidden="true">
         <path fill-rule="evenodd" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm4.7 7.7a1 1 0 0 0-1.4-1.4L11 12.58l-2.3-2.3a1 1 0 1 0-1.4 1.44l3 3a1 1 0 0 0 1.42 0l5-5Z" clip-rule="evenodd" />
       </svg>
       <h1 class="mt-6 text-4xl sm:text-5xl font-bold tracking-tight">
-        <a href="/" class="text-white hover:text-brand-light transition-colors">Thanks - that has reached us</a>
+        Thanks - that has reached us
       </h1>
-      <h2 class="mt-4 text-xl font-semibold text-brand-light">We will ring you back shortly</h2>
-      <p class="mt-6 text-lg text-steel-light">
+      <h2 class="mt-4 text-xl font-semibold text-volt-bright">We will ring you back shortly</h2>
+      <p class="mt-6 text-lg text-mist">
         Someone will call to ask a couple of questions about what you have spotted and book a
         time for the survey. It normally happens within a working day.
       </p>
-      <p class="mt-4 text-steel-light">
+      <p class="mt-4 text-mist">
         If water is coming into the house right now, please do not wait for us to call - ring
         straight away and we will treat it as an emergency.
       </p>
       <div class="mt-10 flex flex-wrap justify-center gap-4">
-        <a href={business.phoneHref} class="inline-flex items-center rounded-md bg-brand px-6 py-3 text-base font-bold text-white shadow-sm hover:bg-brand-light hover:text-ink">
-          Call {business.phone}
+        <a href={company.phoneLink} class="inline-flex items-center rounded-md bg-volt px-6 py-3 text-base font-bold text-white shadow-sm hover:bg-volt-bright hover:text-carbon">
+          Call {company.phone}
         </a>
-        <a href="/common-roof-problems" class="inline-flex items-center rounded-md border border-steel-light/40 px-6 py-3 text-base font-semibold text-white hover:bg-white/10">
-          Read about common roof faults
+        <a href="/" class="inline-flex items-center rounded-md border border-mist/40 px-6 py-3 text-base font-semibold text-white hover:bg-white/10">
+          Back to the site
         </a>
       </div>
     </div>
