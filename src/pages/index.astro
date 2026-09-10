@@ -9,7 +9,7 @@ import Reviews from "../components/Reviews.astro";
 import Guarantee from "../components/Guarantee.astro";
 import NextPage from "../components/NextPage.astro";
 
-const heroImg = img("orpington-roofers-tiled-roof-hero");
+const heroImg = img("bromley-roofers-tiled-roof-hero");
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -22,21 +22,21 @@ const headline = [
   {
     name: "Roof Repairs",
     href: "/roof-repairs",
-    publicId: "roof-repairs-orpington-card",
+    publicId: "roof-repairs-bromley-card",
     alt: "A roofer refixing displaced clay tiles on a pitched roof",
     text: "Slipped tiles, cracked hip mortar, tired flashings and failed valleys. Photographed before it is priced, and repaired rather than sealed over.",
   },
   {
     name: "New Roofs & Re-Roofing",
     href: "/new-roofs",
-    publicId: "new-roof-reroofing-orpington-card",
+    publicId: "new-roof-reroofing-bromley-card",
     alt: "A roof stripped to the rafters with new battens and membrane going on",
     text: "Full strip back to the rafters, new treated battens, breathable membrane and a covering matched to the street. No overlaying, ever.",
   },
   {
     name: "Flat Roofing",
     href: "/flat-roofing",
-    publicId: "flat-roofing-orpington-card",
+    publicId: "flat-roofing-bromley-card",
     alt: "A newly laid flat roof membrane on a single storey extension",
     text: "EPDM, fibreglass and high performance felt on extensions, dormers and garages, with the falls corrected rather than covered over.",
   },
@@ -72,7 +72,7 @@ const benefits = [
 ];
 
 const whyUs = [
-  "Based in Orpington, so most of the BR postcodes are ten to twenty minutes away rather than a scheduling problem",
+  "Based in Bromley, so most of the BR postcodes are ten to twenty minutes away rather than a scheduling problem",
   "Nine roofing services under one firm - repairs, emergencies, storm work, leaks, re-roofing, flat roofs, tiling and slating, chimneys and roofline",
   "Comfortable across all four coverings this area uses: machine-made clay, concrete interlocking, natural slate and handmade Kentish peg tiles",
   "Straight about the London Borough of Bromley's conservation areas, Areas of Special Residential Character and Article 4 directions - and about when none of them apply to you",
@@ -81,7 +81,7 @@ const whyUs = [
 
 const faqs = [
   {
-    question: "How much does a roofer cost in Orpington?",
+    question: "How much does a roofer cost in Bromley?",
     answer:
       "For a single defect - a slipped tile, a cracked flashing, a short run of ridge - most repairs land between £180 and £900 including access. Rebedding all four hips and the ridge on a 1930s semi is generally £900 to £1,600. A chimney flashing renewed in lead is £450 to £950. A full re-roof on a standard three-bedroom semi runs £7,000 to £14,000 including scaffolding, new treated battens and breathable membrane. Every quote we issue is fixed and itemised, so you can see exactly which part of it is materials, which is labour and which is access.",
   },
@@ -93,7 +93,7 @@ const faqs = [
   {
     question: "Which areas do you cover?",
     answer:
-      "Orpington and the BR postcodes around it. That means Petts Wood, St Mary Cray and St Paul's Cray, Chelsfield, Farnborough, Crofton, Locksbottom, Green Street Green, Chislehurst, Bromley, West Wickham, Beckenham, Keston, Downe, Cudham and Biggin Hill - plus Sidcup over the boundary in Bexley and Swanley over the county line in Kent.",
+      "Bromley and the BR postcodes around it. That means Shortlands, Sundridge Park, Bickley and Bromley Common on our doorstep, then Beckenham, Chislehurst, Petts Wood, West Wickham, Hayes and Keston, and south through Orpington, St Mary Cray and St Paul's Cray, Crofton, Farnborough, Locksbottom, Green Street Green, Chelsfield, Downe, Cudham and Biggin Hill - plus Sidcup over the boundary in Bexley and Swanley over the county line in Kent.",
   },
   {
     question: "Do I need planning permission for roof work?",
@@ -124,8 +124,8 @@ const faqSchema = {
 ---
 
 <Layout
-  title="Roofers Orpington – LeonEast Roofing & Building"
-  description="Roofers in Orpington covering repairs, re-roofing, flat roofs, chimneys and guttering across the BR postcodes. Free survey, photos of the fault, fixed price, 10 year guarantee."
+  title="Roofers Bromley – LeonEast Roofing & Building"
+  description="Roofers in Bromley covering repairs, re-roofing, flat roofs, chimneys and guttering across the BR postcodes. Free survey, photos of the fault, fixed price, 10 year guarantee."
   heroImage={heroImg}
   ogImage={heroImg}
   schema={[faqSchema]}
@@ -136,14 +136,14 @@ const faqSchema = {
     <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20 grid lg:grid-cols-2 gap-10 items-center">
       <div>
         <p class="inline-flex items-center rounded-full border border-brand/50 bg-brand/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-brand-light">
-          Orpington · Petts Wood · Bromley · the Crays · Chislehurst
+          Bromley · Beckenham · Chislehurst · Petts Wood · Orpington
         </p>
         <h1 class="mt-4 text-4xl sm:text-6xl font-bold tracking-tight leading-[1.05]">
-          <span class="silver">Roofers</span> <span class="text-brand-light">Orpington</span>
+          <span class="silver">Roofers</span> <span class="text-brand-light">Bromley</span>
         </h1>
         <h2 class="mt-4 text-xl font-semibold text-white">{business.name}</h2>
         <h3 class="mt-3 text-lg font-semibold text-steel-light">
-          Roof repairs, re-roofing, flat roofing, chimneys and guttering across Orpington and
+          Roof repairs, re-roofing, flat roofing, chimneys and guttering across Bromley and
           the BR postcodes around it
         </h3>
         <p class="mt-6 text-lg text-steel-light">
@@ -165,14 +165,14 @@ const faqSchema = {
       <div>
         <img
           src={heroImg}
-          alt="Clay tiled roofs and brick chimney stacks across a residential street in Orpington"
+          alt="Clay tiled roofs and brick chimney stacks across a residential street in Bromley"
           class="w-full rounded-xl shadow-2xl object-cover aspect-[4/3] ring-1 ring-white/10"
           width="1200" height="900" fetchpriority="high" loading="eager"
         />
       </div>
     </div>
     <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-12 lg:pb-20">
-      <ContactForm page="Homepage" title="Book a free roof survey in Orpington" />
+      <ContactForm page="Homepage" title="Book a free roof survey in Bromley" />
     </div>
   </section>
 
@@ -182,7 +182,7 @@ const faqSchema = {
       <p>Public liability insured</p>
       <p>Free surveys and second opinions</p>
       <p>Fixed written prices</p>
-      <p>Local to Orpington, not a call centre</p>
+      <p>Local to Bromley, not a call centre</p>
     </div>
   </section>
 
@@ -207,7 +207,7 @@ const faqSchema = {
             <p class="mt-2 text-sm text-slate/80 flex-1">{s.text}</p>
             <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-dark">
               Learn more<span aria-hidden="true">&rarr;</span>
-              <span class="sr-only">about {s.name.toLowerCase()} in Orpington</span>
+              <span class="sr-only">about {s.name.toLowerCase()} in Bromley</span>
             </span>
           </div>
         </a>
@@ -237,8 +237,8 @@ const faqSchema = {
         </dl>
       </div>
       <div class="lg:sticky lg:top-28">
-        <img src={img("roofer-working-tiled-roof-orpington")}
-          alt="A roofer working on the tiled roof of a suburban house in Orpington"
+        <img src={img("roofer-working-tiled-roof-bromley")}
+          alt="A roofer working on the tiled roof of a suburban house in Bromley"
           class="w-full rounded-xl shadow-lg object-cover aspect-[4/3]" width="800" height="600" loading="lazy" />
       </div>
     </div>
@@ -254,11 +254,11 @@ const faqSchema = {
     <div>
       <h2 class="text-3xl sm:text-4xl font-bold text-ink rule">Why roofs fail differently around here</h2>
       <p class="mt-6 text-slate/80">
-        Orpington sits in the rain shadow of the North Downs, and Bromley records something
+        Bromley sits in the rain shadow of the North Downs and records something
         like 729mm of rain in an average year against a UK figure nearer 1,150mm. That makes
         this one of the driest corners of Britain, and it changes how roofs fail rather than
         whether they do. A fault that would flood a kitchen in Cumbria inside a fortnight can
-        sit quietly above an Orpington bedroom for two or three years, wetting the end of a
+        sit quietly above a Bromley bedroom for two or three years, wetting the end of a
         rafter a little each month, doing its damage entirely out of sight.
       </p>
       <p class="mt-4 text-slate/80">
@@ -271,11 +271,12 @@ const faqSchema = {
         same night.
       </p>
       <p class="mt-4 text-slate/80">
-        The ground matters too. Orpington and everything rising south of it stands on the chalk
-        dip slope of the Downs, which is comparatively steady. North and west towards Beckenham
-        it becomes London Clay, which shrinks through a dry summer and swells again over
-        winter - and that seasonal movement is why we do so much more chimney and flashing work
-        on that side of the patch than on this one.
+        The ground matters too, and Bromley sits almost exactly on the join. South and east of
+        the town - Orpington, Farnborough, up towards Biggin Hill - is the chalk dip slope of
+        the Downs, which is comparatively steady. North and west, through Beckenham and Clock
+        House, it becomes London Clay, which shrinks through a dry summer and swells again over
+        winter. That seasonal movement is why we do so much more chimney and flashing work on
+        one side of town than the other.
       </p>
     </div>
   </section>
@@ -284,7 +285,7 @@ const faqSchema = {
   <section class="bg-brand/5 border-y border-brand/20">
     <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 text-center">
       <p class="text-xl sm:text-2xl font-semibold text-ink leading-snug">
-        "Roughly half the roofs we are called out to around Orpington need one afternoon of
+        "Roughly half the roofs we are called out to around Bromley need one afternoon of
         work and nothing more. The problem is that nobody can tell which half from the ground."
       </p>
       <p class="mt-4 text-sm text-slate/60">From the survey notes at {business.name}</p>
@@ -347,7 +348,7 @@ const faqSchema = {
     <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
       <h2 class="text-3xl sm:text-4xl font-bold text-ink text-center rule rule-center">Roofing advice for this area</h2>
       <p class="mt-8 text-center text-slate/70 max-w-3xl mx-auto">
-        Written for houses around Orpington rather than for the internet in general.
+        Written for houses around Bromley rather than for the internet in general.
       </p>
       <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {posts.map((post) => (
@@ -375,7 +376,7 @@ const faqSchema = {
   <!-- Pricing -->
   <section class="bg-slate text-white">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 text-center">
-      <h2 class="text-3xl sm:text-4xl font-bold">What roof work costs in Orpington</h2>
+      <h2 class="text-3xl sm:text-4xl font-bold">What roof work costs in Bromley</h2>
       <p class="mt-6 text-steel-light max-w-3xl mx-auto">
         Single-fault repairs generally fall between £180 and £900 including access. Rebedding
         the hips and ridge on a 1930s semi is £900 to £1,600. A lead chimney flashing is £450
@@ -408,11 +409,12 @@ const faqSchema = {
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
       <h2 class="text-3xl sm:text-4xl font-bold text-ink text-center rule rule-center">Where we work</h2>
       <p class="mt-8 text-center text-slate/70 max-w-3xl mx-auto">
-        Orpington is the middle of our patch rather than the edge of it. Petts Wood, the Crays
-        and Farnborough are a few minutes away; Chislehurst and Bromley are a straight run
-        north; Chelsfield and Biggin Hill climb up onto the Downs; and we cross two boundaries
-        regularly - into Bexley at Sidcup, and into Kent at Swanley. Each of those towns has
-        its own page, because the housing and the planning rules genuinely differ.
+        Bromley is the middle of our patch rather than the edge of it. Beckenham, Chislehurst
+        and Petts Wood are a few minutes out; Orpington, the Crays and Farnborough are a
+        straight run south; Chelsfield and Biggin Hill climb up onto the Downs; and we cross
+        two boundaries regularly - into Bexley at Sidcup, and into Kent at Swanley. Each of
+        those towns has its own page, because the housing and the planning rules genuinely
+        differ.
       </p>
       <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {locations.map((l) => (

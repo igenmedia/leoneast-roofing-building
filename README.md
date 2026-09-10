@@ -1,7 +1,7 @@
 # LeonEast Roofing & Building Limited
 
-SEO lead-generation site for a roofing contractor covering Orpington and the
-surrounding BR postcodes (leoneastroofing.co.uk). Astro 6 + Tailwind 4, static
+Site for a roofing contractor covering Bromley and the surrounding BR
+postcodes (leoneastroofing.co.uk). Astro 6 + Tailwind 4, static
 output, deployed via GitHub + Cloudflare Pages.
 
 Built 10 September 2026.
@@ -21,13 +21,13 @@ of it is invented in the meantime.
 | # | What | Why it matters | Where it goes |
 |---|------|----------------|---------------|
 | 1 | **Email address** | Without one there is no Web3Forms key, so `ContactForm.astro` renders a call-us panel instead of a form. This is the single highest-value missing item. | `business.email`, then generate a key at web3forms.com and set `business.web3formsAccessKey` |
-| 2 | **Companies House number + registered office** | Footer currently says only "a limited company registered in England and Wales". Required properly in the privacy policy. | `business.companyNumber`, `business.registeredOffice`, plus hardcode the office into `privacy-policy.astro` |
+| 2 | **Companies House number** | Footer currently says only "a limited company registered in England and Wales". Required properly in the privacy policy. | `business.companyNumber`, `business.registeredOffice`, plus hardcode the registered office into `privacy-policy.astro` |
 | 3 | **Google Business Profile URL** | Worth more than every social profile combined for a local trade. Feeds `sameAs` in the RoofingContractor schema. | `business.socials` |
 | 4 | **Real customer reviews** | See the note at the top of `Reviews.astro` before touching this. | `Reviews.astro` |
 | 5 | **Master logo file** | `public/images/leoneast-roofing-logo.svg` is a vector rebuild of the supplied artwork. If an original AI/EPS/SVG exists, drop it in over that file and keep the filename. | `public/images/` |
 | 6 | **Guarantee terms** | 10 years workmanship is currently assumed. Confirm, and confirm whether any materials guarantee should be named. | `business.workmanshipGuaranteeYears` |
 | 7 | **Social profiles** | Footer icon row and `sameAs` both render from one array and hide themselves when it is empty. | `business.socials` |
-| 8 | **Trading address**, if they ever want one published | Everything address-shaped is behind `hasAddress`. Schema currently emits an areaServed-only listing, which is right for a van-based business. | `business.address` |
+| 8 | **Confirmation of the address split** | The Bromley office (23 Kingfisher House, BR1 1LT) is the schema address and geo; the Dulwich office (SE23 1AG) is the trading/paperwork address and appears in the footer and legal pages only. Both display on every page. | `business.address`, `business.addresses` |
 | 9 | **Insurance certificate** | The site states public liability cover is in place. Worth having the certificate on file. | - |
 | 10 | **Scope of the "& Building" side** | The brief said "all types of roofing", so the site is roofing-only. If they want extensions, brickwork or general building represented, that is a further set of service pages. | `src/data/services.ts` |
 
@@ -35,9 +35,10 @@ of it is invented in the meantime.
 
 30 pages:
 
-- Homepage, 9 service pages, cost guide, common roof problems, contact,
-  blog index + 2 posts, thank-you, privacy policy, terms
-- 11 location pages via `[location].astro` + `locations.ts` / `locationPages.ts`
+- Homepage (Bromley), 9 service pages, cost guide, common roof problems,
+  contact, blog index + 2 posts, thank-you, privacy policy, terms
+- 11 location pages via `[location].astro` + `locations.ts` / `locationPages.ts`,
+  Orpington among them
 
 Content lives in `src/data/`, not in the page files:
 
@@ -74,6 +75,11 @@ Every fact below was verified against a primary source, not assumed:
   Sidcup is Bexley and Swanley (BR8) is Sevenoaks District Council in Kent.
   Biggin Hill is TN16 and feels entirely Kentish but is Bromley. The location
   pages lead on this because getting it wrong reads as an out-of-town firm.
+- **The town sits on a geological join**, which is the spine of the site's
+  argument: south and east (Orpington, Farnborough, Chelsfield, Biggin Hill)
+  is chalk and comparatively steady; north and west (Beckenham, Clock House,
+  the Penge edge) is London Clay that shrinks and swells seasonally. That is
+  why the chimney and flashing work clusters on one side of town.
 - **Climate.** Bromley averages ~729mm of rain a year against a UK figure
   nearer 1,150mm, sheltered by the North Downs. The site's argument is that
   dry does not mean kind: faults stay hidden for years, then all announce
@@ -81,17 +87,13 @@ Every fact below was verified against a primary source, not assumed:
 - **Storms.** The Great Storm of 16 October 1987 gusted to ~130mph with west
   Kent and Sevenoaks among the worst hit; Storm Eunice repeated it in
   February 2022.
-- **Geology.** Chalk dip slope of the North Downs at Orpington and south,
-  capped with clay-with-flints, carrying solution features around Orpington
-  and Biggin Hill. London Clay north and west towards Beckenham, which shrinks
-  and swells seasonally - the reason Beckenham generates the chimney work.
 - **Housing.** Interwar boom peaking in the 1920s-30s after the 1904 railway
   improvements (Crofton, Poverest, Goddington, Ramsden); the 1930s Petts Wood
   garden suburb by Basil Scruby and Leonard Culliford, with hung tiles and
   half-timbered gables; postwar concrete-tiled estates through the Cray valley
   and Swanley; handmade Kentish peg tiles in the villages at Chelsfield, Downe
   and Cudham.
-- **Elevation.** Orpington ~50m, Biggin Hill ~180m on the ridge. Drives the
+- **Elevation.** Bromley town ~50m, Biggin Hill ~180m on the ridge. Drives the
   mechanical-fixing argument on the high-ground pages.
 
 ## Images

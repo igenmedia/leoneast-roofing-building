@@ -95,4 +95,4 @@ Third, and only if the job is an alteration rather than a repair, consider a law
 
 One last thing worth saying plainly. If your job is a repair - tiles, mortar, flashings, gutters, a leak traced and stopped - none of the above applies to you, whichever street you live on. We will tell you on the survey if we think your work crosses the line into alteration, and point you at the right page on the right council's website. It is not a question anyone should be answering from a ladder.
 
-[Book a free roof survey in Orpington](/contact)
+[Book a free roof survey in Bromley](/contact)

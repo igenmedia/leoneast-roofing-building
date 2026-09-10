@@ -8,7 +8,7 @@
 //
 // THE LOCAL SPINE running through all nine services, verified rather than
 // invented:
-//   - Orpington sits on the chalk dip slope of the North Downs, capped in
+//   - Bromley sits on the chalk dip slope of the North Downs, capped in
 //     places with clay-with-flints. North and west towards Beckenham it is
 //     London Clay, which shrinks and swells seasonally and moves chimney
 //     stacks with it.
@@ -73,18 +73,18 @@ export const services: ServiceData[] = [
   {
     slug: "/roof-repairs",
     serviceName: "Roof Repairs",
-    metaTitle: "Roof Repairs In Orpington | LeonEast Roofing & Building",
+    metaTitle: "Roof Repairs In Bromley | LeonEast Roofing & Building",
     metaDescription:
-      "Roof repairs in Orpington and across the BR postcodes. Free survey, photographs of what we find, a fixed written price and a 10 year workmanship guarantee.",
-    h1: "Roof Repairs In Orpington",
+      "Roof repairs in Bromley and across the BR postcodes. Free survey, photographs of what we find, a fixed written price and a 10 year workmanship guarantee.",
+    h1: "Roof Repairs In Bromley",
     h2: "Has something up there stopped doing its job?",
-    h3: "Tiles, slates, flashings, valleys and ridges put right on Orpington's interwar semis, village cottages and estate housing",
-    heroPublicId: "roof-repairs-orpington-tiled-roof",
-    heroAlt: "Clay tiled roof and brick gable of a 1930s semi-detached house in Orpington",
+    h3: "Tiles, slates, flashings, valleys and ridges put right on Bromley's interwar semis, village cottages and estate housing",
+    heroPublicId: "roof-repairs-bromley-tiled-roof",
+    heroAlt: "Clay tiled roof and brick gable of a 1930s semi-detached house in Bromley",
     intro:
-      "Most roofs do not fail all at once. They give way in one small place - a slipped tile, a length of cracked mortar along a hip, a flashing that has lifted a few millimetres away from the chimney - and then they carry on looking perfectly respectable from the pavement while water finds its way in behind. That is why so many Orpington homeowners discover a roof problem through a ceiling rather than through the roof. We survey before we quote, we photograph what we find so that you can see it for yourself, and we tell you honestly whether you are looking at a morning's work or the beginning of something bigger.",
+      "Most roofs do not fail all at once. They give way in one small place - a slipped tile, a length of cracked mortar along a hip, a flashing that has lifted a few millimetres away from the chimney - and then they carry on looking perfectly respectable from the pavement while water finds its way in behind. That is why so many Bromley homeowners discover a roof problem through a ceiling rather than through the roof. We survey before we quote, we photograph what we find so that you can see it for yourself, and we tell you honestly whether you are looking at a morning's work or the beginning of something bigger.",
     insight:
-      "Roughly half the roofs we are called to in Orpington need one afternoon of work and nothing more. The trouble is that nobody can tell which half from the ground.",
+      "Roughly half the roofs we are called to in Bromley need one afternoon of work and nothing more. The trouble is that nobody can tell which half from the ground.",
     symptoms: [
       {
         sign: "A tile lying in the flower bed",
@@ -134,9 +134,9 @@ export const services: ServiceData[] = [
       },
     ],
     localAngle: {
-      h: "Why Orpington roofs fail so quietly",
-      p: "Bromley is one of the driest places in Britain. The North Downs shelter this corner of London, and the borough records something like 729mm of rain in an average year against a national figure nearer 1,150mm. You would think that made life easy for a roof, and in one sense it does. What it actually does is change the way roofs fail here. A defect that would flood a kitchen in Cumbria inside a fortnight can sit quietly above an Orpington bedroom for two or three years, wetting the end of a rafter a little each month and doing all its damage out of sight. Then a proper storm arrives - and this corner of the country gets those too, as anyone who remembers the night of 16 October 1987 will tell you - and every quiet fault on the street announces itself in the same few hours. It is the reason we take small stains seriously. Around here the size of the mark on your ceiling tells you almost nothing about the age of the problem behind it.",
-      publicId: "storm-clouds-over-suburban-rooftops-orpington",
+      h: "Why Bromley roofs fail so quietly",
+      p: "Bromley is one of the driest places in Britain. The North Downs shelter this corner of London, and the borough records something like 729mm of rain in an average year against a national figure nearer 1,150mm. You would think that made life easy for a roof, and in one sense it does. What it actually does is change the way roofs fail here. A defect that would flood a kitchen in Cumbria inside a fortnight can sit quietly above an Bromley bedroom for two or three years, wetting the end of a rafter a little each month and doing all its damage out of sight. Then a proper storm arrives - and this corner of the country gets those too, as anyone who remembers the night of 16 October 1987 will tell you - and every quiet fault on the street announces itself in the same few hours. It is the reason we take small stains seriously. Around here the size of the mark on your ceiling tells you almost nothing about the age of the problem behind it.",
+      publicId: "storm-clouds-over-suburban-rooftops-bromley",
       alt: "Heavy grey storm clouds building over the rooftops of a suburban street",
     },
     whatToLook: [
@@ -156,7 +156,7 @@ export const services: ServiceData[] = [
     comparison: {
       header: "Repair the roof, or replace it?",
       intro:
-        "This is the question behind most of the calls we take, and the honest answer depends on how much of the roof is still doing its job. Here is how we weigh it up on an Orpington house, so that you can weigh it up too.",
+        "This is the question behind most of the calls we take, and the honest answer depends on how much of the roof is still doing its job. Here is how we weigh it up on an Bromley house, so that you can weigh it up too.",
       proLabel: "Repair makes sense when",
       altLabel: "Replacement makes sense when",
       rows: [
@@ -186,7 +186,7 @@ export const services: ServiceData[] = [
           alt: "Planning a loft conversion, solar panels, or anything that means disturbing the covering anyway. Doing it twice costs far more than doing it once.",
         },
         {
-          label: "Rough cost on a typical Orpington semi",
+          label: "Rough cost on a typical Bromley semi",
           pro: "£180 to £900 for most single-fault repairs, including access where a tower will do.",
           alt: "£7,000 to £14,000 for a full re-roof with new battens, breathable membrane and scaffolding, depending on the size and pitch.",
         },
@@ -195,7 +195,7 @@ export const services: ServiceData[] = [
     teaser: {
       h: "Not sure what you are looking at?",
       p: "We have written up the faults that come up again and again on this patch - the mortar-bedded hips of the Crofton semis, the hung tiles on the Petts Wood gables, the sixties concrete tiles through the Cray valley, the chimney flashings that move with the London Clay over towards Beckenham. There are photographs of each one and a plain description of what it does if it is left. It is worth ten minutes before you ring anybody, including us.",
-      publicId: "damaged-roof-tiles-close-up-orpington",
+      publicId: "damaged-roof-tiles-close-up-bromley",
       alt: "Close view of cracked and displaced roof tiles on an older pitched roof",
       ctaText: "Read the common roof problems guide",
       ctaHref: "/common-roof-problems",
@@ -204,14 +204,14 @@ export const services: ServiceData[] = [
       "A single slipped or cracked tile refixed from a tower is usually £180 to £320. Rebedding and repointing a hip or a ridge runs from about £350 for a short run to £1,200 for a full hipped roof on a large 1930s semi. A chimney flashing replaced in lead is typically £450 to £950. Where a full scaffold is needed, allow £800 to £1,600 on top for a standard two-storey house, and expect that figure to be a separate line on your quote rather than folded invisibly into the total.",
     faqs: [
       {
-        question: "Do I need planning permission for a roof repair in Orpington?",
+        question: "Do I need planning permission for a roof repair in Bromley?",
         answer:
           "For a like-for-like repair, no. Replacing damaged tiles with matching tiles, rebedding a ridge or renewing a flashing is maintenance and needs no consent anywhere in the borough. It changes if the work alters the roof's shape or appearance: the London Borough of Bromley has 47 conservation areas, 13 Areas of Special Residential Character under Policy 44 of its Local Plan, and Article 4 directions that have removed permitted development rights for upward extensions across 16 areas, including parts of the Petts Wood and Knoll, Chislehurst and Chelsfield and Pratts Bottom wards. If your job involves a dormer, a change of covering or anything that alters the outline, check with the council first. We will tell you on the survey if we think it applies to you.",
       },
       {
         question: "How quickly can you come out?",
         answer:
-          "We are based in Orpington itself, so most of the BR postcodes are a ten to twenty minute drive. A free survey is usually within two to four working days. If water is actively coming in, say so when you call and we will treat it as an emergency rather than a survey - that means a temporary make-safe within hours where we can, and the permanent repair booked afterwards.",
+          "We are based in Bromley itself, so most of the BR postcodes are a ten to twenty minute drive. A free survey is usually within two to four working days. If water is actively coming in, say so when you call and we will treat it as an emergency rather than a survey - that means a temporary make-safe within hours where we can, and the permanent repair booked afterwards.",
       },
       {
         question: "Will you tell me if I do not need the work?",
@@ -219,14 +219,14 @@ export const services: ServiceData[] = [
           "Yes, and it happens regularly. A surprising number of ceiling stains turn out to be condensation in a poorly ventilated loft rather than a leak, and a surprising number of worried calls turn out to be a roof that has fifteen good years left in it. You get the finding in writing either way, and there is no charge for the survey that produced it.",
       },
       {
-        question: "Can you match tiles on an older Orpington house?",
+        question: "Can you match tiles on an older Bromley house?",
         answer:
           "Usually, yes. The interwar streets around Crofton, Poverest and Goddington used a fairly small range of clay tiles, and reclaimed stock is available for most of them. Handmade Kentish peg tiles on the older village properties at Chelsfield and Farnborough are also obtainable, though they take longer to source and cost more. Some 1960s and 70s concrete profiles have been discontinued entirely, and in those cases we will show you the closest available match before ordering anything.",
       },
       {
         question: "Do you work on flat roofs as well as pitched?",
         answer:
-          "Yes. Flat roofing is a genuinely different trade with different materials and different failure modes, and it has its own page on this site. Between them, the rear additions, garage roofs and dormer tops around Orpington account for a large share of the leaks we are called to.",
+          "Yes. Flat roofing is a genuinely different trade with different materials and different failure modes, and it has its own page on this site. Between them, the rear additions, garage roofs and dormer tops around Bromley account for a large share of the leaks we are called to.",
       },
       {
         question: "What does the ten year guarantee actually cover?",
@@ -245,13 +245,13 @@ export const services: ServiceData[] = [
   {
     slug: "/emergency-roof-repairs",
     serviceName: "Emergency Roof Repairs",
-    metaTitle: "Emergency Roof Repairs Orpington | LeonEast Roofing",
+    metaTitle: "Emergency Roof Repairs Bromley | LeonEast Roofing",
     metaDescription:
-      "Emergency roof repairs across Orpington and the BR postcodes. Rapid make-safe to stop water coming in, photographed for your insurer, permanent repair after.",
-    h1: "Emergency Roof Repairs In Orpington",
+      "Emergency roof repairs across Bromley and the BR postcodes. Rapid make-safe to stop water coming in, photographed for your insurer, permanent repair after.",
+    h1: "Emergency Roof Repairs In Bromley",
     h2: "Is water coming in right now?",
-    h3: "Rapid make-safe across Orpington and the surrounding BR postcodes, with the permanent repair booked once the weather allows",
-    heroPublicId: "emergency-roof-repair-orpington-storm-damage",
+    h3: "Rapid make-safe across Bromley and the surrounding BR postcodes, with the permanent repair booked once the weather allows",
+    heroPublicId: "emergency-roof-repair-bromley-storm-damage",
     heroAlt: "Rain running off a damaged pitched roof during a heavy storm",
     intro:
       "An emergency roof job has two halves and they should never be confused with each other. The first is stopping the water, which usually means a temporary covering fitted quickly and safely, often in conditions nobody would choose to work in. The second is the proper repair, which needs daylight, dry weather and the right materials, and which is very rarely a good idea to attempt in the middle of a gale. We are straight about that split when you call. You will be told what we can safely do today, what has to wait, and what each part is going to cost - before anybody climbs anything.",
@@ -282,7 +282,7 @@ export const services: ServiceData[] = [
     benefits: [
       {
         title: "Local, so we can actually get there",
-        text: "We work out of Orpington and cover the BR postcodes around it. Most of our patch is inside twenty minutes, which matters far more in an emergency than any promise about response times made by a firm that turns out to be dispatching from another county.",
+        text: "We work out of Bromley and cover the BR postcodes around it. Most of our patch is inside twenty minutes, which matters far more in an emergency than any promise about response times made by a firm that turns out to be dispatching from another county.",
       },
       {
         title: "Make-safe first, quote second",
@@ -307,7 +307,7 @@ export const services: ServiceData[] = [
     ],
     localAngle: {
       h: "This corner of the country gets the storms",
-      p: "It is easy to think of Orpington as sheltered, and in terms of ordinary rainfall it genuinely is. But sheltered from drizzle is not the same as sheltered from wind, and the serious Atlantic and Channel storms that reach southern England have a habit of hitting exactly this stretch of the north Kent and south London border hardest. The Great Storm of 16 October 1987 is the one everybody remembers: gusts around 130mph, eighteen people killed, something like fifteen million trees brought down, and west Kent and Sevenoaks among the very worst affected places in the country. Storm Eunice did a smaller version of the same thing in February 2022. The pattern we see afterwards is always the same. It is not usually the sound roofs that fail. It is the ones that were already carrying a cracked hip or a tired flashing, quietly, for years - and the storm simply found them all on the same night.",
+      p: "It is easy to think of Bromley as sheltered, and in terms of ordinary rainfall it genuinely is. But sheltered from drizzle is not the same as sheltered from wind, and the serious Atlantic and Channel storms that reach southern England have a habit of hitting exactly this stretch of the north Kent and south London border hardest. The Great Storm of 16 October 1987 is the one everybody remembers: gusts around 130mph, eighteen people killed, something like fifteen million trees brought down, and west Kent and Sevenoaks among the very worst affected places in the country. Storm Eunice did a smaller version of the same thing in February 2022. The pattern we see afterwards is always the same. It is not usually the sound roofs that fail. It is the ones that were already carrying a cracked hip or a tired flashing, quietly, for years - and the storm simply found them all on the same night.",
       publicId: "wind-damaged-roof-after-storm-kent",
       alt: "Roof tiles displaced and timber exposed on a house after a severe windstorm",
     },
@@ -373,7 +373,7 @@ export const services: ServiceData[] = [
       ctaHref: "/storm-damage-repairs",
     },
     costText:
-      "A temporary make-safe on a standard two-storey house in Orpington is typically £180 to £600, depending on how much covering is needed, how the roof can be reached, and whether it is a weekday morning or a Sunday night. That figure comes off the permanent repair if we carry it out. The repair itself is then priced like any other job, from a couple of hundred pounds for a handful of tiles to several thousand where a slope has been stripped by wind and needs scaffolding.",
+      "A temporary make-safe on a standard two-storey house in Bromley is typically £180 to £600, depending on how much covering is needed, how the roof can be reached, and whether it is a weekday morning or a Sunday night. That figure comes off the permanent repair if we carry it out. The repair itself is then priced like any other job, from a couple of hundred pounds for a handful of tiles to several thousand where a slope has been stripped by wind and needs scaffolding.",
     faqs: [
       {
         question: "Do you charge extra for evenings and weekends?",
@@ -398,7 +398,7 @@ export const services: ServiceData[] = [
       {
         question: "How far do you travel for emergencies?",
         answer:
-          "Orpington and the surrounding BR postcodes are our core patch, so Petts Wood, the Crays, Chelsfield, Farnborough and Chislehurst are all a few minutes away. We also cover Bromley, Beckenham, West Wickham, Biggin Hill, Sidcup and Swanley. Further than that and you are better served by someone closer, and we will say so.",
+          "Bromley and the surrounding BR postcodes are our core patch, so Petts Wood, the Crays, Chelsfield, Farnborough and Chislehurst are all a few minutes away. We also cover Bromley, Beckenham, West Wickham, Biggin Hill, Sidcup and Swanley. Further than that and you are better served by someone closer, and we will say so.",
       },
     ],
     related: [
@@ -412,16 +412,16 @@ export const services: ServiceData[] = [
   {
     slug: "/storm-damage-repairs",
     serviceName: "Storm Damage Repairs",
-    metaTitle: "Storm Damage Roof Repairs In Orpington | LeonEast Roofing",
+    metaTitle: "Storm Damage Roof Repairs In Bromley | LeonEast Roofing",
     metaDescription:
-      "Storm damage roof repairs in Orpington. Damage photographed and documented for your insurer, make-safe the same day where possible, permanent repair guaranteed.",
-    h1: "Storm Damage Roof Repairs In Orpington",
+      "Storm damage roof repairs in Bromley. Damage photographed and documented for your insurer, make-safe the same day where possible, permanent repair guaranteed.",
+    h1: "Storm Damage Roof Repairs In Bromley",
     h2: "Did the wind take something off your roof?",
-    h3: "Damage assessed, documented for your insurer and repaired properly - across Orpington, the Downs villages and the whole BR area",
-    heroPublicId: "storm-damage-roof-repairs-orpington",
+    h3: "Damage assessed, documented for your insurer and repaired properly - across Bromley, the Downs villages and the whole BR area",
+    heroPublicId: "storm-damage-roof-repairs-bromley",
     heroAlt: "Bare roof timbers and displaced tiles on a house damaged by high winds",
     intro:
-      "Storm damage is the one kind of roof work where the paperwork matters nearly as much as the workmanship. Insurers pay for damage caused by a storm and decline damage caused by wear, and the difference between those two verdicts is usually decided by photographs taken in the first day or two. So we do this job in a particular order: assess and photograph, make safe, document properly, then repair. Homeowners around Orpington who have been through a rejected claim tend to appreciate why. Those who have not are often surprised how much difference the sequence makes.",
+      "Storm damage is the one kind of roof work where the paperwork matters nearly as much as the workmanship. Insurers pay for damage caused by a storm and decline damage caused by wear, and the difference between those two verdicts is usually decided by photographs taken in the first day or two. So we do this job in a particular order: assess and photograph, make safe, document properly, then repair. Homeowners around Bromley who have been through a rejected claim tend to appreciate why. Those who have not are often surprised how much difference the sequence makes.",
     insight:
       "Nearly every storm claim we see refused is refused for the same reason - there was no record of what the roof looked like before somebody climbed up and started fixing it.",
     symptoms: [
@@ -474,7 +474,7 @@ export const services: ServiceData[] = [
     ],
     localAngle: {
       h: "Wind behaves differently at the top of the Downs",
-      p: "Our patch climbs a long way. Orpington town sits at around 50 metres, the ground rises steadily south and west through Farnborough and Green Street Green, and by the time you reach the ridge at Biggin Hill you are close to 180 metres with almost nothing between you and the weather. That difference is not academic. A gale that produces a breezy afternoon in the Cray valley can be stripping ridge tiles and lifting flat-roof coverings up on the ridge at the same moment, and the roofs up there need detailing that reflects it - mechanically fixed dry ridge systems rather than mortar, clips at the verges, proper edge trim on flat roofs. When we survey a house at Biggin Hill, Cudham or Coney Hall we are looking at a different set of risks from the same house in Petts Wood, and we specify accordingly.",
+      p: "Our patch climbs a long way. Bromley town sits at around 50 metres, the ground rises steadily south and east through Farnborough and Green Street Green, and by the time you reach the ridge at Biggin Hill you are close to 180 metres with almost nothing between you and the weather. That difference is not academic. A gale that produces a breezy afternoon in the Cray valley can be stripping ridge tiles and lifting flat-roof coverings up on the ridge at the same moment, and the roofs up there need detailing that reflects it - mechanically fixed dry ridge systems rather than mortar, clips at the verges, proper edge trim on flat roofs. When we survey a house at Biggin Hill, Cudham or Coney Hall we are looking at a different set of risks from the same house in Petts Wood, and we specify accordingly.",
       publicId: "high-winds-trees-bending-storm-north-downs",
       alt: "Trees bending in strong winds on high open ground during a storm",
     },
@@ -558,7 +558,7 @@ export const services: ServiceData[] = [
           "In most cases yes, though insurers do not always mention it. You may need to get the quote approved before work starts, and if your figure is higher than their panel contractor's they may only pay their rate. Ask the question directly when you report the claim.",
       },
       {
-        question: "Is Orpington actually prone to storm damage?",
+        question: "Is Bromley actually prone to storm damage?",
         answer:
           "More than its reputation suggests. This is a dry part of the country in terms of rainfall, but the south east corner takes the brunt of the serious wind events that reach England - the Great Storm of October 1987 gusted to around 130mph and hit west Kent and Sevenoaks about as hard as anywhere, and Storm Eunice in February 2022 caused widespread damage across the same ground. The exposed high land at Biggin Hill, Downe and Coney Hall sees noticeably more of it than the sheltered valley streets.",
       },
@@ -579,13 +579,13 @@ export const services: ServiceData[] = [
   {
     slug: "/roof-leak-repairs",
     serviceName: "Roof Leak Repairs",
-    metaTitle: "Roof Leak Repairs In Orpington | LeonEast Roofing",
+    metaTitle: "Roof Leak Repairs In Bromley | LeonEast Roofing",
     metaDescription:
-      "Roof leak repairs in Orpington. We trace the leak to where the water actually gets in, show you the photograph, and fix it there. Free survey, 10 year guarantee.",
-    h1: "Roof Leak Repairs In Orpington",
+      "Roof leak repairs in Bromley. We trace the leak to where the water actually gets in, show you the photograph, and fix it there. Free survey, 10 year guarantee.",
+    h1: "Roof Leak Repairs In Bromley",
     h2: "Is there a stain on the ceiling that keeps coming back?",
-    h3: "Leaks traced to their real entry point across Orpington's semis, cottages, conversions and flat-roofed extensions",
-    heroPublicId: "roof-leak-repairs-orpington-wet-roof",
+    h3: "Leaks traced to their real entry point across Bromley's semis, cottages, conversions and flat-roofed extensions",
+    heroPublicId: "roof-leak-repairs-bromley-wet-roof",
     heroAlt: "Rainwater running across the tiles and valley of an older pitched roof",
     intro:
       "The single most useful thing to understand about a roof leak is that water travels. It gets in at a fault, runs along the top of a rafter or across the loft insulation, and emerges at the first point where gravity lets it through - which can easily be three or four metres from where it started. That is why a repair directly above the stain so often fails, and why the same ceiling gets patched three times by three different firms. Finding the actual entry point takes a proper survey of both the roof and the loft, and sometimes a controlled water test. We do not quote until we can point at the fault in a photograph.",
@@ -620,7 +620,7 @@ export const services: ServiceData[] = [
       },
       {
         title: "Comfortable with converted lofts",
-        text: "Dormer cheeks, hidden valleys, compressed insulation and no crawl space change how a leak behaves and how it has to be found. Orpington has a great many loft conversions and we have traced water through a great many of them.",
+        text: "Dormer cheeks, hidden valleys, compressed insulation and no crawl space change how a leak behaves and how it has to be found. Bromley has a great many loft conversions and we have traced water through a great many of them.",
       },
       {
         title: "Condensation ruled in or out first",
@@ -700,14 +700,14 @@ export const services: ServiceData[] = [
     },
     teaser: {
       h: "Chimneys are the usual suspect",
-      p: "If we had to bet on the source of an unexplained leak in an Orpington house, we would bet on the chimney - the flashings around it, the mortar fillet that so often replaced proper lead, or the flaunching at the top. Stacks on the clay ground over towards Beckenham move seasonally, which opens the joints faster still. There is a full page on how we deal with them.",
+      p: "If we had to bet on the source of an unexplained leak in an Bromley house, we would bet on the chimney - the flashings around it, the mortar fillet that so often replaced proper lead, or the flaunching at the top. Stacks on the clay ground over towards Beckenham move seasonally, which opens the joints faster still. There is a full page on how we deal with them.",
       publicId: "chimney-stack-lead-flashing-repair",
       alt: "Brick chimney stack with lead flashing where it meets the tiled roof slope",
       ctaText: "Chimney repairs and flashings",
       ctaHref: "/chimney-repairs",
     },
     costText:
-      "Most single-fault leaks in Orpington come in between £220 and £850 once the survey, the access and the repair are counted. A cracked or slipped tile refixed is at the bottom of that range. Renewing a chimney flashing in lead sits in the middle, typically £450 to £950. Rebuilding a failed valley is the expensive end, £900 to £2,200 depending on length and whether the boards beneath have suffered. Where the survey shows condensation rather than ingress, the answer is usually £150 to £400 of ventilation work and no roofing at all.",
+      "Most single-fault leaks in Bromley come in between £220 and £850 once the survey, the access and the repair are counted. A cracked or slipped tile refixed is at the bottom of that range. Renewing a chimney flashing in lead sits in the middle, typically £450 to £950. Rebuilding a failed valley is the expensive end, £900 to £2,200 depending on length and whether the boards beneath have suffered. Where the survey shows condensation rather than ingress, the answer is usually £150 to £400 of ventilation work and no roofing at all.",
     faqs: [
       {
         question: "How do you find a leak you cannot see?",
@@ -746,18 +746,18 @@ export const services: ServiceData[] = [
   {
     slug: "/new-roofs",
     serviceName: "New Roofs & Re-Roofing",
-    metaTitle: "New Roofs & Re-Roofing In Orpington | LeonEast Roofing",
+    metaTitle: "New Roofs & Re-Roofing In Bromley | LeonEast Roofing",
     metaDescription:
-      "New roofs and full re-roofing in Orpington. Stripped back to the rafters, new treated battens, breathable membrane and matching tiles. Fixed price, 10 year guarantee.",
-    h1: "New Roofs & Re-Roofing In Orpington",
+      "New roofs and full re-roofing in Bromley. Stripped back to the rafters, new treated battens, breathable membrane and matching tiles. Fixed price, 10 year guarantee.",
+    h1: "New Roofs & Re-Roofing In Bromley",
     h2: "Has your roof reached the end rather than had a bad year?",
-    h3: "Full strip and re-cover on Orpington's interwar semis, postwar estate housing and older village properties",
-    heroPublicId: "new-roof-reroofing-orpington-tiles",
+    h3: "Full strip and re-cover on Bromley's interwar semis, postwar estate housing and older village properties",
+    heroPublicId: "new-roof-reroofing-bromley-tiles",
     heroAlt: "Newly laid clay roof tiles on the pitched roof of a house",
     intro:
       "A re-roof is the largest single piece of maintenance most houses ever have, and it is worth understanding what you are buying. The tiles are the visible part and usually the least of it. What actually determines whether a roof lasts twenty years or sixty is the timber beneath - the battens, the membrane, the eaves detail, the ventilation - and none of that is visible once the job is finished. That is precisely why it is the part cheap quotes economise on. We price the whole system, explain each layer, and invite you to look at the roof once it is stripped and before it is covered, which is the only moment you will ever be able to see what you paid for.",
     insight:
-      "Two re-roofing quotes on the same Orpington semi can differ by four thousand pounds, and the difference is almost never the tiles. It is the battens, the membrane and whether the scaffolding was included honestly.",
+      "Two re-roofing quotes on the same Bromley semi can differ by four thousand pounds, and the difference is almost never the tiles. It is the battens, the membrane and whether the scaffolding was included honestly.",
     symptoms: [
       {
         sign: "You have paid for three or four repairs in a few years",
@@ -807,9 +807,9 @@ export const services: ServiceData[] = [
       },
     ],
     localAngle: {
-      h: "Orpington built its roofs in three big waves",
+      h: "Bromley built its roofs in three big waves",
       p: "The railway improvements of 1904 turned a Kentish village into a commuter town, and house building peaked hard through the 1920s and 30s - which is why Crofton, Poverest, Goddington and Ramsden are largely one continuous run of bay-fronted semis with hipped clay tile roofs. Petts Wood went up in the same decade as a planned garden suburb, with hung tiles and half-timbered gables that behave quite differently. Then the postwar decades filled the Cray valley and Swanley with estate housing under concrete interlocking tiles. Each wave is now reaching the end of a predictable life at more or less the same moment, street by street. That is genuinely useful when we are pricing a re-roof, because we already know what is likely to be under the tiles on your road before we lift the first one - and it is why we can usually tell you on the survey whether the battens are going to be a pleasant surprise or an expensive one.",
-      publicId: "1930s-semi-detached-houses-street-orpington",
+      publicId: "1930s-semi-detached-houses-street-bromley",
       alt: "A row of 1930s semi-detached houses with hipped tiled roofs on a suburban street",
     },
     whatToLook: [
@@ -827,7 +827,7 @@ export const services: ServiceData[] = [
       },
     ],
     comparison: {
-      header: "Clay, concrete or slate on an Orpington roof",
+      header: "Clay, concrete or slate on an Bromley roof",
       intro:
         "The right covering depends on what the house is, what the street looks like and how long you intend to be there. These are the trade-offs as they actually apply around here.",
       proLabel: "Clay tiles",
@@ -867,14 +867,14 @@ export const services: ServiceData[] = [
     },
     teaser: {
       h: "What a re-roof actually costs",
-      p: "We have set out full figures on the cost page - a broken-down price for a standard Orpington semi, what a hipped roof adds over a gabled one, what scaffolding runs to, and the handful of things found under the tiles that legitimately change a price mid-job. Knowing all of that before you collect quotes makes comparing them very much easier.",
+      p: "We have set out full figures on the cost page - a broken-down price for a standard Bromley semi, what a hipped roof adds over a gabled one, what scaffolding runs to, and the handful of things found under the tiles that legitimately change a price mid-job. Knowing all of that before you collect quotes makes comparing them very much easier.",
       publicId: "roofers-working-on-new-roof-scaffolding",
       alt: "Roofers laying battens and membrane on a stripped roof from scaffolding",
       ctaText: "See the full cost guide",
       ctaHref: "/roof-repair-cost",
     },
     costText:
-      "A full strip and re-cover on a typical three-bedroom Orpington semi generally lands between £7,000 and £14,000, including scaffolding, new treated battens, breathable membrane, disposal and the tiles themselves. A hipped roof costs more than a gabled one of the same footprint because there is more cutting and more ridge and hip work. Natural slate pushes the top of that range considerably higher. Detached houses and anything with dormers, valleys or multiple levels are priced individually, because on those roofs an average figure is close to meaningless.",
+      "A full strip and re-cover on a typical three-bedroom Bromley semi generally lands between £7,000 and £14,000, including scaffolding, new treated battens, breathable membrane, disposal and the tiles themselves. A hipped roof costs more than a gabled one of the same footprint because there is more cutting and more ridge and hip work. Natural slate pushes the top of that range considerably higher. Detached houses and anything with dormers, valleys or multiple levels are priced individually, because on those roofs an average figure is close to meaningless.",
     faqs: [
       {
         question: "How long does a re-roof take?",
@@ -918,16 +918,16 @@ export const services: ServiceData[] = [
   {
     slug: "/flat-roofing",
     serviceName: "Flat Roofing",
-    metaTitle: "Flat Roofing In Orpington | EPDM, GRP & Felt | LeonEast",
+    metaTitle: "Flat Roofing In Bromley | EPDM, GRP & Felt | LeonEast",
     metaDescription:
-      "Flat roofing in Orpington - EPDM rubber, GRP fibreglass and high performance felt on extensions, dormers and garages. Free survey and a 10 year guarantee.",
-    h1: "Flat Roofing In Orpington",
+      "Flat roofing in Bromley - EPDM rubber, GRP fibreglass and high performance felt on extensions, dormers and garages. Free survey and a 10 year guarantee.",
+    h1: "Flat Roofing In Bromley",
     h2: "Is the flat roof on your extension past its best?",
     h3: "EPDM, GRP and torch-on felt on rear additions, dormers, garages and porches across the BR postcodes",
-    heroPublicId: "flat-roofing-orpington-extension",
+    heroPublicId: "flat-roofing-bromley-extension",
     heroAlt: "A modern flat roof on a single storey rear extension of a house",
     intro:
-      "Flat roofing is a genuinely separate trade from tiling, with different materials, different failure modes and different skills, and a firm that treats it as a sideline usually shows it. It also causes a disproportionate share of the leaks we attend, because a flat roof has no pitch to shed water in a hurry and therefore no tolerance for a poorly made joint. The good news is that the materials available now are far better than the three-layer felt that covers most of the older extensions around Orpington. A properly installed EPDM or fibreglass roof should outlast the extension's second kitchen.",
+      "Flat roofing is a genuinely separate trade from tiling, with different materials, different failure modes and different skills, and a firm that treats it as a sideline usually shows it. It also causes a disproportionate share of the leaks we attend, because a flat roof has no pitch to shed water in a hurry and therefore no tolerance for a poorly made joint. The good news is that the materials available now are far better than the three-layer felt that covers most of the older extensions around Bromley. A properly installed EPDM or fibreglass roof should outlast the extension's second kitchen.",
     insight:
       "Ninety per cent of the flat roof failures we see start at an edge, an upstand or an outlet. Almost none of them start in the middle, which is the part everyone looks at.",
     symptoms: [
@@ -979,7 +979,7 @@ export const services: ServiceData[] = [
       },
     ],
     localAngle: {
-      h: "Why Orpington's dry summers are hard on flat roofs",
+      h: "Why Bromley's dry summers are hard on flat roofs",
       p: "This is one of the sunniest and driest corners of the country, and while that suits a tiled roof it is genuinely tough on a flat one. A dark felt roof in full sun can reach surface temperatures far above the air temperature, and it does that repeatedly, all summer, year after year. Bitumen responds by losing its volatiles, going hard and eventually cracking, and it tends to do so at exactly the points that also have to absorb movement - the upstands and the edges. Then the first serious autumn downpour finds every crack at once. It is why so many of our flat roof emergencies cluster in September and October rather than in midwinter, and it is a strong argument for EPDM around here: rubber stays flexible through the heat in a way that ageing felt simply does not.",
       publicId: "flat-roof-membrane-detail-upstand",
       alt: "Detail of a flat roof membrane turned up against a brick wall at an upstand",
@@ -1044,7 +1044,7 @@ export const services: ServiceData[] = [
     },
     teaser: {
       h: "Dormers are flat roofs in disguise",
-      p: "The top of a dormer is a small flat roof in an awkward position, and around Orpington - where a great many lofts have been converted - it is one of the commonest sources of a mystery leak. The junction where the dormer's flat top meets the main tiled slope has to be right, and on a hurried conversion it very often was not. We deal with both sides of that junction.",
+      p: "The top of a dormer is a small flat roof in an awkward position, and around Bromley - where a great many lofts have been converted - it is one of the commonest sources of a mystery leak. The junction where the dormer's flat top meets the main tiled slope has to be right, and on a hurried conversion it very often was not. We deal with both sides of that junction.",
       publicId: "dormer-window-flat-roof-loft-conversion",
       alt: "A flat-roofed dormer window projecting from a tiled pitched roof",
       ctaText: "How we trace conversion leaks",
@@ -1090,16 +1090,16 @@ export const services: ServiceData[] = [
   {
     slug: "/tiling-and-slating",
     serviceName: "Tiling & Slating",
-    metaTitle: "Roof Tiling & Slating In Orpington | LeonEast Roofing",
+    metaTitle: "Roof Tiling & Slating In Bromley | LeonEast Roofing",
     metaDescription:
-      "Roof tiling and slating in Orpington - clay, concrete, natural slate and Kentish peg tiles matched and laid properly. Free survey, fixed price, 10 year guarantee.",
-    h1: "Roof Tiling & Slating In Orpington",
+      "Roof tiling and slating in Bromley - clay, concrete, natural slate and Kentish peg tiles matched and laid properly. Free survey, fixed price, 10 year guarantee.",
+    h1: "Roof Tiling & Slating In Bromley",
     h2: "Does your roof need work that has to look right as well as be right?",
     h3: "Clay, concrete, natural slate and handmade peg tiles, matched to the house and laid to last",
-    heroPublicId: "roof-tiling-slating-orpington-clay-tiles",
+    heroPublicId: "roof-tiling-slating-bromley-clay-tiles",
     heroAlt: "Rows of weathered clay roof tiles seen close up on a pitched roof",
     intro:
-      "Around Orpington you will find four quite different roof coverings within a couple of miles of each other, and each one wants handling in its own way. Machine-made clay tiles cover the interwar streets. Concrete interlocking tiles cover the postwar estates. Natural slate turns up on the Victorian and Edwardian houses towards Chislehurst and Beckenham. And out in the Kentish villages there are still handmade peg tiles that have been on the same roof for two hundred years. Getting a repair or a re-cover to look right means knowing which is which, sourcing to match, and laying it the way that covering expects to be laid.",
+      "Around Bromley you will find four quite different roof coverings within a couple of miles of each other, and each one wants handling in its own way. Machine-made clay tiles cover the interwar streets. Concrete interlocking tiles cover the postwar estates. Natural slate turns up on the Victorian and Edwardian houses towards Chislehurst and Beckenham. And out in the Kentish villages there are still handmade peg tiles that have been on the same roof for two hundred years. Getting a repair or a re-cover to look right means knowing which is which, sourcing to match, and laying it the way that covering expects to be laid.",
     insight:
       "The difference between a repair that disappears and one you can spot from the pavement is almost always sourcing, not skill. Finding the right tile takes longer than fitting it.",
     symptoms: [
@@ -1152,7 +1152,7 @@ export const services: ServiceData[] = [
     ],
     localAngle: {
       h: "Four roof coverings within three miles",
-      p: "It is unusual to find this much variety in one service area, and it comes from Orpington having been several things in quick succession. The Kentish villages at Chelsfield, Downe and Cudham were here long before London arrived, and some still wear handmade clay peg tiles on steep pitches. The Victorian and Edwardian expansion out towards Chislehurst and Beckenham brought Welsh slate in on the railways. The great interwar boom of the 1920s and 30s covered Crofton, Poverest and Goddington in machine-made clay tiles, mostly hipped, mostly mortar-bedded. Then the postwar decades filled the Cray valley and Swanley with concrete interlocking tiles. A roofer working this patch needs all four in their hands, and needs to know that a technique which is correct on one is wrong on the next.",
+      p: "It is unusual to find this much variety in one service area, and it comes from this corner of the borough having been several things in quick succession. The Kentish villages at Chelsfield, Downe and Cudham were here long before London arrived, and some still wear handmade clay peg tiles on steep pitches. The Victorian and Edwardian expansion out towards Chislehurst and Beckenham brought Welsh slate in on the railways. The great interwar boom of the 1920s and 30s covered Crofton, Poverest and Goddington in machine-made clay tiles, mostly hipped, mostly mortar-bedded. Then the postwar decades filled the Cray valley and Swanley with concrete interlocking tiles. A roofer working this patch needs all four in their hands, and needs to know that a technique which is correct on one is wrong on the next.",
       publicId: "natural-slate-roof-victorian-house",
       alt: "Natural slate roof and brick chimney on a Victorian house",
     },
@@ -1180,7 +1180,7 @@ export const services: ServiceData[] = [
         {
           label: "How long it lasts",
           pro: "The slate itself, eighty to a hundred and fifty years. It is nearly always the nails that fail first, not the slate.",
-          alt: "Sixty to a hundred years. Plenty of Orpington's 1930s clay is still perfectly sound today.",
+          alt: "Sixty to a hundred years. Plenty of Bromley's 1930s clay is still perfectly sound today.",
         },
         {
           label: "Minimum pitch",
@@ -1257,13 +1257,13 @@ export const services: ServiceData[] = [
   {
     slug: "/chimney-repairs",
     serviceName: "Chimney Repairs",
-    metaTitle: "Chimney Repairs In Orpington | LeonEast Roofing",
+    metaTitle: "Chimney Repairs In Bromley | LeonEast Roofing",
     metaDescription:
-      "Chimney repairs in Orpington - lead flashings, repointing, flaunching, rebuilds and removals. The most misdiagnosed leak on any roof. Free survey, 10 year guarantee.",
-    h1: "Chimney Repairs In Orpington",
+      "Chimney repairs in Bromley - lead flashings, repointing, flaunching, rebuilds and removals. The most misdiagnosed leak on any roof. Free survey, 10 year guarantee.",
+    h1: "Chimney Repairs In Bromley",
     h2: "Is the damp in your house actually coming from the stack?",
-    h3: "Flashings, repointing, flaunching, rebuilds and removals across Orpington and the surrounding boroughs",
-    heroPublicId: "chimney-repairs-orpington-brick-stack",
+    h3: "Flashings, repointing, flaunching, rebuilds and removals across Bromley and the surrounding boroughs",
+    heroPublicId: "chimney-repairs-bromley-brick-stack",
     heroAlt: "Brick chimney stack rising above a tiled roof against a grey sky",
     intro:
       "If we had to name the most commonly misdiagnosed source of damp in a house, it would be the chimney - and it is not close. A stack stands proud of the roof on all four sides, takes weather from every direction, is held together by mortar that is often a century old, and connects to the roof through a lead detail that plenty of builders replaced with a smear of sand and cement at some point in the 1980s. Water that gets in there runs down inside the flue or the brickwork and appears on a wall a floor or two below, which is why so many people spend money on the wrong wall entirely.",
@@ -1319,7 +1319,7 @@ export const services: ServiceData[] = [
     ],
     localAngle: {
       h: "Clay ground moves, and chimneys feel it first",
-      p: "Our patch sits across two quite different subsoils, and it makes a real difference to chimney work. Orpington itself and the ground rising south of it is on the chalk dip slope of the North Downs, which is comparatively stable - though the chalk does carry solution features, natural voids that occasionally cause very localised settlement around Orpington and Biggin Hill. Head north and west towards Beckenham, Penge and the lower ground and you are on London Clay, which shrinks in a dry summer and swells again through winter. That seasonal movement is small but it is relentless, and a chimney stack is a tall, rigid, heavy thing bolted to a roof that is moving underneath it. The joints open, the flaunching cracks, the flashings pull away from the brickwork. We get noticeably more chimney work out of Beckenham and the clay side than out of the chalk villages, and the difference is the ground, not the builders.",
+      p: "Bromley sits almost exactly on a geological join, and it makes a real difference to chimney work. South and east of the town - Orpington, Farnborough, Chelsfield, up towards Biggin Hill - is the chalk dip slope of the North Downs, which is comparatively stable, though the chalk carries solution features, natural voids that occasionally cause very localised settlement around Orpington and Biggin Hill. North and west, through Beckenham, Clock House and the Penge edge, it becomes London Clay, which shrinks in a dry summer and swells again through winter. That seasonal movement is small but it is relentless, and a chimney stack is a tall, rigid, heavy thing bolted to a roof that is moving underneath it. The joints open, the flaunching cracks, the flashings pull away from the brickwork. We get noticeably more chimney work out of Beckenham and the clay side than out of the chalk villages, and the difference is the ground, not the builders.",
       publicId: "chimney-stack-repointing-mortar-work",
       alt: "A brick chimney being repointed with fresh mortar between the courses",
     },
@@ -1424,16 +1424,16 @@ export const services: ServiceData[] = [
   {
     slug: "/guttering-fascias-and-soffits",
     serviceName: "Guttering, Fascias & Soffits",
-    metaTitle: "Guttering, Fascias & Soffits In Orpington | LeonEast Roofing",
+    metaTitle: "Guttering, Fascias & Soffits In Bromley | LeonEast Roofing",
     metaDescription:
-      "Guttering, fascias and soffits in Orpington. Blocked, sagging and leaking gutters cleared or replaced, rotten roofline renewed. Free survey and a 10 year guarantee.",
-    h1: "Guttering, Fascias & Soffits In Orpington",
+      "Guttering, fascias and soffits in Bromley. Blocked, sagging and leaking gutters cleared or replaced, rotten roofline renewed. Free survey and a 10 year guarantee.",
+    h1: "Guttering, Fascias & Soffits In Bromley",
     h2: "Is water going down the wall instead of down the pipe?",
-    h3: "Gutters, downpipes, fascias, soffits and bargeboards across Orpington and the tree-lined streets around it",
-    heroPublicId: "guttering-fascias-soffits-orpington",
+    h3: "Gutters, downpipes, fascias, soffits and bargeboards across Bromley and the tree-lined streets around it",
+    heroPublicId: "guttering-fascias-soffits-bromley",
     heroAlt: "White uPVC guttering and fascia along the eaves of a house roof",
     intro:
-      "The roofline is the least interesting part of a house and one of the most consequential. A gutter that overflows at one corner does not stay a gutter problem for long: the water soaks the fascia, the fascia rots, the rafter ends behind it follow, and what began as a fifty pound bracket becomes several thousand pounds of timber work. Bromley is among the greenest London boroughs and this is a borough of mature street trees, so gutters here fill faster than most. Getting up there once a year is genuinely one of the highest-value things a homeowner around Orpington can do.",
+      "The roofline is the least interesting part of a house and one of the most consequential. A gutter that overflows at one corner does not stay a gutter problem for long: the water soaks the fascia, the fascia rots, the rafter ends behind it follow, and what began as a fifty pound bracket becomes several thousand pounds of timber work. Bromley is among the greenest London boroughs and this is a borough of mature street trees, so gutters here fill faster than most. Getting up there once a year is genuinely one of the highest-value things a homeowner around Bromley can do.",
     insight:
       "The cheapest roofing job we ever do is clearing a gutter. The most annoying is replacing the rafter feet that rotted because nobody did.",
     symptoms: [
@@ -1538,7 +1538,7 @@ export const services: ServiceData[] = [
         },
         {
           label: "Usually right for",
-          pro: "Interwar and postwar housing, which is the great majority of what we work on around Orpington.",
+          pro: "Interwar and postwar housing, which is the great majority of what we work on around Bromley.",
           alt: "Victorian and Edwardian property, conservation areas, and anywhere the original is still sound.",
         },
       ],
@@ -1552,7 +1552,7 @@ export const services: ServiceData[] = [
       ctaHref: "/roof-leak-repairs",
     },
     costText:
-      "Clearing the gutters and downpipes on a standard Orpington semi is £90 to £180, and it is the single best value job on this website. Replacing a run of guttering is £25 to £45 per metre in uPVC. Full roofline replacement - guttering, fascias and soffits together - runs £1,400 to £3,200 on a typical semi depending on the length and the access. Repairing rotten rafter ends discovered behind an old fascia adds £40 to £90 per rafter, and we will always show you a photograph before doing it.",
+      "Clearing the gutters and downpipes on a standard Bromley semi is £90 to £180, and it is the single best value job on this website. Replacing a run of guttering is £25 to £45 per metre in uPVC. Full roofline replacement - guttering, fascias and soffits together - runs £1,400 to £3,200 on a typical semi depending on the length and the access. Repairing rotten rafter ends discovered behind an old fascia adds £40 to £90 per rafter, and we will always show you a photograph before doing it.",
     faqs: [
       {
         question: "How often should gutters be cleared around here?",

@@ -1,15 +1,15 @@
 ---
-title: "How To Choose A Roofer In Orpington: Six Questions That Sort Them Fast"
-description: "Six questions to put to any roofer quoting on your Orpington house - what they reveal, and what a fair local price actually looks like in 2026."
+title: "How To Choose A Roofer In Bromley: Six Questions That Sort Them Fast"
+description: "Six questions to put to any roofer quoting on your Bromley house - what they reveal, and what a fair local price actually looks like in 2026."
 pubDate: 2026-09-10
-heroImage: "/images/blog-choosing-roofer-orpington.webp"
-heroImageAlt: "A roofer working on the tiled roof of a suburban house in Orpington"
+heroImage: "/images/blog-choosing-roofer-bromley.webp"
+heroImageAlt: "A roofer working on the tiled roof of a suburban house in Bromley"
 faqs:
-  - question: "How many quotes should I get for roof work in Orpington?"
+  - question: "How many quotes should I get for roof work in Bromley?"
     answer: "Three is the sensible number. One tells you nothing, two gives you no way of knowing which is the outlier, and beyond three you are mostly spending your own time. Make sure all three have actually surveyed the roof rather than pricing from the pavement, or you are comparing guesses."
   - question: "Should I be worried if one quote is much cheaper?"
     answer: "Yes, and the thing to do is find out why rather than assume it is a bargain. The four usual places the difference hides are ungraded or untreated battens, an overlay instead of a full strip, scaffolding excluded and billed later, and a cement fillet at the chimney instead of lead. None of those is visible once the job is finished."
-  - question: "Does a roofer in Orpington need to be accredited?"
+  - question: "Does a roofer in Bromley need to be accredited?"
     answer: "There is no legal requirement to hold an accreditation to carry out roofing work in the UK. Membership of a body such as the National Federation of Roofing Contractors or registration with TrustMark is a useful signal, but public liability insurance, a written guarantee and evidence of comparable local work matter more day to day. Be equally wary of anyone claiming a certification they cannot produce."
   - question: "Is it normal to pay a deposit for a roof?"
     answer: "For a small repair, no - those are invoiced on completion. For a full re-roof, where several thousand pounds of materials and scaffolding are ordered up front, staged payments are normal across the trade and should be set out in writing on the quotation before you accept it. A large cash deposit requested before any materials have been ordered is a warning sign."
@@ -19,17 +19,17 @@ Hiring a roofer is unusually hard to get right, and the reason is structural rat
 
 ## Question one: are you actually local, or is this a call centre?
 
-<img src="/images/blog-choosing-roofer-orpington.webp" alt="A roofer working on the tiled roof of a suburban house in Orpington" width="900" height="600" loading="eager" fetchpriority="high" />
+<img src="/images/blog-choosing-roofer-bromley.webp" alt="A roofer working on the tiled roof of a suburban house in Bromley" width="900" height="600" loading="eager" fetchpriority="high" />
 
-A great many numbers advertised as "emergency roofers Orpington" route to a national booking service, which then subcontracts your job to whoever has capacity. You pay a referral margin on top of the work, you have no relationship with the person who actually turns up, and if something goes wrong in two years' time the entity you contracted with may have very little interest in it.
+A great many numbers advertised as "emergency roofers Bromley" route to a national booking service, which then subcontracts your job to whoever has capacity. You pay a referral margin on top of the work, you have no relationship with the person who actually turns up, and if something goes wrong in two years' time the entity you contracted with may have very little interest in it.
 
-The test is straightforward. Ask where the person coming out is based. A real local firm answers with a place you recognise - Orpington, Petts Wood, the Crays - and can tell you roughly how long the drive is. If the answer is vague, or is a region rather than a town, you are talking to an intermediary.
+The test is straightforward. Ask where the person coming out is based. A real local firm answers with a place you recognise - Bromley, Beckenham, Petts Wood, Orpington - and can tell you roughly how long the drive is. If the answer is vague, or is a region rather than a town, you are talking to an intermediary.
 
-Being local matters practically as well as ethically. Most of the BR postcodes are ten to twenty minutes from Orpington, which is the difference between a make-safe happening this afternoon and happening on Thursday. It also means the firm has worked on your kind of house before. Someone who has rebedded a hundred hips across Crofton already knows what is under your ridge tiles. If you would like to see how we cover the area, [our service area and the towns we work in](/) is set out on the homepage.
+Being local matters practically as well as ethically. Most of the BR postcodes are ten to twenty minutes from Bromley, which is the difference between a make-safe happening this afternoon and happening on Thursday. It also means the firm has worked on your kind of house before. Someone who has rebedded a hundred hips across Crofton already knows what is under your ridge tiles. If you would like to see how we cover the area, [our service area and the towns we work in](/) is set out on the homepage.
 
 ## Question two: what is the access going to cost?
 
-<img src="/images/blog-scaffolding-cost-orpington-house.webp" alt="Scaffolding erected against the side of a two storey house for roof work" width="900" height="600" loading="lazy" />
+<img src="/images/blog-scaffolding-cost-bromley-house.webp" alt="Scaffolding erected against the side of a two storey house for roof work" width="900" height="600" loading="lazy" />
 
 Scaffolding is frequently the single largest line on a roofing invoice and it is the one homeowners are least prepared for. On a standard two-storey house in this area, allow £800 to £1,600, charged by the hire period. A chimney access scaffold is cheaper. Some repairs are perfectly safe from a tower, which costs a fraction of either.
 
@@ -77,7 +77,7 @@ So ask: will you photograph the damage before you touch it, and will you describ
 
 Be equally alert to the opposite problem. Anyone who urges you to claim before they have properly assessed the damage, or offers to cover your excess, is a firm to walk away from. On a small job a claim can genuinely cost you more over time than paying directly once the excess and the premium increase are counted. This corner of the country does take real storms - the Great Storm of October 1987 gusted to around 130mph and hit west Kent about as hard as anywhere in England, and Storm Eunice repeated a milder version in February 2022 - so the question comes up here more than the rainfall figures suggest.
 
-## What a fair price actually looks like around Orpington
+## What a fair price actually looks like around Bromley
 
 <img src="/images/blog-comparing-roofing-quotes.webp" alt="Two written roofing quotations laid side by side for comparison" width="900" height="600" loading="lazy" />
 
@@ -87,4 +87,4 @@ Roughly 40 per cent of the repair work we carry out in the Farnborough and Croft
 
 Two final things. Check the firm has public liability insurance and ask to see the certificate - it takes ten seconds and almost nobody does it. And if you want to understand what you are being quoted for before the first roofer arrives, it is worth ten minutes on [the faults that come up again and again on this patch](/common-roof-problems), because a homeowner who can name the problem is a homeowner who is very hard to oversell to.
 
-[Book a free roof survey in Orpington](/contact)
+[Book a free roof survey in Bromley](/contact)

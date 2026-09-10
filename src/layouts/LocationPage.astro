@@ -214,7 +214,7 @@ const serviceSchema = {
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
       <h2 class="text-3xl sm:text-4xl font-bold text-ink text-center rule rule-center">Where {data.name} sits</h2>
       <p class="mt-6 text-center text-slate/70 max-w-3xl mx-auto">
-        Around {town.driveTime} from our base in Orpington, in the {town.postcode} postcode, and
+        Around {town.driveTime} from our office in Bromley, in the {town.postcode} postcode, and
         under <a href={town.councilUrl} target="_blank" rel="noopener noreferrer" class="text-brand-dark font-semibold hover:underline">{town.council}</a>
         {" "}for anything that needs planning permission.
       </p>
@@ -271,7 +271,7 @@ const serviceSchema = {
         ))}
       </div>
       <div class="mt-6 flex flex-wrap justify-center gap-2">
-        <a href="/" class="rounded-full bg-ink px-4 py-1.5 text-sm font-semibold text-white hover:bg-slate">Orpington</a>
+        <a href="/" class="rounded-full bg-ink px-4 py-1.5 text-sm font-semibold text-white hover:bg-slate">Bromley</a>
         {locations.map((l) => (
           l.slug === data.slug ? (
             <span class="rounded-full bg-brand px-4 py-1.5 text-sm font-semibold text-white">{l.name}</span>

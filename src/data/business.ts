@@ -33,39 +33,39 @@ export const business = {
   email: "",
 
   // Core service area
-  location: "Orpington",
+  location: "Bromley",
   region: "Greater London",
   country: "GB",
   serviceAreaLabel:
-    "Covering Orpington and the BR postcodes around it - Petts Wood, Chislehurst, Bromley, the Crays, Chelsfield, Farnborough, West Wickham, Beckenham, Biggin Hill, and over the borough line into Sidcup and Swanley",
+    "Covering Bromley and the BR postcodes around it - Beckenham, Petts Wood, Chislehurst, West Wickham, Orpington, the Crays, Farnborough, Chelsfield, Biggin Hill, and over the borough line into Sidcup and Swanley",
 
-  // Trading address - drives the footer, the contact page and the
-  // LocalBusiness schema. Client confirmed the Dulwich office is the trading
-  // one of the two.
+  // Operational address - drives the contact page and the LocalBusiness
+  // schema, because schema should say where the business actually is. The
+  // Dulwich office is the trading/paperwork address; it still appears in the
+  // footer and on the legal pages but does not set the business's location.
   address: {
-    street: "70 Dulwich Business Park, Malham Road",
-    locality: "London",
+    street: "23 Kingfisher House, Elmfield Road",
+    locality: "Bromley",
     region: "Greater London",
-    postcode: "SE23 1AG",
+    postcode: "BR1 1LT",
   },
 
   // Both client addresses, shown together at the foot of every page. The
-  // first is the trading address above; the second is listed as a further
-  // office. Only the trading one goes into schema, so the NAP stays single
-  // and consistent.
+  // first is the trading/paperwork address, the second is the Bromley office
+  // the business works out of. Only the Bromley one goes into schema, so the
+  // NAP stays single and consistent.
   addresses: [
     ["70 Dulwich Business Park", "Malham Road", "London", "SE23 1AG", "England"],
     ["23 Kingfisher House", "Elmfield Road", "Bromley", "BR1 1LT", "England"],
   ],
 
-  // Centroid of SE23 1AG, verified against postcodes.io. This matches the
-  // trading address above rather than the service centre - schema `geo` and
-  // schema `address` have to describe the same place or the record is
-  // self-contradictory. Where the firm actually works is expressed through
-  // `areaServed`, which lists Orpington and all eleven towns.
+  // Centroid of BR1 1LT, verified against postcodes.io - the same place as
+  // the address above, because schema `geo` and schema `address` have to
+  // agree or the record contradicts itself. Where the firm works is carried
+  // by `areaServed`, which lists Bromley and all eleven towns around it.
   geo: {
-    latitude: 51.4428,
-    longitude: -0.0481,
+    latitude: 51.402,
+    longitude: 0.0183,
   },
   serviceRadiusKm: 14,
 

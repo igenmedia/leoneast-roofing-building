@@ -23,12 +23,15 @@
 //     and Eden Park, Petts Wood and Knoll, and Shortlands wards. A separate
 //     Article 4 removes roof alteration rights in places.
 //
-// The geology is the other thing that shapes this file. Orpington and the
-// ground south of it sits on the chalk dip slope of the North Downs, capped
-// in places with clay-with-flints; north and west towards Beckenham and Penge
-// it is London Clay. Chalk is the steadier of the two but carries solution
-// features - natural voids - while London Clay shrinks and swells with the
-// seasons and takes chimney stacks and roof lines with it.
+// The geology is the other thing that shapes this file, and Bromley sits
+// almost exactly on the join. South and east - Orpington, Farnborough,
+// Chelsfield, Biggin Hill - is the chalk dip slope of the North Downs,
+// capped in places with clay-with-flints and carrying solution features,
+// natural voids that cause very localised settlement. North and west -
+// Beckenham, Clock House, the Penge edge - is London Clay, which shrinks
+// through a dry summer and swells again over winter, opening joints at
+// chimney stacks and pulling flashings away from brickwork. Which side of
+// town a house sits on changes what fails on it.
 
 export interface Town {
   name: string;
@@ -68,7 +71,7 @@ export const locations: Town[] = [
     hoods: ["The Knoll", "Woodhurst Avenue", "Birchwood Road", "Chatsworth Avenue"],
     exposure:
       "Hung tiles and deep gables are the weak points. Tile hanging relies on battens and nails buried inside the elevation, so when they finally give up there is nothing to see from the ground until a whole panel slips at once. The estate was built in one push in the thirties, so the fixings are all reaching the same age at the same time.",
-    driveTime: "about 8 minutes",
+    driveTime: "about 10 minutes",
   },
   {
     name: "Chislehurst",
@@ -83,21 +86,21 @@ export const locations: Town[] = [
     hoods: ["Chislehurst Common", "Royal Parade", "Camden Park Road", "Bickley border"],
     exposure:
       "Height and tree cover. These are steep three-storey roofs under mature oak and beech, which means gutters that silt up every autumn, valleys that hold leaf litter through the winter, and slate that has been fixed with the same nails since the 1880s. Access is half the job and pricing it honestly is the other half.",
-    driveTime: "about 12 minutes",
+    driveTime: "about 10 minutes",
   },
   {
-    name: "Bromley",
-    slug: "bromley",
-    postcode: "BR1 & BR2",
+    name: "Orpington",
+    slug: "orpington",
+    postcode: "BR5 & BR6",
     council: BROMLEY,
     councilUrl: BROMLEY_URL,
     planningNote:
-      "Bromley Town is one of the wards named in the council's Article 4 direction on upward extensions, and the town centre has its own conservation area appraisal covering the older frontages around the High Street and Market Square. Outside those pockets, most repair work in Bromley is straightforward like-for-like and needs no consent at all.",
+      "The town itself carries less designation than its neighbours - the great interwar estates at Crofton, Poverest and Goddington sit outside both the conservation areas and the Article 4 zones, so most work here needs no consent at all. That changes at the edges: the old village core at Farnborough, the church end of St Mary Cray, and anything out towards Chelsfield, where the council's Article 4 direction on upward extensions does apply.",
     stock:
-      "The whole century in one town. Victorian and Edwardian terraces and villas ring the centre, the interwar boom filled Shortlands, Sundridge and Bickley with bay-fronted semis, and the last twenty years have stacked flats behind the High Street on flat and near-flat roofs that are already reaching their first membrane replacement.",
-    hoods: ["Shortlands", "Sundridge Park", "Bickley", "Plaistow"],
+      "A Kentish village that the railway turned into a commuter town. Building peaked hard through the 1920s and 30s after the station improvements of 1904, which is why Crofton, Poverest, Goddington and Ramsden run to street after street of bay-fronted semis with hipped clay tile roofs. Postwar estates fill the Cray valley to the north, and there are older properties scattered along the original high street.",
+    hoods: ["Crofton", "Poverest", "Goddington", "Ramsden"],
     exposure:
-      "Bromley sits on the join. The clay ground to the north and west moves with the seasons and pulls at chimney stacks and roof lines, while the older housing carries slate that is well past its original nail life. Add flat-roofed extensions from four different decades on the back of the same terrace and you get a town where no two quotes look alike.",
+      "Uniformity is the story. Thousands of roofs went up within a few years of each other, with the same mortar-bedded hips and ridges and the same nailing pattern, and ninety years on they are all reaching the same point together. Hip mortar is far and away the most common thing we are called out to in the BR6 postcode.",
     driveTime: "about 15 minutes",
   },
   {
@@ -113,7 +116,7 @@ export const locations: Town[] = [
     hoods: ["High Street", "Poverest", "Ramsden Estate", "Derry Downs"],
     exposure:
       "Streets that were built together are failing together. The concrete tiles laid across the Cray estates in the fifties and sixties are past sixty years now, and concrete tiles do not fail politely - they delaminate, shed their surface, and get heavy with water. When one house on a road needs work, the neighbours usually do too.",
-    driveTime: "about 5 minutes",
+    driveTime: "about 15 minutes",
   },
   {
     name: "Chelsfield",
@@ -128,7 +131,7 @@ export const locations: Town[] = [
     hoods: ["Chelsfield Village", "Chelsfield Park", "Well Hill", "Pratts Bottom"],
     exposure:
       "This is where our patch stops being London and starts being the North Downs. The ground is higher, the tree cover heavier and the wind considerably less polite than it is in the town. Peg-tiled village roofs need someone who has handled peg tiles before, and the big Chelsfield Park roofs need proper access before anyone can say what is wrong with them.",
-    driveTime: "about 8 minutes",
+    driveTime: "about 18 minutes",
   },
   {
     name: "Farnborough",
@@ -143,7 +146,7 @@ export const locations: Town[] = [
     hoods: ["Farnborough High Street", "Crofton", "Locksbottom", "Green Street Green"],
     exposure:
       "Crofton is the story here. Thousands of houses went up in the same decade with the same hipped clay-tile roofs, the same mortar bedding on the hips and ridges, and the same nails. Ninety years on, hip mortar is the single most common thing we are called out to in this postcode - it cracks, it lets go, and it takes a tile with it.",
-    driveTime: "about 6 minutes",
+    driveTime: "about 12 minutes",
   },
   {
     name: "West Wickham",
@@ -158,7 +161,7 @@ export const locations: Town[] = [
     hoods: ["Coney Hall", "Wickham Court", "Layhams Road", "Corkscrew Hill"],
     exposure:
       "The land climbs steadily towards Coney Hall and the Kent border, and the top of that rise catches weather that the sheltered streets below never feel. Roofs up there lose ridge tiles in gales that the rest of the borough sleeps through, and the long southern-facing slopes bake hard in a dry summer, which is what finally kills tired felt underlay.",
-    driveTime: "about 20 minutes",
+    driveTime: "about 12 minutes",
   },
   {
     name: "Beckenham",
@@ -173,7 +176,7 @@ export const locations: Town[] = [
     hoods: ["Park Langley", "Eden Park", "Clock House", "Kelsey Park"],
     exposure:
       "This is the London Clay end of our patch, not the chalk, and the difference shows up in the roof line. Clay shrinks in a dry summer and swells again in winter, and over decades that movement opens joints at chimney stacks, cracks flaunching and pulls flashings away from brickwork. Beckenham gets more chimney work out of us than anywhere else we cover.",
-    driveTime: "about 20 minutes",
+    driveTime: "about 8 minutes",
   },
   {
     name: "Biggin Hill",
@@ -188,7 +191,7 @@ export const locations: Town[] = [
     hoods: ["Main Road", "Leaves Green", "Downe", "Cudham"],
     exposure:
       "The highest ground we cover, at around 180 metres on the North Downs ridge, and it is a different climate from Orpington seven miles down the hill. Wind is the constant - exposed ridges, no shelter, and gusts that lift ridge tiles and strip felt off flat roofs while the rest of the borough records a breezy afternoon. Roofs up here need mechanically fixed ridges, not mortar and hope.",
-    driveTime: "about 22 minutes",
+    driveTime: "about 20 minutes",
   },
   {
     name: "Sidcup",
@@ -203,7 +206,7 @@ export const locations: Town[] = [
     hoods: ["Sidcup High Street", "Albany Park", "Lamorbey", "Blackfen"],
     exposure:
       "Mile after mile of houses built in the same few years to the same detail, which makes the failures wonderfully predictable: mortar-bedded hips letting go, original sand-faced clay tiles delaminating at the nose, and cast-iron gutters that were replaced with cheap uPVC in the eighties and are now sagging between brackets.",
-    driveTime: "about 15 minutes",
+    driveTime: "about 18 minutes",
   },
   {
     name: "Swanley",
@@ -218,6 +221,6 @@ export const locations: Town[] = [
     hoods: ["Swanley Village", "Hextable", "Crockenhill", "White Oak"],
     exposure:
       "Concrete tile country, and the tiles are all hitting the same age. A sixty-year-old concrete interlocking tile has usually lost its surface coating, gone porous, and put on real weight - which is a problem for the original softwood battens underneath it, most of which were never treated. On a Swanley re-roof the battens are the job as often as the tiles are.",
-    driveTime: "about 12 minutes",
+    driveTime: "about 20 minutes",
   },
 ];

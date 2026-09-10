@@ -7,7 +7,7 @@ import StatsBar from "../components/StatsBar.astro";
 import Reviews from "../components/Reviews.astro";
 import NextPage from "../components/NextPage.astro";
 
-const heroImg = img("common-roof-problems-orpington-hero");
+const heroImg = img("common-roof-problems-bromley-hero");
 
 // Eight faults, ordered roughly by how often we are called to them on this
 // patch. Each one is tied to the local housing that produces it rather than
@@ -146,8 +146,8 @@ const breadcrumbSchema = {
 ---
 
 <Layout
-  title="Common Roof Problems In Orpington | LeonEast Roofing"
-  description="The eight roof faults we get called to most around Orpington - what causes each one, how urgent it really is, and what it costs to put right."
+  title="Common Roof Problems In Bromley | LeonEast Roofing"
+  description="The eight roof faults we get called to most around Bromley - what causes each one, how urgent it really is, and what it costs to put right."
   ogImage={heroImg}
   schema={[faqSchema, breadcrumbSchema]}
 >
@@ -160,7 +160,7 @@ const breadcrumbSchema = {
         <span class="text-steel-light">Common Roof Problems</span>
       </nav>
       <h1 class="mt-4 text-4xl sm:text-5xl font-bold tracking-tight leading-tight">
-        <a href="/" class="text-white hover:text-brand-light transition-colors">Common Roof Problems In Orpington</a>
+        <a href="/" class="text-white hover:text-brand-light transition-colors">Common Roof Problems In Bromley</a>
       </h1>
       <h2 class="mt-4 text-xl font-semibold text-brand-light">What is that, and does it need doing now?</h2>
       <h3 class="mt-3 text-lg font-semibold text-steel-light">
@@ -170,7 +170,7 @@ const breadcrumbSchema = {
       <p class="mt-6 text-lg text-steel-light text-left">
         The single most useful thing this page can do is stop somebody worrying about moss
         while ignoring a cracked flaunching. Below are the eight things we get called out to
-        most around Orpington, each tied to the housing that produces it - the interwar hips
+        most around Bromley, each tied to the housing that produces it - the interwar hips
         at Crofton, the postwar concrete tiles through the Crays, the chimneys on the clay at
         Beckenham. Each one says plainly whether it needs dealing with this week, this year, or
         not for a while yet.
@@ -248,7 +248,7 @@ const breadcrumbSchema = {
         eight faults above are not evenly distributed across the patch.
       </p>
       <div class="mt-8 flex flex-wrap justify-center gap-2">
-        <a href="/" class="rounded-full bg-ink px-4 py-1.5 text-sm font-semibold text-white hover:bg-slate">Orpington</a>
+        <a href="/" class="rounded-full bg-ink px-4 py-1.5 text-sm font-semibold text-white hover:bg-slate">Bromley</a>
         {locations.map((l) => (
           <a href={`/${l.slug}`} class="rounded-full border border-slate/20 bg-paper px-4 py-1.5 text-sm text-slate/80 hover:border-brand hover:text-brand-dark">{l.name}</a>
         ))}

@@ -9,7 +9,7 @@
 // its roofs rather than on a template with the name swapped:
 //   Petts Wood      - a 1930s garden suburb and its hung tiles
 //   Chislehurst     - height, heritage and heavy tree cover
-//   Bromley         - four building eras meeting in one town
+//   Orpington       - a whole town roofed in one decade, all failing in step
 //   St Mary Cray    - postwar estate roofs all ageing in step
 //   Chelsfield      - two villages, peg tiles and private estate covenants
 //   Farnborough     - the Crofton hip-mortar belt
@@ -71,7 +71,7 @@ export const locationPages: LocationPageData[] = [
     metaDescription:
       "Roofers in Petts Wood who understand a 1930s garden suburb - hung tiles, half-timbered gables and Article 4 rules. Free survey, fixed price, 10 year guarantee.",
     h2: "Does your roofer know what tile hanging actually is?",
-    h3: "Repairs, re-covers and roofline work on Petts Wood's garden suburb housing, eight minutes from our base",
+    h3: "Repairs, re-covers and roofline work on Petts Wood's garden suburb housing, ten minutes from the Bromley office",
     intro:
       "Petts Wood is one of the most coherent pieces of 1930s planning in outer London, and it is also one of the trickier places to roof properly. The estate was built to a deliberate style - half-timbered gables, steep pitches, leaded lights and clay tiles hung down the upper walls - and that last feature catches out a great many roofers, because tile hanging is a wall covering that behaves like a roof and fails like one too. We work here constantly, we know what is behind those elevations, and we know which streets sit inside the Area of Special Residential Character where the council takes a close interest in anything that changes how a house looks.",
     heroPublicId: "petts-wood-tile-hung-gable-house",
@@ -125,8 +125,8 @@ export const locationPages: LocationPageData[] = [
         text: "Petts Wood and Knoll is one of the wards where upward extension rights have been withdrawn. We will tell you on the survey whether your job touches that, and when it does not.",
       },
       {
-        title: "Eight minutes away",
-        text: "Our base is in Orpington, so Petts Wood is a short run rather than a scheduling problem. It shows most in emergencies and in how quickly we can get back if something needs a second look.",
+        title: "Ten minutes away",
+        text: "Our office is in Bromley, so Petts Wood is a short run rather than a scheduling problem. It shows most in emergencies, and in how easily we can come back if something wants a second look.",
       },
     ],
     insight:
@@ -176,7 +176,7 @@ export const locationPages: LocationPageData[] = [
       {
         question: "How quickly can you get to Petts Wood?",
         answer:
-          "It is about eight minutes from our base in Orpington, so it is one of the fastest calls we make. Free surveys are usually within two to four working days, and if water is actively coming in we will treat it as an emergency and get there the same day where the weather allows.",
+          "About ten minutes from our office in Bromley, so it is one of the quicker calls we make. Free surveys are usually within two to four working days, and if water is actively coming in we will treat it as an emergency and get there the same day where the weather allows.",
       },
     ],
     finalH: "Book a free roof survey in Petts Wood",
@@ -305,127 +305,128 @@ export const locationPages: LocationPageData[] = [
       "We will get properly up there, photograph the slate, the ridges, the flashings and the valleys, and tell you honestly whether you are looking at a repair, a re-lay or nothing at all this year.",
   },
 
-  // ------------------------------------------------------------- BROMLEY --
+  // ----------------------------------------------------------- ORPINGTON --
   {
-    slug: "bromley",
-    name: "Bromley",
-    metaTitle: "Roofers Bromley | LeonEast Roofing & Building",
+    slug: "orpington",
+    name: "Orpington",
+    metaTitle: "Roofers Orpington | LeonEast Roofing & Building",
     metaDescription:
-      "Roofers in Bromley covering Victorian slate, 1930s tiled semis and modern flat roofs. Free survey, photographs of the fault, fixed price and a 10 year guarantee.",
-    h2: "Do you know which decade your roof is actually from?",
-    h3: "Repairs, re-roofing and flat roofing across Bromley town, Shortlands, Sundridge Park and Bickley",
+      "Roofers in Orpington covering Crofton, Poverest and Goddington. Hip mortar, 1930s clay tile repairs and full re-roofs. Free survey and a 10 year guarantee.",
+    h2: "Is your roof the same age as every other roof on the road?",
+    h3: "Roofing across Orpington, Crofton, Poverest, Goddington and Ramsden - fifteen minutes from the Bromley office",
     intro:
-      "Bromley has a bit of everything, which is unusual for one town and genuinely useful to a roofer. Walk out from the High Street and you pass Victorian and Edwardian villas under slate, then the great interwar spread of bay-fronted semis under clay tile through Shortlands and Sundridge, then postwar infill, then flats behind the town centre whose flat roofs are now on their first membrane replacement. Each generation fails in its own way and on its own schedule, and pricing a Bromley roof sensibly starts with working out which one you have.",
-    heroPublicId: "bromley-suburban-rooftops-mixed-housing",
-    heroAlt: "A mix of slate and tiled rooftops across a south London suburb",
+      "Orpington is the most uniform patch we work on, and that is genuinely good news if you own a roof here. The town went up in one enormous push through the 1920s and 30s, street after street of bay-fronted semis built to the same details by builders working to the same conventions. Ninety years on they are producing the same faults in the same order, which means we can usually tell you what we expect to find before the ladder comes off the van. It also means that when your neighbour has scaffolding up, it is worth a look at your own.",
+    heroPublicId: "orpington-rooftops-interwar-semis",
+    heroAlt: "Rooftops of interwar semi-detached houses across a residential street in Orpington",
     about: {
-      p1: "Bromley was a Kentish market town that the railway turned into a suburb and the twentieth century turned into a small city. The centre was substantially rebuilt in the sixties and seventies, but the streets radiating out from it were not, and they still read as a clear timeline: the Victorian and Edwardian villas closest in, then the interwar boom that filled Shortlands, Sundridge Park and Bickley with bay-windowed semis, then everything since.",
-      p2: "The town also sits on a geological join, which matters more than most people expect. South and east of here the ground is chalk, the dip slope of the North Downs, and it is comparatively steady. North and west it becomes London Clay, which shrinks in a dry summer and swells again in winter, moving chimney stacks and opening joints as it goes. Bromley gets a bit of both, which is one reason the borough's chimney work is so unevenly distributed across it.",
-      publicId: "bromley-town-victorian-terrace-houses",
-      alt: "A row of Victorian terraced houses with chimney stacks and slate roofs",
+      p1:
+        "Orpington was a Kentish village with a name recorded as far back as 1038, and it stayed one for the best part of nine hundred years. The railway arrived in 1868 and the station improvements of 1904 changed everything - within two decades the farmland west and south of the high street had been laid out as Crofton, Poverest and Goddington, and the population went up several times over. The River Cray still rises in Priory Gardens, which is about the only bit of the old village that has not been built around.",
+      p2:
+        "For a roofer, the interesting thing is that all of that happened in one short window. The estates share a covering, a pitch, a hip detail and a nailing pattern, so the failures arrive in waves rather than at random. The postwar decades added the Cray valley estates to the north under concrete interlocking tiles, and there are older properties scattered along the original high street - but the overwhelming majority of the roofs we look at in BR5 and BR6 are hipped, clay-tiled and about ninety years old.",
+      publicId: "orpington-victorian-terraces-older-housing",
+      alt: "Older brick terraced houses with slate roofs and chimney stacks",
     },
     featured: [
       {
         name: "Roof Repairs",
         href: "/roof-repairs",
-        text: "The bread and butter across every Bromley era - slipped tiles, cracked hips, tired flashings, and telling you honestly which of those actually needs doing.",
+        text: "Rebedding and repointing hips and ridges, which is more than a third of everything we do in this postcode.",
       },
       {
-        name: "Flat Roofing",
-        href: "/flat-roofing",
-        text: "Rear extensions, garages and the flat roofs on the newer blocks behind the High Street, several of which are now well past their original felt.",
-      },
-      {
-        name: "Chimney Repairs",
-        href: "/chimney-repairs",
-        text: "Bromley's clay side moves seasonally, which opens joints and cracks flaunching on stacks that would sit still elsewhere in the borough.",
+        name: "Tiling & Slating",
+        href: "/tiling-and-slating",
+        text: "Matching 1930s machine-made clay tiles, which the estates used in a small enough range that reclaimed stock is easy to find.",
       },
       {
         name: "New Roofs & Re-Roofing",
         href: "/new-roofs",
-        text: "Interwar roofs reaching the end together, street by street, and Victorian slate where the nails rather than the slates have finished.",
+        text: "When the hips have been rebedded twice and the original felt has torn, the arithmetic stops favouring another repair.",
+      },
+      {
+        name: "Guttering, Fascias & Soffits",
+        href: "/guttering-fascias-and-soffits",
+        text: "Original timber roofline on a great many of these houses, and a lot of it capped over rather than replaced in the nineties.",
       },
     ],
-    benefitsHeading: "Four eras of roof, one town",
+    benefitsHeading: "What a town built in one decade means for your roof",
     benefitsIntro:
-      "A firm that only really knows one kind of roof will quote every job as though it were that kind. These are the five things we bring to a town that has this much variety in it.",
+      "Uniformity cuts both ways. It makes the problems predictable and the materials easy to match, and it means they all arrive at once. Five things worth knowing.",
     benefits: [
       {
-        title: "We date the roof first",
-        text: "Knowing whether you have Victorian slate, interwar clay or postwar concrete tells us what is likely underneath before we lift anything, and it makes the quote considerably more accurate.",
+        title: "We know what is up there already",
+        text: "Give us the road and we can usually name the covering, the hip detail and the likely fault before we arrive. The survey then confirms rather than discovers, which shows up as a quote you can rely on.",
       },
       {
-        title: "Slate and tile both, properly",
-        text: "They are different trades with different fixings and different failure modes. Plenty of firms are genuinely good at one and hopeful about the other.",
+        title: "Hip mortar, caught early",
+        text: "The dominant fault on hipped interwar roofs and much cheaper to deal with before tiles start moving. A single hip is a few hundred pounds; a hip that has shed three tiles is not.",
       },
       {
-        title: "Flat roofing taken seriously",
-        text: "Bromley has a great deal of it - extensions, garages, dormer tops and modern blocks - and it causes a disproportionate share of the leaks we attend.",
+        title: "Matching is straightforward here",
+        text: "Thousands of houses share a narrow range of clay tiles, so reclaimed stock is plentiful. A repair on an Orpington semi should be invisible from the pavement, and ours are.",
       },
       {
-        title: "The ground taken into account",
-        text: "On the clay side of town, seasonal movement is a real factor in chimney and flashing work. Repairs that ignore it come back.",
+        title: "Less planning to worry about than the neighbours",
+        text: "Crofton, Poverest and Goddington sit outside the conservation areas and outside the Article 4 zones. Most work here needs no consent at all, and we will say so rather than making it sound complicated.",
       },
       {
-        title: "Fifteen minutes from base",
-        text: "Bromley is a straight run from Orpington. Close enough that coming back to check something is never a problem worth charging for.",
+        title: "Fifteen minutes from the office",
+        text: "Straight down the A21 or through Bickley. Close enough that an emergency is a same-day call and coming back to check something is never a problem worth charging for.",
       },
     ],
     insight:
-      "Give us the road name in Bromley and we can usually tell you the decade, the covering and the most likely fault before we have seen the house. It is not a party trick, it is just what building a town in waves does.",
+      "Give us an Orpington road name and we can usually name the fault before we see the house. That is not intuition - it is one builder solving the same problem the same way five hundred times in a row.",
     attractions: [
       {
-        name: "Church House Gardens",
-        text: "A green valley running down from the High Street with a lake, mature trees and a great deal more space than you expect to find behind a town centre. It has been a public park since the 1920s.",
+        name: "Priory Gardens",
+        text: "Formal gardens and ponds beside the medieval Priory, right off the high street. The River Cray rises in the grounds, which makes this the reason there was a village here in the first place.",
         publicId: "town-park-lake-trees-benches-england",
-        alt: "A lake surrounded by mature trees and grass in a town park",
-        mapLink: maps("Church House Gardens Bromley"),
+        alt: "A pond fringed with trees and grass in a formal public garden",
+        mapLink: maps("Priory Gardens Orpington"),
       },
       {
-        name: "The Churchill Theatre",
-        text: "A proper receiving house on the edge of the High Street, running touring drama, comedy and a serious pantomime season. It has been the town's main stage since the 1970s.",
-        publicId: "theatre-auditorium-seats-stage-lighting",
-        alt: "Rows of red seats facing a lit stage inside a theatre auditorium",
-        mapLink: maps("Churchill Theatre Bromley"),
+        name: "Crofton Roman Villa",
+        text: "The remains of a Roman villa preserved under a cover building next to the station, with around ten rooms and the underfloor heating still visible. Occupied for roughly three hundred years, and found in the 1920s during the building boom.",
+        publicId: "roman-villa-excavated-remains-foundations",
+        alt: "Excavated Roman foundations and floor remains preserved at an archaeological site",
+        mapLink: maps("Crofton Roman Villa Orpington"),
       },
       {
-        name: "Norman Park",
-        text: "Around a hundred acres of playing fields, athletics track and open ground along the River Ravensbourne. Less manicured than the town-centre parks and better for a long walk.",
+        name: "Goddington Park",
+        text: "A large stretch of open parkland and playing fields on the eastern edge of the town, with the old Goddington House at one end. Good for a long walk without getting in the car.",
         publicId: "open-parkland-playing-fields-path-trees",
-        alt: "Wide open parkland with playing fields, a path and trees along the edge",
-        mapLink: maps("Norman Park Bromley"),
+        alt: "Open parkland with playing fields, a path and mature trees along the boundary",
+        mapLink: maps("Goddington Park Orpington"),
       },
     ],
-    mapQuery: "Bromley, London",
+    mapQuery: "Orpington, London",
     costText:
-      "Single tile and slate repairs run £180 to £450. Rebedding hips and ridges on a Bromley semi is £400 to £1,200. A chimney flashing renewed in lead is £450 to £950, more on the taller Victorian houses where access costs more. Re-covering a flat extension roof in EPDM is generally £1,600 to £2,900. A full re-roof is £7,000 to £14,000 on a standard semi and considerably more on the larger detached houses out towards Bickley and Sundridge Park.",
+      "Rebedding a single hip is £350 to £650, and doing all four hips plus the ridge on a standard Orpington semi runs £900 to £1,600 - comfortably the job we quote most often here. Converting to a mechanically fixed dry system is £1,300 to £2,400 and ends the mortar cycle for good. Individual tile repairs are £180 to £420. A full re-roof with new treated battens, breathable membrane and matched tiles is £7,500 to £13,000 including scaffolding.",
     faqs: [
       {
-        question: "Do I need permission for roof work in Bromley?",
+        question: "Do I need planning permission for roof work in Orpington?",
         answer:
-          "Like-for-like repair, no. Anything that changes the roof's appearance or shape, quite possibly. Bromley Town is one of the wards named in the council's Article 4 direction withdrawing permitted development rights for upward extensions, the town centre has its own conservation area, and the borough has 47 conservation areas and 13 Areas of Special Residential Character in total. The council's permitted development pages and its Article 4 map will tell you where your house sits, and we will flag it on the survey if we think it applies.",
+          "For a like-for-like repair, no, and that covers nearly everything we do here. Orpington is also less encumbered than much of the borough - Crofton, Poverest and Goddington sit outside the London Borough of Bromley's conservation areas and outside the Article 4 zones that removed upward-extension rights elsewhere. It tightens at the edges, around the old village core at Farnborough, the church end of St Mary Cray, and out towards Chelsfield. If your plans change the roof line rather than repair it, check the council's Article 4 map first.",
       },
       {
-        question: "How do I know whether my roof is clay or concrete?",
+        question: "Why does the mortar on my hips keep cracking?",
         answer:
-          "Age is the quickest guide. If the house is pre-war it is very likely clay; if it went up in the 1950s or later, concrete is more probable. The other tell is the edge - concrete tiles tend to be thicker with a squarer profile, and as they age they lose their surface coating and go patchy and rough. Clay weathers rather than crumbles. It matters because their remaining lifespans are quite different, and so is what we would recommend.",
+          "Because mortar is rigid and a roof is not. Timber moves with temperature and humidity, tiles expand and contract, and decades of that movement works on a brittle material until it gives. Mortar realistically lasts forty to sixty years and the Orpington estates were built in the 1930s, so every mortar-bedded hip in the town is overdue rather than unlucky. That is why you see so much scaffolding on these roads at once.",
       },
       {
-        question: "Why does my chimney leak when the rest of the roof is fine?",
+        question: "Can you match the tiles on a Crofton semi?",
         answer:
-          "Because a chimney is exposed on all four sides with no roof of its own, and because the ground here moves. On the clay side of Bromley, seasonal shrinking and swelling puts a small but relentless strain on a tall rigid stack, which opens mortar joints and cracks the flaunching at the top. Water then runs down inside the flue and appears on a wall a floor below. It is the most misdiagnosed damp in any house.",
+          "Almost always. The estates used a small number of machine-made clay tile patterns and reclaimed stock is widely available through salvage. On a street where every house shares a roof, we would rather take an extra few days sourcing the right tile than fit something approximate that you will notice every time you park outside.",
       },
       {
-        question: "Do you cover Shortlands, Bickley and Sundridge Park?",
+        question: "How quickly can you get to Orpington from Bromley?",
         answer:
-          "Yes, and Plaistow, Downham and Bromley Common as well. The whole of BR1 and BR2 is comfortably inside our patch, about fifteen minutes from our base in Orpington.",
+          "About fifteen minutes, straight down the A21 or through Bickley. Free surveys are normally within two to four working days. If water is actively coming in, say so when you ring and we will treat it as an emergency instead - that usually means a temporary make-safe the same day where the weather allows.",
       },
     ],
-    finalH: "Book a free roof survey in Bromley",
+    finalH: "Book a free roof survey in Orpington",
     finalP:
-      "Tell us the street and we will already have a fair idea what is up there. Then we will get on the roof and confirm it properly, with photographs and a fixed price if anything needs doing.",
+      "If your hips have started shedding mortar, or a neighbour's scaffolding has made you wonder about your own, the survey costs nothing and takes half an hour. Photographs, a written verdict, and a fixed price only if something genuinely needs doing.",
   },
-
   // -------------------------------------------------------- ST MARY CRAY --
   {
     slug: "st-mary-cray",
@@ -488,7 +489,7 @@ export const locationPages: LocationPageData[] = [
         text: "Laying new tiles on top of old is quicker and cheaper and it buries every existing problem while adding load the structure was never designed for. We do not offer it.",
       },
       {
-        title: "Five minutes from base",
+        title: "Fifteen minutes from the office",
         text: "The Crays are effectively next door to us. That means fast surveys, fast emergency response, and no travel loading buried in the price.",
       },
     ],
@@ -544,7 +545,7 @@ export const locationPages: LocationPageData[] = [
     ],
     finalH: "Book a free roof survey in St Mary Cray",
     finalP:
-      "We are five minutes away, the survey costs nothing, and if the honest answer is that your roof has a few more years in it, that is the answer you will get in writing.",
+      "We are fifteen minutes up the road, the survey costs nothing, and if the honest answer is that your roof has a few more years in it, that is the answer you will get in writing.",
   },
 
   // ---------------------------------------------------------- CHELSFIELD --
@@ -606,7 +607,7 @@ export const locationPages: LocationPageData[] = [
       },
       {
         title: "Exposure taken into account",
-        text: "You are on the edge of the Downs here, with more wind and much more tree cover than Orpington town. Mechanically fixed ridges and clipped verges earn their keep on this ground.",
+        text: "You are on the edge of the Downs here, with more wind and much more tree cover than the streets down in Bromley. Mechanically fixed ridges and clipped verges earn their keep on this ground.",
       },
       {
         title: "Article 4 checked before you plan anything",
@@ -658,7 +659,7 @@ export const locationPages: LocationPageData[] = [
           "They can. Private estate covenants sit alongside the council's planning rules rather than instead of them, and they sometimes restrict materials, colours or alterations in ways the council would not. They are enforced by the estate rather than the local authority, so the council's permitted development guidance will not tell you about them. It is worth checking your deeds before committing to a change of covering, and we will raise it at the survey.",
       },
       {
-        question: "Is Chelsfield more exposed to storm damage than Orpington?",
+        question: "Is Chelsfield more exposed to storm damage than Bromley?",
         answer:
           "Noticeably, yes. The ground climbs as you move south towards the Downs, the tree cover is much heavier, and there is far less shelter from surrounding buildings. We see more wind-lifted ridge tiles and more branch damage per house out here than in the town, which is why we generally recommend mechanically fixed ridge systems rather than relying on mortar.",
       },
@@ -730,7 +731,7 @@ export const locationPages: LocationPageData[] = [
         text: "Crofton used a narrow range of machine-made clay tiles, and reclaimed stock is readily available. A repair on these roofs should be invisible from the street, and ours are.",
       },
       {
-        title: "Six minutes from base",
+        title: "Twelve minutes from the office",
         text: "This is our closest patch after the Crays. Quick surveys, quick call-outs, and no travel cost buried in the quote.",
       },
     ],
@@ -781,7 +782,7 @@ export const locationPages: LocationPageData[] = [
       {
         question: "Do you cover Locksbottom and Green Street Green?",
         answer:
-          "Yes, along with Keston, Downe, Cudham and Pratts Bottom. It is all within ten minutes or so of our base, and it is some of the most regular work we do.",
+          "Yes, along with Keston, Downe, Cudham and Pratts Bottom. All of it is fifteen minutes or so from the office, and it is some of the most regular work we do.",
       },
     ],
     finalH: "Book a free roof survey in Farnborough",
@@ -1038,7 +1039,7 @@ export const locationPages: LocationPageData[] = [
     metaTitle: "Roofers Biggin Hill | LeonEast Roofing & Building",
     metaDescription:
       "Roofers in Biggin Hill, Downe and Cudham. Wind-exposed ridge-top roofs needing mechanical fixing, not mortar and hope. Free survey and a 10 year guarantee.",
-    h2: "Is your roof taking weather that Orpington never sees?",
+    h2: "Is your roof taking weather that Bromley never sees?",
     h3: "Roofing on the North Downs ridge - Biggin Hill, Leaves Green, Downe and Cudham",
     intro:
       "Biggin Hill sits at around 180 metres on the North Downs ridge, which makes it the highest ground we cover by a considerable margin and a genuinely different place to own a roof. Seven miles down the hill in Orpington a windy afternoon is a windy afternoon. Up here the same weather system is getting under ridge tiles, lifting verges and peeling the edges off flat roofs. Anything that relies on mortar or on friction to stay put is living on borrowed time, and we specify accordingly - mechanically fixed ridges, clipped verges, properly fastened edge trim.",
@@ -1094,7 +1095,7 @@ export const locationPages: LocationPageData[] = [
       },
       {
         title: "We come to you properly equipped",
-        text: "It is twenty-odd minutes up the hill from Orpington. We turn up with what the job needs rather than making two trips, because a second visit up here costs everyone time.",
+        text: "It is twenty-odd minutes up the hill from Bromley. We turn up with what the job needs rather than making two trips, because a second visit up here costs everyone time.",
       },
     ],
     insight:
@@ -1265,7 +1266,7 @@ export const locationPages: LocationPageData[] = [
       {
         question: "How far is Sidcup from your base?",
         answer:
-          "About fifteen minutes from Orpington, straight up through the Crays. It is a regular part of our week rather than an outlying job, and there is no travel loading in the price.",
+          "About eighteen minutes from the Bromley office, out through Chislehurst. It is a regular part of our week rather than an outlying job, and there is no travel loading in the price.",
       },
     ],
     finalH: "Book a free roof survey in Sidcup",
@@ -1386,7 +1387,7 @@ export const locationPages: LocationPageData[] = [
       {
         question: "Is Swanley within your normal area?",
         answer:
-          "Yes - about twelve minutes from our base in Orpington, straight out along the A20 side. Swanley Village, Hextable and Crockenhill are all comfortably within our patch and there is no travel surcharge on any of them.",
+          "Yes - about twenty minutes from the Bromley office, straight out along the A20. Swanley Village, Hextable and Crockenhill are all comfortably within our patch and there is no travel surcharge on any of them.",
       },
     ],
     finalH: "Book a free roof survey in Swanley",

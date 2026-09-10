@@ -1,7 +1,7 @@
 // Drives the "Next" link at the foot of every page so that a reader - and a
 // crawler - can walk the whole site without going back to the navigation.
 export const pageChain = [
-  { slug: "/", label: "Roofers In Orpington" },
+  { slug: "/", label: "Roofers In Bromley" },
   { slug: "/roof-repairs", label: "Roof Repairs" },
   { slug: "/emergency-roof-repairs", label: "Emergency Roof Repairs" },
   { slug: "/storm-damage-repairs", label: "Storm Damage Repairs" },
@@ -15,7 +15,7 @@ export const pageChain = [
   { slug: "/roof-repair-cost", label: "Roof Repair Cost Guide" },
   { slug: "/petts-wood", label: "Roofers In Petts Wood" },
   { slug: "/chislehurst", label: "Roofers In Chislehurst" },
-  { slug: "/bromley", label: "Roofers In Bromley" },
+  { slug: "/orpington", label: "Roofers In Orpington" },
   { slug: "/st-mary-cray", label: "Roofers In St Mary Cray" },
   { slug: "/chelsfield", label: "Roofers In Chelsfield" },
   { slug: "/farnborough", label: "Roofers In Farnborough" },
