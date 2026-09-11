@@ -4,12 +4,11 @@ import { company } from "../data/company";
 
 // Noindex, and excluded from the sitemap.
 //
-// TODO(client): when the Companies House number and registered office are
-// confirmed, write the registered office into "Who we are" below directly
-// rather than pulling it from company.ts, so that editing company.ts can
-// never silently change a legal document.
+// The registered office and company number below are written out in full
+// rather than pulled from company.ts. This is a legal document, and an edit
+// to a data file should never be able to change what it says.
 const hasEmail = Boolean(company.email);
-const updated = "10 September 2026";
+const updated = "11 September 2026";
 ---
 
 <Layout
@@ -29,10 +28,11 @@ const updated = "10 September 2026";
   <section class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 prose prose-neutral max-w-none">
     <h2>Who we are</h2>
     <p>
-      This website is operated by {company.name}, a limited company registered in England and
-      Wales, trading from {company.office.town}, {company.county}. For the
-      purposes of UK data protection law we are the data controller for the personal
-      information described in this policy.
+      This website is operated by LeonEast Roofing &amp; Building Limited, a company registered
+      in England and Wales under number 16990741, whose registered office is at 132 Lewisham
+      High Street, London, England, SE13 6EE. We work from {company.office.town},
+      {company.county}. For the purposes of UK data protection law we are the data controller
+      for the personal information described in this policy.
     </p>
     <p>
       You can contact us about anything in this policy by telephone on

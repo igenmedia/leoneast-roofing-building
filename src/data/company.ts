@@ -2,7 +2,6 @@
 //
 // STILL NEEDED FROM THE CLIENT (see README):
 //   - an email address, which is what unlocks the enquiry form
-//   - the Companies House number
 //   - a Google Business Profile link and any socials
 //   - real customer reviews
 //
@@ -50,7 +49,11 @@ export const company = {
 
   guaranteeYears: 10,
 
-  companyNumber: "",
+  // Companies House, confirmed by the client. The registered office
+  // (132 Lewisham High Street, London SE13 6EE) is deliberately NOT here -
+  // it is hardcoded in the privacy policy, so editing this file can never
+  // silently rewrite a legal document.
+  companyNumber: "16990741",
 
   social: [] as { name: string; url: string }[],
 

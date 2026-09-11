@@ -69,14 +69,13 @@ the moment it lands. Nothing is invented in the meantime.
 | # | What | Effect while missing |
 |---|------|----------------------|
 | 1 | **Email address** | No Web3Forms key, so `QuoteForm` renders a call panel instead of a form. A form without a key accepts submissions and discards them, which is worse than no form. Highest-value item by some distance. |
-| 2 | **Companies House number** | Footer says "a limited company registered in England and Wales" rather than naming a number. |
-| 3 | **Real reviews** | `Testimonials` shows an honest "no reviews yet" panel. See the note at the top of that file before changing it. |
-| 4 | **Google Business Profile + socials** | `company.social` is empty, so the footer social row does not render. |
-| 5 | **Master logo file** | `public/images/leoneast-roofing-logo.svg` is a vector rebuild of the supplied artwork. Drop an original over it and keep the filename. |
-| 6 | **Guarantee terms** | 10 years workmanship is assumed throughout. Worth confirming. |
-| 7 | **Scope of the "& Building" side** | The brief said all types of roofing, so the site is roofing only. |
+| 2 | **Real reviews** | `Testimonials` shows an honest "no reviews yet" panel. See the note at the top of that file before changing it. |
+| 3 | **Google Business Profile + socials** | `company.social` is empty, so the footer social row does not render. |
+| 4 | **Master logo file** | `public/images/leoneast-roofing-logo.svg` is a vector rebuild of the supplied artwork. Drop an original over it and keep the filename. |
+| 5 | **Guarantee terms** | 10 years workmanship is assumed throughout. Worth confirming. |
+| 6 | **Scope of the "& Building" side** | The brief said all types of roofing, so the site is roofing only. |
 
-### The two addresses
+### The three addresses
 
 - **23 Kingfisher House, Elmfield Road, Bromley BR1 1LT** - the office the firm
   works from. This is the schema address and geo, and it is what the contact
@@ -85,7 +84,17 @@ the moment it lands. Nothing is invented in the meantime.
   paperwork address. Footer and legal pages only; it does not set the
   business's location.
 
-Both display in the footer on every page.
+- **132 Lewisham High Street, London SE13 6EE** - the registered office at
+  Companies House. Privacy policy only, and hardcoded into that page rather
+  than read from `company.ts`, so a data edit can never rewrite a legal
+  document.
+
+The office and the trading address display in the footer on every page. The
+registered office does not - it is not where the firm works from, and putting
+it in the footer would muddy the NAP.
+
+Company number **16990741**, incorporated 27 January 2026. It sets the footer
+copyright line and the opening clause of the terms.
 
 ## Design
 

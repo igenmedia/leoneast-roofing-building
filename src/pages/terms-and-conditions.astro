@@ -6,7 +6,7 @@ import { company } from "../data/company";
 // LeonEast Roofing & Building Limited - there is no separate site operator.
 const hasEmail = Boolean(company.email);
 const hasCompanyDetails = Boolean(company.companyNumber);
-const updated = "10 September 2026";
+const updated = "11 September 2026";
 ---
 
 <Layout
@@ -26,8 +26,7 @@ const updated = "10 September 2026";
   <section class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 prose prose-neutral max-w-none">
     <h2>About us and this website</h2>
     <p>
-      This website is owned and operated by {company.name}
-      {hasCompanyDetails
+      This website is owned and operated by {company.name}{hasCompanyDetails
         ? `, a company registered in England and Wales under number ${company.companyNumber}`
         : ", a limited company registered in England and Wales"}.
       Any contract for surveys, quotations or roofing work arising from this website is made
