@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import { company, photo } from "../data/company";
 import QuoteForm from "../components/QuoteForm.astro";
 import CallStrip from "../components/CallStrip.astro";
-const lead = photo("chimney-repairs-bromley-brick-stack");
+const lead = photo("chimneys-guttering-bromley-hero");
 ---
 
 <Layout
@@ -25,8 +25,8 @@ const lead = photo("chimney-repairs-bromley-brick-stack");
           {company.phone}
         </a>
       </div>
-      <img src={lead} alt="A brick chimney stack rising above a tiled roof"
-        class="w-full rounded-lg object-cover aspect-[4/3]" width="1200" height="900"
+      <img src={lead} alt="Brick houses with tiled roofs and chimneys on an English residential street"
+        class="w-full rounded-lg object-cover aspect-[4/3]" width="900" height="506"
         fetchpriority="high" loading="eager" />
     </div>
   </section>
