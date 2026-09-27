@@ -17,7 +17,7 @@ const { title, description, listing = false, lead, noindex = false } = Astro.pro
 
 const path = Astro.url.pathname.replace(/\/+$/, "");
 const canonical = new URL(path || "/", company.url).toString();
-const share = new URL(photo("bromley-roofers-tiled-roof-hero"), company.url).toString();
+const share = new URL(photo("bromley-terraced-rooftops-chimneys-hero"), company.url).toString();
 
 // One listing block, on the homepage and the contact page only. No FAQ,
 // Service or Breadcrumb markup - this is a small firm's website, not a

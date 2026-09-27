@@ -6,7 +6,7 @@ import QuoteForm from "../components/QuoteForm.astro";
 import Testimonials from "../components/Testimonials.astro";
 import CallStrip from "../components/CallStrip.astro";
 
-const lead = photo("bromley-roofers-tiled-roof-hero");
+const lead = photo("bromley-terraced-rooftops-chimneys-hero");
 
 const cards = [
   { ...services[0], img: "roof-repairs-bromley-card", alt: "Moss and lichen spreading across the tiles and ridge of an older roof",
@@ -15,7 +15,7 @@ const cards = [
     text: "Stripped back to the rafters, new treated battens and membrane, then re-covered in tiles or slate matched to the house." },
   { ...services[2], img: "flat-roofing-bromley-card", alt: "Flat roofs over the rear extensions of a row of English terraced houses",
     text: "EPDM rubber, fibreglass and felt on extensions, dormers and garages, with the fall corrected rather than covered over." },
-  { ...services[3], img: "chimney-guttering-bromley-card", alt: "Tiled roofs and chimneys across a suburban English neighbourhood",
+  { ...services[3], img: "chimney-stacks-clay-pots-bromley-card", alt: "Brick chimney stacks with clay pots above a slate roof on an English house",
     text: "Lead flashings, repointing, flaunching and pots, plus guttering, fascias and soffits cleared or replaced." },
 ];
 ---
@@ -53,8 +53,8 @@ const cards = [
         </p>
       </div>
       <div class="lg:col-span-2">
-        <img src={lead} alt="Tiled roofs and brick chimney stacks on houses in Bromley"
-          class="w-full rounded-lg object-cover aspect-[4/3]" width="1200" height="800"
+        <img src={lead} alt="Slate roofs, dormers and brick chimney stacks on a row of terraced houses in Bromley"
+          class="w-full rounded-lg object-cover aspect-[4/3]" width="1200" height="900"
           fetchpriority="high" loading="eager" />
       </div>
     </div>

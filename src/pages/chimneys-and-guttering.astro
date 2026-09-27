@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import { company, photo } from "../data/company";
 import QuoteForm from "../components/QuoteForm.astro";
 import CallStrip from "../components/CallStrip.astro";
-const lead = photo("chimneys-guttering-bromley-hero");
+const lead = photo("brick-chimney-stacks-pots-bromley");
 ---
 
 <Layout
@@ -25,8 +25,8 @@ const lead = photo("chimneys-guttering-bromley-hero");
           {company.phone}
         </a>
       </div>
-      <img src={lead} alt="Brick houses with tiled roofs and chimneys on an English residential street"
-        class="w-full rounded-lg object-cover aspect-[4/3]" width="900" height="506"
+      <img src={lead} alt="Two brick chimney stacks with clay pots and cowls above a slate roof"
+        class="w-full rounded-lg object-cover aspect-[4/3]" width="1200" height="900"
         fetchpriority="high" loading="eager" />
     </div>
   </section>
@@ -62,9 +62,9 @@ const lead = photo("chimneys-guttering-bromley-hero");
       </p>
 
       <h2 class="mt-10 text-2xl sm:text-3xl font-bold text-carbon">Guttering, fascias and soffits</h2>
-      <img src={photo("blocked-gutter-leaves-autumn-roof")}
-        alt="A roof gutter filled with fallen autumn leaves"
-        class="mt-5 w-full rounded-lg object-cover aspect-[3/2]" width="800" height="533" loading="lazy" />
+      <img src={photo("overflowing-gutter-rainwater-bromley")}
+        alt="Rainwater spilling over the end of a blocked gutter"
+        class="mt-5 w-full rounded-lg object-cover aspect-[3/2]" width="900" height="600" loading="lazy" />
       <p class="mt-6 text-graphite/80">
         Clearing a gutter is the cheapest job on this website and it prevents the most
         expensive one. A gutter that overflows at one corner soaks the fascia behind it, the

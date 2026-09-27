@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import { company, photo } from "../data/company";
 import QuoteForm from "../components/QuoteForm.astro";
 import CallStrip from "../components/CallStrip.astro";
-const lead = photo("flat-roofing-bromley-extension");
+const lead = photo("flat-roof-rear-extension-bromley");
 ---
 
 <Layout
@@ -26,8 +26,8 @@ const lead = photo("flat-roofing-bromley-extension");
           {company.phone}
         </a>
       </div>
-      <img src={lead} alt="A flat roof on a single storey rear extension"
-        class="w-full rounded-lg object-cover aspect-[4/3]" width="1200" height="800"
+      <img src={lead} alt="A single storey rear extension with a flat roof on a brick semi detached house"
+        class="w-full rounded-lg object-cover aspect-[4/3]" width="1080" height="810"
         fetchpriority="high" loading="eager" />
     </div>
   </section>
@@ -69,9 +69,9 @@ const lead = photo("flat-roofing-bromley-extension");
         under a new roof.
       </p>
 
-      <img src={photo("flat-roof-membrane-detail-upstand")}
-        alt="A flat roof membrane turned up against a brick wall at an upstand"
-        class="mt-10 w-full rounded-lg object-cover aspect-[3/2]" width="800" height="500" loading="lazy" />
+      <img src={photo("flat-roof-extension-blockwork-bromley")}
+        alt="Blockwork walls and a steel beam on a rear extension waiting for its flat roof"
+        class="mt-10 w-full rounded-lg object-cover aspect-[3/2]" width="900" height="600" loading="lazy" />
 
       <h2 class="mt-10 text-2xl sm:text-3xl font-bold text-carbon">Rough costs</h2>
       <p class="mt-4 text-graphite/80">

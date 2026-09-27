@@ -1,15 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { company, photo } from "../data/company";
+import { company } from "../data/company";
 import { areas } from "../data/areas";
 import CallStrip from "../components/CallStrip.astro";
-const lead = photo("bromley-rooftops-suburban-skyline");
 ---
 
 <Layout
   title="Areas We Cover | LeonEast Roofing & Building"
   description="LeonEast Roofing covers Bromley, Beckenham, Chislehurst, Petts Wood, Orpington, Sidcup, Swanley and the towns between. No travel charge anywhere on the list."
-  lead={lead}
 >
   <section class="bg-carbon text-white">
     <div class="mx-auto max-w-6xl px-4 sm:px-6 py-12">
