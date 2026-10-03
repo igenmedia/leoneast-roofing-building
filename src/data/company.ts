@@ -2,7 +2,7 @@
 //
 // STILL NEEDED FROM THE CLIENT (see README):
 //   - an email address, which is what unlocks the enquiry form
-//   - a Google Business Profile link and any socials
+//   - any social profiles
 //   - real customer reviews
 //
 // Nothing here is invented. Where a value is missing the template checks for
@@ -55,7 +55,11 @@ export const company = {
   // silently rewrite a legal document.
   companyNumber: "16990741",
 
-  social: [] as { name: string; url: string }[],
+  // Google Business Profile share link, supplied by the client. It resolves
+  // to the "LeonEast Roofing & Building" listing (kgmid /g/11zxp69jsv).
+  social: [
+    { name: "Google Business Profile", url: "https://share.google/6ILzSdbwW4NKJkGPa" },
+  ] as { name: string; url: string }[],
 
   // Generated at web3forms.com once an email address exists. While it is
   // empty the enquiry form is replaced by a call panel, so no enquiry can be

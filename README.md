@@ -70,7 +70,7 @@ the moment it lands. Nothing is invented in the meantime.
 |---|------|----------------------|
 | 1 | **Email address** | No Web3Forms key, so `QuoteForm` renders a call panel instead of a form. A form without a key accepts submissions and discards them, which is worse than no form. Highest-value item by some distance. |
 | 2 | **Real reviews** | `Testimonials` shows an honest "no reviews yet" panel. See the note at the top of that file before changing it. |
-| 3 | **Google Business Profile + socials** | `company.social` is empty, so the footer social row does not render. |
+| 3 | **Socials** | Google Business Profile is in. Add any Facebook/Instagram etc. to `company.social` and they appear in the footer and `sameAs`. |
 | 4 | **Master logo file** | `public/images/leoneast-roofing-logo.svg` is a vector rebuild of the supplied artwork. Drop an original over it and keep the filename. |
 | 5 | **Guarantee terms** | 10 years workmanship is assumed throughout. Worth confirming. |
 | 6 | **Scope of the "& Building" side** | The brief said all types of roofing, so the site is roofing only. |
