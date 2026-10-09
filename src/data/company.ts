@@ -9,6 +9,8 @@
 // it and leaves the section out rather than filling the gap with something
 // plausible.
 
+const googleBusinessProfile = "https://share.google/6ILzSdbwW4NKJkGPa";
+
 export const company = {
   name: "LeonEast Roofing & Building Limited",
   short: "LeonEast",
@@ -56,9 +58,15 @@ export const company = {
   companyNumber: "16990741",
 
   // Google Business Profile share link, supplied by the client. It resolves
-  // to the "LeonEast Roofing & Building" listing (kgmid /g/11zxp69jsv).
+  // to the "LeonEast Roofing & Building" listing (kgmid /g/11zxp69jsv). The
+  // listing is a service-area business, so the embed shades the area covered
+  // rather than pinning a street address.
+  googleBusinessProfile,
+  gbpEmbed:
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38287.47395239877!2d0.028896!3d51.391167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa18e4dbb2e1fa227%3A0x129b4764c4502804!2sLeonEast%20Roofing%20%26%20Building!5e0!3m2!1sen!2s!4v1791529605608!5m2!1sen!2s",
+
   social: [
-    { name: "Google Business Profile", url: "https://share.google/6ILzSdbwW4NKJkGPa" },
+    { name: "Google Business Profile", url: googleBusinessProfile },
   ] as { name: string; url: string }[],
 
   // Generated at web3forms.com once an email address exists. While it is
