@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import { company, photo } from "../data/company";
 import QuoteForm from "../components/QuoteForm.astro";
 import CallStrip from "../components/CallStrip.astro";
-const lead = photo("flat-roof-rear-extension-bromley");
+const lead = photo("felt-flat-roof-terrace-extension-leoneast");
 ---
 
 <Layout
@@ -26,8 +26,8 @@ const lead = photo("flat-roof-rear-extension-bromley");
           {company.phone}
         </a>
       </div>
-      <img src={lead} alt="A single storey rear extension with a flat roof on a brick semi detached house"
-        class="w-full rounded-lg object-cover aspect-[4/3]" width="1080" height="810"
+      <img src={lead} alt="Mineral felt flat roof we have just finished over a terrace's back extension, with new flashing to the party wall"
+        class="w-full rounded-lg object-cover aspect-[4/3]" width="800" height="600"
         fetchpriority="high" loading="eager" />
     </div>
   </section>

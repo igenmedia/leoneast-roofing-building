@@ -7,7 +7,19 @@ import Testimonials from "../components/Testimonials.astro";
 import CallStrip from "../components/CallStrip.astro";
 import GbpMap from "../components/GbpMap.astro";
 
-const lead = photo("bromley-terraced-rooftops-chimneys-hero");
+const lead = photo("roof-retiling-scaffold-brick-semi-leoneast");
+
+const recent = [
+  { img: "roof-stripped-new-battens-membrane-leoneast",
+    alt: "A re-roof part way through, old tiles stripped and new yellow battens fixed over fresh breathable membrane",
+    caption: "Re-roof, stripped back to new battens and membrane" },
+  { img: "felt-flat-roof-terrace-extension-leoneast",
+    alt: "A newly finished mineral felt flat roof on the back extension of a London stock brick terrace",
+    caption: "New felt flat roof over a back extension" },
+  { img: "scaffold-fascia-work-townhouses-leoneast",
+    alt: "Two of the LeonEast team putting up scaffolding across the front of three storey tile-hung townhouses",
+    caption: "Scaffold going up for roofline work on townhouses" },
+];
 
 const cards = [
   { ...services[0], img: "roof-repairs-bromley-card", alt: "Moss and lichen spreading across the tiles and ridge of an older roof",
@@ -54,9 +66,28 @@ const cards = [
         </p>
       </div>
       <div class="lg:col-span-2">
-        <img src={lead} alt="Slate roofs, dormers and brick chimney stacks on a row of terraced houses in Bromley"
-          class="w-full rounded-lg object-cover aspect-[4/3]" width="1200" height="900"
+        <img src={lead} alt="The LeonEast team re-tiling the roof of a red brick semi from a full scaffold"
+          class="w-full rounded-lg object-cover aspect-[4/3]" width="845" height="634"
           fetchpriority="high" loading="eager" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Our own jobs -->
+  <section class="bg-carbon text-white border-t border-white/10">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 pb-12 lg:pb-16 pt-2">
+      <h2 class="text-xl sm:text-2xl font-bold">Recent jobs - our own photos</h2>
+      <p class="mt-2 text-sm text-mist/80">
+        Taken on site by us, not pulled from a picture library. This is what the work looks like halfway through.
+      </p>
+      <div class="mt-6 grid gap-4 sm:grid-cols-3">
+        {recent.map((r) => (
+          <figure>
+            <img src={photo(r.img)} alt={r.alt} class="w-full rounded-lg object-cover aspect-[4/3]"
+              width="800" height="600" loading="lazy" />
+            <figcaption class="mt-2 text-sm text-mist">{r.caption}</figcaption>
+          </figure>
+        ))}
       </div>
     </div>
   </section>
