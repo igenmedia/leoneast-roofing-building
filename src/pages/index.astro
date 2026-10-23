@@ -168,16 +168,28 @@ const cards = [
   <Testimonials />
 
   <!-- Areas -->
-  <section class="mx-auto max-w-6xl px-4 sm:px-6 py-14">
-    <h2 class="text-2xl sm:text-3xl font-bold text-carbon">Where we work</h2>
-    <p class="mt-3 max-w-3xl text-graphite/80">
-      Bromley and the towns around it - {areas.slice(1, 8).join(", ")} and out as far as
-      {" "}{areas.slice(8).join(", ")}. If you are just outside, ring and ask. We will tell you
-      honestly if you would be better off with somebody closer.
-    </p>
-    <a href="/areas-we-cover" class="mt-5 inline-flex items-center gap-1 font-semibold text-volt-deep hover:underline">
-      See the full list<span aria-hidden="true">&rarr;</span>
-    </a>
+  <section class="mx-auto max-w-6xl px-4 sm:px-6 py-14 grid gap-10 md:grid-cols-5 items-center">
+    <div class="md:col-span-3">
+      <h2 class="text-2xl sm:text-3xl font-bold text-carbon">Where we work</h2>
+      <p class="mt-3 max-w-3xl text-graphite/80">
+        Bromley and the towns around it - {areas.slice(1, 8).join(", ")} and out as far as
+        {" "}{areas.slice(8).join(", ")}. If you are just outside, ring and ask. We will tell you
+        honestly if you would be better off with somebody closer.
+      </p>
+      <p class="mt-3 max-w-3xl text-graphite/80">
+        If you spot a white van and a LeonEast banner tied to the scaffold on your road, that is
+        one of ours.
+      </p>
+      <a href="/areas-we-cover" class="mt-5 inline-flex items-center gap-1 font-semibold text-volt-deep hover:underline">
+        See the full list<span aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+    <figure class="md:col-span-2">
+      <img src={photo("leoneast-van-scaffold-reroof-semi")}
+        alt="The LeonEast Roofing and Building van parked outside a semi-detached house, scaffolded with the company banner while the roof is re-tiled in dark grey tiles"
+        class="w-full max-w-sm mx-auto rounded-lg object-cover" width="700" height="845" loading="lazy" />
+      <figcaption class="mt-2 text-sm text-graphite/70 text-center">Our van and banner outside a re-roof in progress</figcaption>
+    </figure>
   </section>
 
   <GbpMap />
