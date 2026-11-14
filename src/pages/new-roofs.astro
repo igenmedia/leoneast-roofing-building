@@ -3,12 +3,12 @@ import Layout from "../layouts/Layout.astro";
 import { company, photo } from "../data/company";
 import QuoteForm from "../components/QuoteForm.astro";
 import CallStrip from "../components/CallStrip.astro";
-const lead = photo("new-roof-tiled-houses-bromley-street");
+const lead = photo("new-roof-tiled-houses-kent-street");
 ---
 
 <Layout
-  title="New Roofs & Re-Roofing in Bromley | LeonEast Roofing & Building"
-  description="Full re-roofing across Bromley. Stripped to the rafters, new treated battens and breathable membrane, tiles or slate matched to the house. Fixed price, 10 year guarantee."
+  title="New Roofs & Re-Roofing in Canterbury & Ashford | LeonEast Roofing & Building"
+  description="Full re-roofing across Canterbury and Ashford. Stripped to the rafters, new treated battens and breathable membrane, tiles or slate matched to the house. Fixed price, 10 year guarantee."
   lead={lead}
 >
   <section class="bg-carbon text-white">
@@ -26,7 +26,7 @@ const lead = photo("new-roof-tiled-houses-bromley-street");
           {company.phone}
         </a>
       </div>
-      <img src={lead} alt="Brick houses with freshly tiled pitched roofs on a Bromley residential street"
+      <img src={lead} alt="Brick houses with freshly tiled pitched roofs on a residential street"
         class="w-full rounded-lg object-cover aspect-[4/3]" width="1200" height="900"
         fetchpriority="high" loading="eager" />
     </div>

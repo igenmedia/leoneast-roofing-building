@@ -3,12 +3,12 @@ import Layout from "../layouts/Layout.astro";
 import { company, photo } from "../data/company";
 import Testimonials from "../components/Testimonials.astro";
 import CallStrip from "../components/CallStrip.astro";
-const lead = photo("bromley-residential-street-tiled-roofs");
+const lead = photo("kent-residential-street-tiled-roofs");
 ---
 
 <Layout
   title="About Us | LeonEast Roofing & Building"
-  description="LeonEast Roofing & Building is a roofing firm working out of Bromley. What we do, how we price, and what the 10 year workmanship guarantee actually covers."
+  description="LeonEast Roofing & Building is a roofing firm covering Canterbury and Ashford. What we do, how we price, and what the 10 year workmanship guarantee actually covers."
   lead={lead}
 >
   <section class="bg-carbon text-white">
@@ -16,10 +16,10 @@ const lead = photo("bromley-residential-street-tiled-roofs");
       <div>
         <h1 class="text-4xl sm:text-5xl font-bold leading-tight">About us</h1>
         <p class="mt-5 text-lg text-mist">
-          {company.name} is a roofing and building firm working out of Bromley, covering the
-          towns around it. Roofs are what we do all day - repairs, re-roofs, flat roofs,
-          chimneys and guttering - on the houses this part of south east London is actually
-          made of.
+          {company.name} is a roofing and building firm working across Canterbury, Ashford
+          and the Kent villages around them. Roofs are what we do all day - repairs, re-roofs,
+          flat roofs, chimneys and guttering - on the mix of old and new houses this part of
+          Kent is built from.
         </p>
       </div>
       <img src={lead} alt="A street of bay fronted terraced houses with tiled roofs and chimney stacks"
@@ -45,7 +45,7 @@ const lead = photo("bromley-residential-street-tiled-roofs");
 
     <h2 class="mt-10 text-2xl sm:text-3xl font-bold text-carbon">The guarantee</h2>
     <p class="mt-4 text-graphite/80">
-      Every van in south London says "all work guaranteed" and it costs nothing to paint on.
+      Every van in Kent says "all work guaranteed" and it costs nothing to paint on.
       Ours is a dated, signed document specific to your job, handed over when we finish along
       with the photographs. {company.guaranteeYears} years on our workmanship: if water finds
       its way back through something we repaired, we come back and put it right at no cost.
@@ -73,9 +73,8 @@ const lead = photo("bromley-residential-street-tiled-roofs");
 
     <h2 class="mt-10 text-2xl sm:text-3xl font-bold text-carbon">Where to find us</h2>
     <p class="mt-4 text-graphite/80">
-      The office is at {company.office.line1}, {company.office.line2}, {company.office.town}
-      {" "}{company.office.postcode}. It is for post and paperwork - surveys happen at your
-      house, not ours. Open {company.hours}.
+      On the end of the phone, mostly. There is no showroom to visit - surveys happen at
+      your house, not ours, anywhere around {company.town}. We are open {company.hours}.
     </p>
   </section>
 

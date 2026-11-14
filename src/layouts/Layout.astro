@@ -34,13 +34,11 @@ const listingSchema = {
   logo: `${company.url}/images/leoneast-roofing-logo.svg`,
   address: {
     "@type": "PostalAddress",
-    streetAddress: `${company.office.line1}, ${company.office.line2}`,
-    addressLocality: company.office.town,
+    addressLocality: "Canterbury",
     addressRegion: company.county,
-    postalCode: company.office.postcode,
     addressCountry: "GB",
   },
-  geo: { "@type": "GeoCoordinates", latitude: company.latitude, longitude: company.longitude },
+  areaServed: ["Canterbury", "Ashford", "Kent"],
   ...(company.social.length ? { sameAs: company.social.map((s) => s.url) } : {}),
 };
 ---

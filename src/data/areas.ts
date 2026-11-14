@@ -3,6 +3,8 @@
 // If somebody wants to know about their own street they can ring.
 
 export const areas = [
+  "Canterbury",
+  "Ashford",
   "Bromley",
   "Beckenham",
   "Chislehurst",

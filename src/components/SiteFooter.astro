@@ -32,18 +32,8 @@ const hasNumber = Boolean(company.companyNumber);
     </div>
 
     <div>
-      <h2 class="text-sm font-semibold uppercase tracking-wide text-white">Where to find us</h2>
+      <h2 class="text-sm font-semibold uppercase tracking-wide text-white">Get hold of us</h2>
       <div class="mt-3 space-y-4 text-sm text-mist/70">
-        <address class="not-italic">
-          <span class="block text-mist">Office</span>
-          {company.office.line1}, {company.office.line2}<br />
-          {company.office.town}, {company.office.postcode}
-        </address>
-        <address class="not-italic">
-          <span class="block text-mist">Trading address</span>
-          {company.tradingAddress.line1}, {company.tradingAddress.line2}<br />
-          {company.tradingAddress.town}, {company.tradingAddress.postcode}
-        </address>
         {hasEmail && <p><a href={`mailto:${company.email}`} class="hover:text-volt-bright break-all">{company.email}</a></p>}
         <p>{company.hours}</p>
       </div>

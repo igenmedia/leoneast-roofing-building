@@ -3,13 +3,13 @@ import Layout from "../layouts/Layout.astro";
 import { company, photo } from "../data/company";
 import QuoteForm from "../components/QuoteForm.astro";
 import GbpMap from "../components/GbpMap.astro";
-const lead = photo("contact-leoneast-roofing-bromley");
+const lead = photo("contact-leoneast-roofing-kent");
 const hasEmail = Boolean(company.email);
 ---
 
 <Layout
-  title="Contact | LeonEast Roofing & Building, Bromley"
-  description="Get in touch with LeonEast Roofing & Building in Bromley. Call 07746 517099. Free look at the job, fixed written prices, 10 year workmanship guarantee."
+  title="Contact | LeonEast Roofing & Building, Canterbury & Ashford"
+  description="Contact LeonEast Roofing & Building for roof work in Canterbury and Ashford. Call 07746 517099. Free look at the job, fixed written prices, 10 year workmanship guarantee."
   listing={true}
   lead={lead}
 >
@@ -62,28 +62,9 @@ const hasEmail = Boolean(company.email);
           <dt class="text-sm font-semibold uppercase tracking-wide text-graphite/60">Hours</dt>
           <dd class="mt-1 text-graphite/80">{company.hours}. Emergencies answered outside those hours, though whether we can safely get on a roof depends on the weather and we will be straight with you about that.</dd>
         </div>
-        <div>
-          <dt class="text-sm font-semibold uppercase tracking-wide text-graphite/60">Office</dt>
-          <dd class="mt-1">
-            <address class="not-italic text-graphite/80">
-              {company.office.line1}<br />{company.office.line2}<br />
-              {company.office.town}<br />{company.office.postcode}
-            </address>
-            <p class="mt-2 text-sm text-graphite/60">Post and paperwork only - we come to you.</p>
-          </dd>
-        </div>
-        <div>
-          <dt class="text-sm font-semibold uppercase tracking-wide text-graphite/60">Trading address</dt>
-          <dd class="mt-1">
-            <address class="not-italic text-graphite/80">
-              {company.tradingAddress.line1}<br />{company.tradingAddress.line2}<br />
-              {company.tradingAddress.town}<br />{company.tradingAddress.postcode}
-            </address>
-          </dd>
-        </div>
       </dl>
 
-      <img src={lead} alt="A brick terrace with bay windows on a south London residential street"
+      <img src={lead} alt="A brick terrace with bay windows on a residential street"
         class="mt-8 w-full rounded-lg object-cover aspect-[3/2]" width="800" height="533" loading="lazy" />
     </div>
   </section>
